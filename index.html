@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script type="text/javascript" src="js/d3.js"></script>
+        <script type="text/javascript" src="js/scripts.js" defer></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="dropdown-container">
+                <label for="order-sort">Sort films by: </label>
+                <select id="order-sort">
+                    <option value="date_rated">Rating Date</option>
+                    <option value="rating">Rating</option>
+                    <option value="year">Release Year</option>
+                </select>
+            </div>
+
+            <div class="dropdown-container">
+                <label for="decade-filter">Filter by decade: </label>
+                <select id="decade-filter">
+                    <!-- <option>All decades</option> -->
+                </select>
+            </div>
+            <button id=sort-rating>Click</button>
+
+            <div class="card-container">
+                <div id="tooltip" class="tooltip" style="width: 400px"></div>
+            </div>
+        </div>
+    </body>
+</html>
