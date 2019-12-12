@@ -7,14 +7,6 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="dropdown-container">
-                <label for="order-sort">Sort films by: </label>
-                <select id="order-sort">
-                    <option value="date_rated">Rating Date</option>
-                    <option value="rating">Rating</option>
-                    <option value="year">Release Year</option>
-                </select>
-            </div>
 
             <div class="dropdown-container">
                 <label for="decade-filter">Filter by decade: </label>
@@ -22,7 +14,13 @@
                     <!-- <option>All decades</option> -->
                 </select>
             </div>
-            <button id=sort-rating>Click</button>
+
+            <div class="dropdown-container">
+                <label for="order-sort">Sort films by: </label>
+                <button id="sort-date" value="date_rated">Rating Date</button>
+                <button id="sort-rating" value="rating">Rating</button>
+                <button id="sort-year" value="year">Release Year</button>
+            </div>
 
             <div class="card-container">
                 <div id="tooltip" class="tooltip" style="width: 400px"></div>
