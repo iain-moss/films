@@ -1,5 +1,5 @@
 async function cards() {
-    let data = await d3.csv("../data/all_films.csv", d3.autoType);
+    let data = await d3.csv("./data/all_films.csv", d3.autoType);
     data.sort((a, b) => d3.descending(a.date_rated, b.date_rated));
 
     const minScore = d3.min(data, d => d.rating);
