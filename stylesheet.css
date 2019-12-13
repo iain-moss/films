@@ -143,7 +143,6 @@ button {
 @media only screen and (max-width: 1360px) {
     .wrapper {
         width: 100%;
-        margin: 10px;
     }
 }
 
