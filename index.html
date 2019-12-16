@@ -1,31 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="stylesheet.css" />
         <script type="text/javascript" src="js/d3.js"></script>
         <script type="text/javascript" src="js/scripts.js" defer></script>
         <script src="https://kit.fontawesome.com/853c57480c.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
         <title>Film Analysis</title>
     </head>
     <body>
         <div class="wrapper">
-
-            <div class="dropdown-container">
-                <label for="decade-filter">Filter by decade: </label>
-                <select id="decade-filter">
-                    <!-- <option>All decades</option> -->
-                </select>
+            <div style="display: flex">
+                <button class="tab-button" data-tab="tab-1">Film Grid</button>
+                <button class="tab-button" data-tab="tab-2">Analysis</button>
             </div>
+            <div id="tab-1" class="tab-content">
+                <div class="dropdown-container">
+                    <label for="decade-filter">Filter by decade: </label>
+                    <select id="decade-filter">
+                        <!-- <option>All decades</option> -->
+                    </select>
+                </div>
 
-            <div class="dropdown-container">
-                <label for="order-sort">Sort films by: </label>
-                <button id="sort-date" value="date_rated">Rating Date</button>
-                <button id="sort-rating" value="rating">Rating</button>
-                <button id="sort-year" value="year">Release Year</button>
+                <div class="dropdown-container">
+                    <label for="order-sort">Sort films by: </label>
+                    <button id="sort-date" value="date_rated">
+                        Rating Date
+                    </button>
+                    <button id="sort-rating" value="rating">Rating</button>
+                    <button id="sort-year" value="year">Release Year</button>
+                </div>
+
+                <div class="card-container">
+                    <div  id="tooltip" class="tooltip" style="width: 400px"></div>
+                </div>
             </div>
-
-            <div class="card-container">
-                <div id="tooltip" class="tooltip" style="width: 400px"></div>
+            <div id="tab-2" class="tab-content">
+                <h1 class="chart-title">Films seen by release year</h1>
+                <div id="release-year"></div>
             </div>
         </div>
     </body>

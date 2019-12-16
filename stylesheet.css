@@ -3,12 +3,19 @@
 body {
     --panel-width: 242px;
     --panel-height: 110px;
-    background-color: #f9f7f7;
+    --background-color: #f3efef;
+    background-color: var(--background-color);
 }
 
 .wrapper {
     width: 75%;
     margin: auto;
+}
+
+.tab-content {
+    background-color: #f9f7f7;
+    padding: 10px;
+    border-radius: 0 5px 5px 5px;
 }
 
 .card-container {
@@ -74,6 +81,11 @@ h1 {
     margin: 2px;
 }
 
+.chart-title {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
 p,
 li, 
 select,
@@ -96,12 +108,17 @@ p {
     margin: 2px;
 }
 
-.year {
+.year,
+.axis text {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 300;
     font-style: normal;
     color: #242424;
     font-size: 12px;
+}
+
+.axis text {
+    font-weight: 400;
 }
 
 select {
@@ -126,6 +143,7 @@ button {
     box-shadow: 0 0 1px 1px rgba(179, 179, 179, 0.2);
     background-color: white;
     padding: 3px 5px;
+    cursor: pointer;
 }
 
 .tooltip {
@@ -138,6 +156,37 @@ button {
     z-index: 10;
     transition: all 0.2s ease-out;
     pointer-events: none;
+}
+
+.tab-button {
+    border: none;
+    outline: none;
+    float: left;
+    font-size: 16px;
+    padding: 5px 7px;
+    background-color: #f9f7f7;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+.inactive {
+    background-color: var(--background-color);
+}
+
+.tab-button:first-child {
+    border-radius: 5px 0 0 0;
+}
+
+.tab-button:nth-child(2) {
+    border-radius: 0 5px 0 0;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #ddd2d2;
+    shape-rendering: crispEdges;
 }
 
 @media only screen and (max-width: 1360px) {

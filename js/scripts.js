@@ -1,3 +1,21 @@
+// Tabs
+$(document).ready(function() {
+    $(".tab-button:not(:first)").addClass("inactive");
+    $(".tab-content").hide();
+    $(".tab-content:first").show();
+
+    $(".tab-button").on("click", function() {
+        let t = $(this).attr("data-tab")
+        if ($(this).hasClass("inactive")) {
+            $(".tab-button").addClass("inactive")
+            $(this).removeClass("inactive");
+
+            $(".tab-content").hide();
+            $("#" + t).show();
+        };
+    })
+});
+
 async function cards() {
     let data = await d3.csv("./data/all_films.csv", d3.autoType);
     data.sort((a, b) => d3.descending(a.date_rated, b.date_rated));
@@ -372,4 +390,68 @@ async function cards() {
         };
     };
 
-    }; cards();
+}; cards();
+
+async function releaseYear() {
+    const parseDate = d3.timeParse("%Y");
+    const yearFormat = d3.timeFormat("%Y");
+    const data = await d3.csv("./data/release_year.csv", d => ({
+        year: parseDate(d.year),
+        count: +d.title
+    }));
+
+    const maxYear = data.reduce((prev, current) => prev.count > current.count ? prev : current);
+    
+    const margin = { top: 40, right: 40, bottom: 50, left: 30 }
+        , width = 900 - margin.left - margin.right
+        , height = 450 - margin.top - margin.bottom;
+
+    const svg = d3.select("#release-year")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.left + margin.right)
+        .append("g")
+        .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+    const y = d3.scaleLinear()
+        .domain([0, d3.max(data, d => d.count)])
+        .range([height, 0])
+        .nice();
+
+    const x = d3.scaleTime()
+        .domain(d3.extent(data, d => d.year))
+        .range([0, width])
+        .nice();
+
+    const yAxis = d3.axisLeft()
+        .scale(y)
+        .tickSize(-width)
+        .tickPadding(10);
+
+    const xAxis = d3.axisBottom()
+        .scale(x)
+        .tickPadding(10);
+    
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", `translate(0, ${height})`)
+        .call(xAxis);
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .style("stroke-opacity", 0.4)
+        .call(yAxis)
+        .select(".domain")
+        .remove();
+
+    svg.append("g")
+        .selectAll("rect")
+        .data(data)
+        .join("rect")
+        .attr("x", d => x(d.year))
+        .attr("y", d => y(d.count))
+        .attr("height", d => y(0) - y(d.count))
+        .attr("width", width / data.length - 1.5)
+        .attr("fill", "#906c6c");
+
+}; releaseYear();
