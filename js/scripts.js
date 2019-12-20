@@ -17,11 +17,17 @@ $(document).ready(function() {
 });
 
 async function cards() {
-    let data = await d3.csv("./data/all_films.csv", d3.autoType);
+    let data = await d3.csv("./data/all_letterboxd.csv", d3.autoType);
     data.sort((a, b) => d3.descending(a.date_rated, b.date_rated));
 
     const minScore = d3.min(data, d => d.rating);
     const filmCount = data.length;
+    const totalDuration = d3.sum(data, d => d.duration);
+    const aveRating = d3.mean(data, d => d.rating);
+
+    const formatCommaOneDec = d3.format(",.1f");
+    const formatTwoDec = d3.format(".2f");
+    const dateFormat = d3.timeFormat("%-d %B %Y");
 
     const tooltip = d3.select("#tooltip");
 
@@ -82,6 +88,7 @@ async function cards() {
                 tooltip.style("opacity", 1);
                 tooltip.html(`<h1>${d.title} (${d.director})</h1>
                             <p class="year">${d.genre}</p>
+                            <p class="year">Rated on ${dateFormat(d.date_rated)}</p>
                             <p style="color: ${colours(d.rating)}">${multiplyStar(d.rating)}</p>
                             <p>${d.summary}</p>`
                             );
@@ -153,6 +160,7 @@ async function cards() {
                     tooltip.style("opacity", 1);
                     tooltip.html(`<h1>${d.title} (${d.director})</h1>
                                 <p class="year">${d.genre}</p>
+                                <p class="year">Rated on ${dateFormat(d.date_rated)}</p>
                                 <p style="color: ${colours(d.rating)}">${multiplyStar(d.rating)}</p>
                                 <p>${d.summary}</p>`
                                 );
@@ -219,6 +227,7 @@ async function cards() {
                     tooltip.style("opacity", 1);
                     tooltip.html(`<h1>${d.title} (${d.director})</h1>
                                 <p class="year">${d.genre}</p>
+                                <p class="year">Rated on ${dateFormat(d.date_rated)}</p>
                                 <p style="color: ${colours(d.rating)}">${multiplyStar(d.rating)}</p>
                                 <p>${d.summary}</p>`
                                 );
@@ -292,6 +301,7 @@ async function cards() {
                 tooltip.style("opacity", 1);
                 tooltip.html(`<h1>${d.title} (${d.director})</h1>
                             <p class="year">${d.genre}</p>
+                            <p class="year">Rated on ${dateFormat(d.date_rated)}</p>
                             <p style="color: ${colours(d.rating)}">${multiplyStar(d.rating)}</p>
                             <p>${d.summary}</p>`
                             );
@@ -390,6 +400,48 @@ async function cards() {
         };
     };
 
+    d3.select("#film-count")
+        .each(function() {
+            d3.select(this)
+                .append("text")
+                .classed("ban", true)
+                .style("display", "block")
+                .text(`${filmCount}`);
+            d3.select(this)
+                .append("text")
+                .classed("year", true)
+                .style("display", "block")
+                .text(`films seen`)
+        });
+
+    d3.select("#duration")
+        .each(function() {
+            d3.select(this)
+                .append("text")
+                .classed("ban", true)
+                .style("display", "block")
+                .text(`${formatCommaOneDec(totalDuration / 60)}`);
+            d3.select(this)
+                .append("text")
+                .classed("year", true)
+                .style("display", "block")
+                .text(`hours`)
+        });
+
+    d3.select("#average-rating")
+        .each(function() {
+            d3.select(this)
+                .append("text")
+                .classed("ban", true)
+                .style("display", "block")
+                .text(`${formatTwoDec(aveRating)}`);
+            d3.select(this)
+                .append("text")
+                .classed("year", true)
+                .style("display", "block")
+                .text(`average rating`)
+        });
+
 }; cards();
 
 async function releaseYear() {
@@ -404,7 +456,9 @@ async function releaseYear() {
     
     const margin = { top: 40, right: 40, bottom: 50, left: 30 }
         , width = 900 - margin.left - margin.right
-        , height = 450 - margin.top - margin.bottom;
+        , height = 300 - margin.top - margin.bottom;
+
+    const barPadding = 1.5;
 
     const svg = d3.select("#release-year")
         .append("svg")
@@ -444,14 +498,54 @@ async function releaseYear() {
         .select(".domain")
         .remove();
 
-    svg.append("g")
+    const barGroup = svg.append("g")
         .selectAll("rect")
         .data(data)
-        .join("rect")
+        .join("g");
+
+    const barRects = barGroup.append("rect")
+        .attr("key", (d, i) => i)
         .attr("x", d => x(d.year))
         .attr("y", d => y(d.count))
         .attr("height", d => y(0) - y(d.count))
-        .attr("width", width / data.length - 1.5)
-        .attr("fill", "#906c6c");
+        .attr("width", width / data.length - barPadding);
+
+    svg.append("g")
+        .selectAll(".overlay")
+        .data(data)
+        .join("rect")
+        .classed("overlay", true)        
+        .attr("x", d => x(d.year))
+        .attr("y", y(0) - height)
+        .attr("height", height)
+        .attr("width", width / data.length)
+        .on("mouseenter", onMouseEnter)
+        .on("mouseleave", onMouseLeave);
+
+    const tooltip = d3.select("#release-year-tooltip");
+
+    function onMouseEnter(d, index) {
+        const filmPlural = d.count != 1 ? "films" : "film";
+        tooltip.style("opacity", 1);
+        tooltip.html(`<h1>${yearFormat(d.year)}</h1><p>${d.count} ${filmPlural}</p>`);
+
+        const xTooltip = x(d.year) + ((width / data.length) - (3 * barPadding)) + margin.left;
+        const yTooltip = y(d.count) + margin.top - 10;
+
+        tooltip.style("transform", `translate(calc(-50% + ${xTooltip}px), calc(-100% + ${yTooltip}px))`);
+
+        const hoveredBar = barGroup.select(`rect[key="${index}"]`);
+        hoveredBar.classed("hovered", true);
+    };
+
+    function onMouseLeave() {
+        tooltip.style("opacity", 0);
+        barRects.classed("hovered", false);
+    }
+
+    d3.select("#release-year-call-out")
+        .append("p")
+        .classed("call-out", true)
+        .text(`I have seen more films from ${yearFormat(maxYear.year)} than any other year (${maxYear.count}).`);
 
 }; releaseYear();

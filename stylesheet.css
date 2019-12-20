@@ -1,9 +1,34 @@
 @import url("https://use.typekit.net/lxh1tfz.css");
 
+/* @font-face {
+    font-family: nzz-sans-serif;
+    src: url("https://assets.static-nzz.ch/nzz/app/static/fonts/gt-america-standard-regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: nzz-sans-serif;
+    src: local("nzz-sans-serif"), url("https://assets.static-nzz.ch/nzz/app/static/fonts/gt-america-standard-medium.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: nzz-serif;
+    src: local("nzz-serif"), url("https://assets.static-nzz.ch/nzz/app/static/fonts/pensumpro-medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+} */
+
 body {
     --panel-width: 242px;
     --panel-height: 110px;
     --background-color: #f3efef;
+    --main-text-color: #242424;
+    --main-red: #906c6c;
     background-color: var(--background-color);
 }
 
@@ -73,11 +98,11 @@ body {
 }
 
 h1 {
-    font-family: neue-haas-unica, sans-serif;
+    font-family: /*nzz-serif, */neue-haas-unica, sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 12px;
-    color: #242424;
+    color: var(--main-text-color);
     margin: 2px;
 }
 
@@ -91,10 +116,10 @@ li,
 select,
 button,
 label {
-    font-family: neue-haas-unica, sans-serif;
+    font-family: /*nzz-sans-serif, */neue-haas-unica, sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #242424;
+    color: var(--main-text-color);
     font-size: 12px;
 }
 
@@ -110,10 +135,10 @@ p {
 
 .year,
 .axis text {
-    font-family: neue-haas-unica, sans-serif;
+    font-family: /*nzz-sans-serif, */neue-haas-unica, sans-serif;
     font-weight: 300;
     font-style: normal;
-    color: #242424;
+    color: var(--main-text-color);
     font-size: 12px;
 }
 
@@ -146,7 +171,7 @@ button {
     cursor: pointer;
 }
 
-.tooltip {
+.chart-tooltip {
     position: absolute;
     opacity: 0;
     padding: 0.6em 1em;
@@ -156,6 +181,22 @@ button {
     z-index: 10;
     transition: all 0.2s ease-out;
     pointer-events: none;
+    text-align: center;
+}
+
+.chart-tooltip:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: translate(-50%, 50%) rotate(45deg);
+    transform-origin: center center;
+    z-index: 10;
 }
 
 .tab-button {
@@ -182,11 +223,69 @@ button {
     border-radius: 0 5px 0 0;
 }
 
+.chart-container {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    opacity: 0;
+    top: -12px;
+    left: 0;
+    padding: 0.6em 1em;
+    background: #fff;
+    box-shadow: 0 6px 8px rgba(52, 73, 94, .2), 0 1px 1px rgba(52, 73, 94, 0.1);
+    z-index: 10;
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+}
+
 .axis path,
 .axis line {
     fill: none;
     stroke: #ddd2d2;
     shape-rendering: crispEdges;
+}
+
+.bans {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 50px 0;
+}
+
+.bans > * {
+    text-align: center;
+}
+
+.call-out {
+    margin: 20px 0;
+}
+
+.call-out::before {
+    content: "▶ ";
+    color: var(--main-red);
+}
+
+rect {
+    fill: var(--main-red);
+}
+
+.hovered {
+    fill: #6c7e90;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+text.ban {
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24px;
+    color: var(--main-red);
 }
 
 @media only screen and (max-width: 1360px) {
