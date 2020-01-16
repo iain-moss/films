@@ -192,12 +192,12 @@ button {
 }
 
 .des:after {
-    content: " ▼";
+    content: " ⏷";
     font-size: 9px;
 }
 
 .asc:after {
-    content: " ⯅";
+    content: " ⏶";
     font-size: 9px;
 }
 
