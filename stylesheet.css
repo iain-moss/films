@@ -1,13 +1,5 @@
 @import url("https://use.typekit.net/lxh1tfz.css");
 
-/* @font-face {
-    font-family: nzz-sans-serif;
-    src: url("https://assets.static-nzz.ch/nzz/app/static/fonts/gt-america-standard-regular.woff2") format("woff2");
-    font-style: normal;
-    font-weight: 100;
-    font-display: swap;
-}
-
 @font-face {
     font-family: nzz-sans-serif;
     src: local("nzz-sans-serif"), url("https://assets.static-nzz.ch/nzz/app/static/fonts/gt-america-standard-medium.woff2") format("woff2");
@@ -20,6 +12,34 @@
     font-family: nzz-serif;
     src: local("nzz-serif"), url("https://assets.static-nzz.ch/nzz/app/static/fonts/pensumpro-medium.woff2") format("woff2");
     font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: GT America;
+    src: url("https://uploads-ssl.webflow.com/5d11aab596e640fb3d8cf53f/5d37dd43f1f7ed1e4c774a7d_GT-America-Standard-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: GT America;
+    src: url("https://uploads-ssl.webflow.com/5d11aab596e640fb3d8cf53f/5d37dd54062c9331676b6b60_GT-America-Standard-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* @font-face {
+    font-family: Univers;
+    src: url("https://www.kesterblack.com/assets/fonts/36B68B_0_0.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Univers;
+    src: url("https://www.kesterblack.com/assets/fonts/36B68B_1_0.woff2") format("woff2");
+    font-weight: 600;
     font-display: swap;
 } */
 
@@ -66,6 +86,7 @@ body {
     align-items: center;
     justify-content: space-between;
     transition: all .3s linear;
+    cursor: pointer;
 }
 
 .card-panel:hover {
@@ -98,7 +119,7 @@ body {
 }
 
 h1 {
-    font-family: /*nzz-serif, */neue-haas-unica, sans-serif;
+    font-family: /*Univers, */GT America, sofia-pro, neue-haas-unica, sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 12px;
@@ -116,7 +137,7 @@ li,
 select,
 button,
 label {
-    font-family: /*nzz-sans-serif, */neue-haas-unica, sans-serif;
+    font-family: /*nzz-sans-serif, Univers, */GT America, sofia-pro, neue-haas-unica, sans-serif;
     font-weight: 400;
     font-style: normal;
     color: var(--main-text-color);
@@ -135,7 +156,7 @@ p {
 
 .year,
 .axis text {
-    font-family: /*nzz-sans-serif, */neue-haas-unica, sans-serif;
+    font-family: nzz-sans-serif, sofia-pro, neue-haas-unica, sans-serif;
     font-weight: 300;
     font-style: normal;
     color: var(--main-text-color);
@@ -153,7 +174,6 @@ select {
     box-shadow: 0 0 1px 1px rgba(179, 179, 179, 0.2);
     background-color: white;
     padding: 5px;
-    width: 155px;
 }
 
 select:hover,
@@ -171,7 +191,15 @@ button {
     cursor: pointer;
 }
 
-.chart-tooltip {
+.des:after {
+    content: "▼";
+}
+
+.asc:after {
+    content: "⯅";
+}
+
+.year-tooltip {
     position: absolute;
     opacity: 0;
     padding: 0.6em 1em;
@@ -184,7 +212,7 @@ button {
     text-align: center;
 }
 
-.chart-tooltip:before {
+.year-tooltip:before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -197,6 +225,18 @@ button {
     transform: translate(-50%, 50%) rotate(45deg);
     transform-origin: center center;
     z-index: 10;
+}
+
+.chart-tooltip {
+    position: absolute;
+    opacity: 0;
+    padding: 0.6em 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 1px rgba(179, 179, 179, 0.2);
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 10;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
 }
 
 .tab-button {
@@ -223,21 +263,55 @@ button {
     border-radius: 0 5px 0 0;
 }
 
-.chart-container {
+/* .chart-container {
     position: relative;
-}
+} */
 
 .tooltip {
     position: absolute;
     opacity: 0;
     top: -12px;
     left: 0;
-    padding: 0.6em 1em;
+    /* padding: 0.6em 1em; */
     background: #fff;
     box-shadow: 0 6px 8px rgba(52, 73, 94, .2), 0 1px 1px rgba(52, 73, 94, 0.1);
     z-index: 10;
     transition: all 0.2s ease-out;
     pointer-events: none;
+    display: flex;
+    align-items: flex-start;
+    height: 345px;
+    width: 500px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tooltip:hover {
+    cursor: none;
+}
+
+.tooltip-film-details {
+    height: 345px;
+    padding: 10px 5px;
+}
+
+.tooltip-poster {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.tooltip-summary {
+    overflow: hidden;
+}
+
+.tooltip-summary > p {
+    display: -webkit-box;
+    -webkit-line-clamp: 16;
+    -webkit-box-orient: vertical;  
 }
 
 .axis path,
@@ -281,11 +355,12 @@ rect {
 }
 
 text.ban {
-    font-family: neue-haas-unica, sans-serif;
+    font-family: GT America, sofia-pro, neue-haas-unica, sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 24px;
     color: var(--main-red);
+    font-variant-numeric: oldstyle-nums;
 }
 
 @media only screen and (max-width: 1360px) {

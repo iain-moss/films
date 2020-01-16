@@ -1,3 +1,5 @@
+const round = d3.format(".1f");
+
 // Tabs
 $(document).ready(function() {
     $(".tab-button:not(:first)").addClass("inactive");
@@ -17,8 +19,10 @@ $(document).ready(function() {
 });
 
 async function cards() {
-    let data = await d3.csv("./data/all_letterboxd.csv", d3.autoType);
+    let data = await d3.csv("../data/all_letterboxd.csv", d3.autoType);
     data.sort((a, b) => d3.descending(a.date_rated, b.date_rated));
+
+    const buttons = d3.selectAll("div.dropdown-container  button");
 
     const minScore = d3.min(data, d => d.rating);
     const filmCount = data.length;
@@ -28,6 +32,7 @@ async function cards() {
     const formatCommaOneDec = d3.format(",.1f");
     const formatTwoDec = d3.format(".2f");
     const dateFormat = d3.timeFormat("%-d %B %Y");
+    const formatComma = d3.format(",");
 
     const tooltip = d3.select("#tooltip");
 
@@ -43,7 +48,7 @@ async function cards() {
         .data(decades.map(d => d.key))
         .attr("value", "all-films")
         .classed("default", true)
-        .text(`All decades (${filmCount} films)`)
+        .text(`All decades (${formatComma(filmCount)} films)`)
         .enter();
 
     decadeFilter.selectAll("option.decade")
@@ -51,7 +56,7 @@ async function cards() {
         .join("option")
         .classed("decade", true)
         .attr("value", d => d.key)
-        .text(d => `${d.key} (${d.value} films)`);
+        .text(d => `${d.key} (${formatComma(d.value)} films)`);
 
     const colours = d3.scaleLinear()
         .range(["#ACD9E5", "#E82632"])
@@ -64,6 +69,20 @@ async function cards() {
             return title;
         }
     };
+
+    const stars = ["","&#189;","&#9733;","&#9733;&#189;","&#9733;&#9733;","&#9733;&#9733;&#189;","&#9733;&#9733;&#9733;","&#9733;&#9733;&#9733;&#189;","&#9733;&#9733;&#9733;&#9733;","&#9733;&#9733;&#9733;&#9733;&#189;","&#9733;&#9733;&#9733;&#9733;&#9733;"];
+
+    function convertToStars(rating) {
+        return stars[rating];
+    };
+
+    // function truncateSummary(summary) {
+    //     if (summary.length > 380) {
+    //         return summary.slice(0, 380) + "...";
+    //     } else {
+    //         return summary;
+    //     }
+    // };
     
     d3.select(".card-container")
         .selectAll(".card-panel")
@@ -79,18 +98,25 @@ async function cards() {
                         <p>${d.director}</p>
                         <ul>
                             <li>${d.duration} mins</li>
-                            <li style="color: ${colours(d.rating)}">&#9733 ${d.rating}</li>
+                            <li style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</li>
                         </ul>
                     </div>`
                 );
             })
-            .on("mouseenter", function(d) {
+            .on("click", function(d) {
                 tooltip.style("opacity", 1);
-                tooltip.html(`<h1>${d.title} (${d.director})</h1>
-                            <p class="year">${d.genre}</p>
-                            <p class="year">Rated on ${dateFormat(d.date_rated)}</p>
-                            <p style="color: ${colours(d.rating)}">${multiplyStar(d.rating)}</p>
-                            <p>${d.summary}</p>`
+                tooltip.style("left", `${d3.event.pageX - 250}px`);
+                tooltip.style("top", `${d3.event.pageY - 172.5}px`);
+                tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                            <div class="tooltip-film-details">
+                                <h1>${d.title} (${d.director})</h1>
+                                <p class="year">${d.genre}</p>
+                                <p class="year">Watched on ${dateFormat(d.date_rated)}</p>
+                                <p style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</p>
+                                <div class="tooltip-summary">
+                                    <p>${d.summary}</p>
+                                </div>
+                            </div>`
                             );
                 d3.selectAll(".card-panel")
                     .transition()
@@ -99,40 +125,66 @@ async function cards() {
                 d3.select(this)
                     .transition()
                     .duration(100)
-                    .style("opacity", 1);
+                    .style("opacity", 1)
+                    .style("cursor", "none");
             })
             .on("mouseleave", function(d) {
                 tooltip.style("opacity", 0);
                 d3.selectAll(".card-panel")
                     .transition()
                     .duration(100)
-                    .style("opacity", 1);
+                    .style("opacity", 1)
+                    .style("cursor", "pointer");
             })
             .on("mousemove", function(d) {
-                tooltip.style("left", `${d3.event.pageX - 200}px`);
-                tooltip.style("top", `${d3.event.pageY - 150}px`);
+                tooltip.style("left", `${d3.event.pageX - 250}px`);
+                tooltip.style("top", `${d3.event.pageY - 172.5}px`);
             });
+
+        let sortAllFilmsOrder = false;
 
         d3.select("#sort-date")
             .on("click", function() {
                 const attribute = d3.select(this).property("value");
                 sortAllFilms(attribute);
+                if (sortAllFilmsOrder) {
+                    d3.select(this).attr("class", "des")
+                } else {
+                    d3.select(this).attr("class", "asc");
+                };
             });
     
         d3.select("#sort-rating")
             .on("click", function() {
                 const attribute = d3.select(this).property("value");
                 sortAllFilms(attribute);
+                if (sortAllFilmsOrder) {
+                    d3.select(this).attr("class", "des")
+                } else {
+                    d3.select(this).attr("class", "asc");
+                };
             });
     
         d3.select("#sort-year")
             .on("click", function() {
                 const attribute = d3.select(this).property("value");
                 sortAllFilms(attribute);
+                if (sortAllFilmsOrder) {
+                    d3.select(this).attr("class", "des")
+                } else {
+                    d3.select(this).attr("class", "asc");
+                };
             });
 
         function sortAllFilms(attribute) {
-            data.sort((i, j) => j[attribute] - i[attribute]);
+            sortAllFilmsOrder = !sortAllFilmsOrder;
+            buttons.attr("class", "buttons");
+            if (sortAllFilmsOrder) {
+                data.sort((i, j) => j[attribute] - i[attribute]);
+            } else {
+                data.sort((i, j) => i[attribute] - j[attribute]);
+            };
+
             d3.selectAll(".card-panel")
                 .exit()
                 .remove();
@@ -151,19 +203,23 @@ async function cards() {
                                 <p>${d.director}</p>
                                 <ul>
                                     <li>${d.duration} mins</li>
-                                    <li style="color: ${colours(d.rating)}">&#9733 ${d.rating}</li>
+                                    <li style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</li>
                                 </ul>
                             </div>`
                         );
                 })
-                .on("mouseenter", function(d) {
+                .on("click", function(d) {
                     tooltip.style("opacity", 1);
-                    tooltip.html(`<h1>${d.title} (${d.director})</h1>
-                                <p class="year">${d.genre}</p>
-                                <p class="year">Rated on ${dateFormat(d.date_rated)}</p>
-                                <p style="color: ${colours(d.rating)}">${multiplyStar(d.rating)}</p>
-                                <p>${d.summary}</p>`
-                                );
+                    tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                                <div class="tooltip-film-details">
+                                    <h1>${d.title} (${d.director})</h1>
+                                    <p class="year">${d.genre}</p>
+                                    <p class="year">Watched on ${dateFormat(d.date_rated)}</p>
+                                    <p style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</p>
+                                    <div class="tooltip-summary">
+                                        <p>${d.summary}</p>
+                                    </div>
+                                </div>`);
                     d3.selectAll(".card-panel")
                         .transition()
                         .duration(100)
@@ -171,25 +227,27 @@ async function cards() {
                     d3.select(this)
                         .transition()
                         .duration(100)
-                        .style("opacity", 1);
+                        .style("opacity", 1)
+                        .style("cursor", "none");
                 })
                 .on("mouseleave", function(d) {
                     tooltip.style("opacity", 0);
                     d3.selectAll(".card-panel")
                         .transition()
                         .duration(100)
-                        .style("opacity", 1);
+                        .style("opacity", 1)
+                        .style("cursor", "pointer");
                 })
                 .on("mousemove", function(d) {
-                    tooltip.style("left", `${d3.event.pageX - 200}px`);
-                    tooltip.style("top", `${d3.event.pageY - 150}px`);
+                    tooltip.style("left", `${d3.event.pageX - 250}px`);
+                    tooltip.style("top", `${d3.event.pageY - 172.5}px`);
                 });
             };
         
-    function multiplyStar(num) {
-        const star = "&#9733";
-        return star.repeat(num);
-    };
+    // function multiplyStar(num) {
+    //     const star = "&#9733";
+    //     return star.repeat(num);
+    // };
 
     decadeFilter.on("change", function() {
         const selectDecade = d3.select(this).property("value");
@@ -218,19 +276,23 @@ async function cards() {
                                 <p>${d.director}</p>
                                 <ul>
                                     <li>${d.duration} mins</li>
-                                    <li style="color: ${colours(d.rating)}">&#9733 ${d.rating}</li>
+                                    <li style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</li>
                                 </ul>
                             </div>`
                         );
                 })
-                .on("mouseenter", function(d) {
+                .on("click", function(d) {
                     tooltip.style("opacity", 1);
-                    tooltip.html(`<h1>${d.title} (${d.director})</h1>
-                                <p class="year">${d.genre}</p>
-                                <p class="year">Rated on ${dateFormat(d.date_rated)}</p>
-                                <p style="color: ${colours(d.rating)}">${multiplyStar(d.rating)}</p>
-                                <p>${d.summary}</p>`
-                                );
+                    tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                                <div class="tooltip-film-details">
+                                    <h1>${d.title} (${d.director})</h1>
+                                    <p class="year">${d.genre}</p>
+                                    <p class="year">Watched on ${dateFormat(d.date_rated)}</p>
+                                    <p style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</p>
+                                    <div class="tooltip-summary">
+                                        <p>${d.summary}</p>
+                                    </div>
+                                </div>`);
                     d3.selectAll(".card-panel")
                         .transition()
                         .duration(100)
@@ -238,36 +300,53 @@ async function cards() {
                     d3.select(this)
                         .transition()
                         .duration(100)
-                        .style("opacity", 1);
+                        .style("opacity", 1)
+                        .style("cursor", "none");
                 })
                 .on("mouseleave", function(d) {
                     tooltip.style("opacity", 0);
                     d3.selectAll(".card-panel")
                         .transition()
                         .duration(100)
-                        .style("opacity", 1);
+                        .style("opacity", 1)
+                        .style("cursor", "pointer");
                 })
                 .on("mousemove", function(d) {
-                    tooltip.style("left", `${d3.event.pageX - 200}px`);
-                    tooltip.style("top", `${d3.event.pageY - 150}px`);
+                    tooltip.style("left", `${d3.event.pageX - 250}px`);
+                    tooltip.style("top", `${d3.event.pageY - 172.5}px`);
                 });
 
             d3.select("#sort-date")
                 .on("click", function() {
                     const attribute = d3.select(this).property("value");
                     sortAllFilms(attribute);
+                    if (sortAllFilmsOrder) {
+                        d3.select(this).attr("class", "des")
+                    } else {
+                        d3.select(this).attr("class", "asc");
+                    };
                 });
         
             d3.select("#sort-rating")
                 .on("click", function() {
                     const attribute = d3.select(this).property("value");
                     sortAllFilms(attribute);
+                    if (sortAllFilmsOrder) {
+                        d3.select(this).attr("class", "des")
+                    } else {
+                        d3.select(this).attr("class", "asc");
+                    };
                 });
         
             d3.select("#sort-year")
                 .on("click", function() {
                     const attribute = d3.select(this).property("value");
                     sortAllFilms(attribute);
+                    if (sortAllFilmsOrder) {
+                        d3.select(this).attr("class", "des")
+                    } else {
+                        d3.select(this).attr("class", "asc");
+                    };
                 });
 
             sortAllFilms(attribute);
@@ -292,19 +371,23 @@ async function cards() {
                             <p>${d.director}</p>
                             <ul>
                                 <li>${d.duration} mins</li>
-                                <li style="color: ${colours(d.rating)}">&#9733 ${d.rating}</li>
+                                <li style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</li>
                             </ul>
                         </div>`
                     );
             })
-            .on("mouseenter", function(d) {
+            .on("click", function(d) {
                 tooltip.style("opacity", 1);
-                tooltip.html(`<h1>${d.title} (${d.director})</h1>
-                            <p class="year">${d.genre}</p>
-                            <p class="year">Rated on ${dateFormat(d.date_rated)}</p>
-                            <p style="color: ${colours(d.rating)}">${multiplyStar(d.rating)}</p>
-                            <p>${d.summary}</p>`
-                            );
+                tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                            <div class="tooltip-film-details">
+                                <h1>${d.title} (${d.director})</h1>
+                                <p class="year">${d.genre}</p>
+                                <p class="year">Watched on ${dateFormat(d.date_rated)}</p>
+                                <p style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</p>
+                                <div class="tooltip-summary">
+                                    <p>${d.summary}</p>
+                                </div>
+                            </div>`);
                 d3.selectAll(".card-panel")
                     .transition()
                     .duration(100)
@@ -312,40 +395,66 @@ async function cards() {
                 d3.select(this)
                     .transition()
                     .duration(100)
-                    .style("opacity", 1);
+                    .style("opacity", 1)
+                    .style("cursor", "none");
             })
             .on("mouseleave", function(d) {
                 tooltip.style("opacity", 0);
                 d3.selectAll(".card-panel")
                     .transition()
                     .duration(100)
-                    .style("opacity", 1);
+                    .style("opacity", 1)
+                    .style("cursor", "pointer");
             })
             .on("mousemove", function(d) {
-                tooltip.style("left", `${d3.event.pageX - 200}px`);
-                tooltip.style("top", `${d3.event.pageY - 150}px`);
+                tooltip.style("left", `${d3.event.pageX - 250}px`);
+                tooltip.style("top", `${d3.event.pageY - 172.5}px`);
             });
+
+        let sortFilmsOrder = false;
 
         d3.select("#sort-date")
             .on("click", function() {
                 const attribute = d3.select(this).property("value");
                 sortFilms(attribute);
+                if (sortFilmsOrder) {
+                    d3.select(this).attr("class", "des")
+                } else {
+                    d3.select(this).attr("class", "asc");
+                };
             });
     
         d3.select("#sort-rating")
             .on("click", function() {
                 const attribute = d3.select(this).property("value");
                 sortFilms(attribute);
+                if (sortFilmsOrder) {
+                    d3.select(this).attr("class", "des")
+                } else {
+                    d3.select(this).attr("class", "asc");
+                };
             });
     
         d3.select("#sort-year")
             .on("click", function() {
                 const attribute = d3.select(this).property("value");
                 sortFilms(attribute);
+                if (sortFilmsOrder) {
+                    d3.select(this).attr("class", "des")
+                } else {
+                    d3.select(this).attr("class", "asc");
+                };
             });
 
         function sortFilms(attribute) {
-            selectedDecade.sort((i, j) => j[attribute] - i[attribute]);
+            sortFilmsOrder = !sortFilmsOrder;
+            buttons.attr("class", "buttons");
+            if (sortFilmsOrder) {
+                selectedDecade.sort((i, j) => j[attribute] - i[attribute]);
+            } else {
+                selectedDecade.sort((i, j) => i[attribute] - j[attribute]);
+            };
+
             d3.selectAll(".card-panel")
                 .exit()
                 .remove();
@@ -364,18 +473,23 @@ async function cards() {
                                 <p>${d.director}</p>
                                 <ul>
                                     <li>${d.duration} mins</li>
-                                    <li style="color: ${colours(d.rating)}">&#9733 ${d.rating}</li>
+                                    <li style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</li>
                                 </ul>
                             </div>`
                         );
                 })
-                .on("mouseenter", function(d) {
+                .on("click", function(d) {
                     tooltip.style("opacity", 1);
-                    tooltip.html(`<h1>${d.title} (${d.director})</h1>
-                                <p class="year">${d.genre}</p>
-                                <p style="color: ${colours(d.rating)}">${multiplyStar(d.rating)}</p>
-                                <p>${d.summary}</p>`
-                                );
+                    tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                                <div class="tooltip-film-details">
+                                    <h1>${d.title} (${d.director})</h1>
+                                    <p class="year">${d.genre}</p>
+                                    <p class="year">Watched on ${dateFormat(d.date_rated)}</p>
+                                    <p style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</p>
+                                    <div class="tooltip-summary">
+                                        <p>${d.summary}</p>
+                                    </div>
+                                </div>`);
                     d3.selectAll(".card-panel")
                         .transition()
                         .duration(100)
@@ -383,18 +497,20 @@ async function cards() {
                     d3.select(this)
                         .transition()
                         .duration(100)
-                        .style("opacity", 1);
+                        .style("opacity", 1)
+                        .style("cursor", "none");
                 })
                 .on("mouseleave", function(d) {
                     tooltip.style("opacity", 0);
                     d3.selectAll(".card-panel")
                         .transition()
                         .duration(100)
-                        .style("opacity", 1);
+                        .style("opacity", 1)
+                        .style("cursor", "pointer");
                 })
                 .on("mousemove", function(d) {
-                    tooltip.style("left", `${d3.event.pageX - 200}px`);
-                    tooltip.style("top", `${d3.event.pageY - 150}px`);
+                    tooltip.style("left", `${d3.event.pageX - 250}px`);
+                    tooltip.style("top", `${d3.event.pageY - 172.5}px`);
                 });
             };
         };
@@ -406,7 +522,7 @@ async function cards() {
                 .append("text")
                 .classed("ban", true)
                 .style("display", "block")
-                .text(`${filmCount}`);
+                .text(`${formatComma(filmCount)}`);
             d3.select(this)
                 .append("text")
                 .classed("year", true)
@@ -447,7 +563,7 @@ async function cards() {
 async function releaseYear() {
     const parseDate = d3.timeParse("%Y");
     const yearFormat = d3.timeFormat("%Y");
-    const data = await d3.csv("./data/release_year.csv", d => ({
+    const data = await d3.csv("../data/release_year.csv", d => ({
         year: parseDate(d.year),
         count: +d.title
     }));
@@ -549,3 +665,93 @@ async function releaseYear() {
         .text(`I have seen more films from ${yearFormat(maxYear.year)} than any other year (${maxYear.count}).`);
 
 }; releaseYear();
+
+async function dirBar() {
+    const data = await d3.csv("../data/dir_bar.csv", d3.autoType);
+    const pivotData = await d3.csv("../data/test.csv", d3.autoType);
+    console.log(pivotData.filter(d => d.title == "All"));
+    
+    const nest = d3.nest()
+        .key(d => d.director)
+        .rollup(v => ({
+            count: v.length,
+            average: d3.mean(v, a => a.rating)
+        }))
+        .entries(data)
+        .sort((a, b) => d3.descending(a.value.count, b.value.count))
+        .slice(0, 20);
+
+    const margin = {
+        top: 50,
+        right: 50,
+        bottom: 50,
+        left: 150
+    },
+    width = 800 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
+
+    const svg = d3.select("#dir-bar")
+        .append("svg")
+        .attr("height", height + margin.top + margin.bottom)
+        .attr("width", width + margin.left + margin.right)
+        .append("g")
+        .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+    const x = d3.scaleLinear()
+        .domain([0, d3.max(nest, d => d.value.count)])
+        .range([0, width]);
+
+    const y = d3.scaleBand()
+        .domain(nest.map(d => d.key))
+        .range([0, height])
+        .padding(0.1);
+
+    const yAxis = d3.axisLeft()
+        .scale(y)
+        .tickSize(0)
+        .tickPadding(10);
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .select(".domain")
+            .remove();
+
+    const tooltip = d3.select("#dir-bar-tooltip");
+
+    svg.append("g")
+        .selectAll("rect")
+        .data(nest)
+        .join("rect")
+        .attr("x", d => x(0))
+        .attr("y", d => y(d.key))
+        .attr("width", d => x(d.value.count) - x(0))
+        .attr("height", y.bandwidth())
+        .on("mouseenter", function() {
+            tooltip.style("opacity", 1);
+        })
+        .on("mousemove", function(d) {
+            tooltip.style("left", `${d3.event.pageX - 100}px`);
+            tooltip.style("top", `${d3.event.pageY - 60}px`);
+            d3.select("#director-name")
+                .text(d.key)
+            d3.select("#director-summary")
+                .text(`${d.value.count} films seen, average rating ${round(d.value.average)}`);
+        })
+        .on("mouseleave", function() {
+            tooltip.style("opacity", 0);
+        });
+
+    svg.append("g")
+        .selectAll("text")
+        .data(nest)
+        .join("text")
+        .classed("year", true)
+        .style("fill", "white")
+        .attr("x", d => x(d.value.count) - 5)
+        .attr("y", d => y(d.key) + y.bandwidth() / 2)
+        .attr("dy", "0.35em")
+        .attr("text-anchor", "end")
+        .text(d => d.value.count);
+
+}; dirBar();

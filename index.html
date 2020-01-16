@@ -30,22 +30,33 @@
                     <button id="sort-rating" value="rating">Rating</button>
                     <button id="sort-year" value="year">Release Year</button>
                 </div>
+                <h1 style="margin-top: 20px; text-align: center;">Click film cards for more information</h1>
 
                 <div class="card-container">
-                    <div  id="tooltip" class="tooltip" style="width: 400px"></div>
+                    <div id="tooltip" class="tooltip"></div>
                 </div>
             </div>
             <div id="tab-2" class="tab-content">
+                
                 <div class="bans">
                     <div id="film-count"></div>
                     <div id="duration"></div>
                     <div id="average-rating"></div>
                 </div>
+
                 <h1 class="chart-title">Films seen by release year</h1>
                 <div id="release-year" class="chart-container">
-                    <div id="release-year-tooltip" class="chart-tooltip"></div>
+                    <div id="release-year-tooltip" class="year-tooltip"></div>
                 </div>
                 <div id="release-year-call-out"></div>
+
+                <h1 class="chart-title">Top 20 directors by films seen</h1>
+                <div id="dir-bar" class="chart-container">
+                    <div id="dir-bar-tooltip" class="chart-tooltip">
+                        <h1 id="director-name"></h1>
+                        <p class="year" id="director-summary"></p>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
