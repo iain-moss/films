@@ -19,7 +19,7 @@ $(document).ready(function() {
 });
 
 async function cards() {
-    let data = await d3.csv("../data/all_letterboxd.csv", d3.autoType);
+    let data = await d3.csv("./data/all_letterboxd.csv", d3.autoType);
     data.sort((a, b) => d3.descending(a.date_rated, b.date_rated));
 
     const buttons = d3.selectAll("div.dropdown-container  button");
@@ -563,7 +563,7 @@ async function cards() {
 async function releaseYear() {
     const parseDate = d3.timeParse("%Y");
     const yearFormat = d3.timeFormat("%Y");
-    const data = await d3.csv("../data/release_year.csv", d => ({
+    const data = await d3.csv("./data/release_year.csv", d => ({
         year: parseDate(d.year),
         count: +d.title
     }));
@@ -667,8 +667,8 @@ async function releaseYear() {
 }; releaseYear();
 
 async function dirBar() {
-    const data = await d3.csv("../data/dir_bar.csv", d3.autoType);
-    const pivotData = await d3.csv("../data/test.csv", d3.autoType);
+    const data = await d3.csv("./data/dir_bar.csv", d3.autoType);
+    const pivotData = await d3.csv("./data/test.csv", d3.autoType);
     console.log(pivotData.filter(d => d.title == "All"));
     
     const nest = d3.nest()
