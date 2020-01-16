@@ -193,10 +193,12 @@ button {
 
 .des:after {
     content: "▼";
+    font-size: 10px;
 }
 
 .asc:after {
     content: "⯅";
+    font-size: 10px;
 }
 
 .year-tooltip {
