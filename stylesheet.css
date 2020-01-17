@@ -49,7 +49,10 @@ body {
     --background-color: #f3efef;
     --main-text-color: #242424;
     --main-red: #906c6c;
+    --tooltip-height: 345px;
     background-color: var(--background-color);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 .wrapper {
@@ -127,6 +130,16 @@ h1 {
     margin: 2px;
 }
 
+h2 {
+    font-family: /*Univers, */GT America, sofia-pro, neue-haas-unica, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12px;
+    color: var(--main-text-color);
+    text-transform: uppercase;
+    margin: 2px;
+}
+
 .chart-title {
     font-size: 16px;
     margin: 10px 0;
@@ -136,7 +149,8 @@ p,
 li, 
 select,
 button,
-label {
+label,
+.legend {
     font-family: /*nzz-sans-serif, Univers, */GT America, sofia-pro, neue-haas-unica, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -192,11 +206,13 @@ button {
 }
 
 .des:after {
-    content: "▼";
+    content: "⏷";
+    font-size: 9px;
 }
 
 .asc:after {
-    content: "⯅";
+    content: "⏶";
+    font-size: 9px;
 }
 
 .year-tooltip {
@@ -280,7 +296,7 @@ button {
     pointer-events: none;
     display: flex;
     align-items: flex-start;
-    height: 345px;
+    height: var(--tooltip-height);
     width: 500px;
     border-radius: 5px;
     overflow: hidden;
@@ -297,8 +313,8 @@ button {
 
 .tooltip-poster {
     display: block;
-    max-width: 100%;
-    max-height: 100%;
+    /* max-width: 100%; */
+    height: var(--tooltip-height);
     top: 0;
     left: 0;
     bottom: 0;
@@ -352,6 +368,20 @@ rect {
 .overlay {
     fill: none;
     pointer-events: all;
+}
+
+path.line {
+    fill: none;
+    stroke: var(--main-red);
+    stroke-width: 2px;
+}
+
+path.mean,
+line.mean {
+    fill: none;
+    stroke: #c1abab;
+    shape-rendering: crispEdges;
+    stroke-dasharray: 3;
 }
 
 text.ban {

@@ -19,7 +19,7 @@ $(document).ready(function() {
 });
 
 async function cards() {
-    let data = await d3.csv("../data/all_letterboxd.csv", d3.autoType);
+    let data = await d3.csv("./data/all_letterboxd.csv", d3.autoType);
     data.sort((a, b) => d3.descending(a.date_rated, b.date_rated));
 
     const buttons = d3.selectAll("div.dropdown-container  button");
@@ -563,7 +563,7 @@ async function cards() {
 async function releaseYear() {
     const parseDate = d3.timeParse("%Y");
     const yearFormat = d3.timeFormat("%Y");
-    const data = await d3.csv("../data/release_year.csv", d => ({
+    const data = await d3.csv("./data/release_year.csv", d => ({
         year: parseDate(d.year),
         count: +d.title
     }));
@@ -667,9 +667,17 @@ async function releaseYear() {
 }; releaseYear();
 
 async function dirBar() {
-    const data = await d3.csv("../data/dir_bar.csv", d3.autoType);
-    const pivotData = await d3.csv("../data/test.csv", d3.autoType);
-    console.log(pivotData.filter(d => d.title == "All"));
+    const data = await d3.csv("./data/dir_bar.csv", d3.autoType);
+    let allData = await d3.csv("./data/test.csv", d3.autoType);
+    allData = allData.filter(d => d.title == "All");
+    
+    const allDataNest = d3.nest()
+        .key(d => d.director)
+        .entries(allData)
+        .sort((a, b) => d3.descending(a.values.len, b.values.len))
+        .slice(0, 20);
+
+    console.log(allDataNest);
     
     const nest = d3.nest()
         .key(d => d.director)
@@ -755,3 +763,207 @@ async function dirBar() {
         .text(d => d.value.count);
 
 }; dirBar();
+
+async function watchDate() {
+    const parseDate = d3.timeParse("%Y-%m-%d");
+    const data = await d3.csv("./data/watch_date.csv", d => ({
+        date: parseDate(d.date),
+        count: +d.count
+    }));
+
+    const round = d3.format(".1f");
+    
+    const averageFilms = d3.mean(data, d => d.count);
+
+    const dateFormat = d3.timeFormat("%b");
+
+    const mainMargin = { top: 30, right: 50, bottom: 100, left: 25 }
+        , miniMargin = { top: 400, right: 50, bottom: 30, left: 25 }
+        , width = 900 - mainMargin.left - mainMargin.right
+        , mainHeight = 450 - mainMargin.top - mainMargin.bottom
+        , miniHeight = 450 - miniMargin.top - miniMargin.bottom;
+
+    const mainX = d3.scaleTime()
+        .domain(d3.extent(data, d => d.date))
+        .range([0, width]);
+    
+    const miniX = d3.scaleTime()
+        .domain(mainX.domain())
+        .range([0, width]);
+
+    const mainY = d3.scaleLinear()
+        .domain([0, d3.max(data, d => d.count)])
+        .range([mainHeight, 0])
+        .nice();
+    
+    const miniY = d3.scaleLinear()
+        .domain([0, d3.max(data, d => d.count)])
+        .range([miniHeight, 0])
+        .nice();
+
+    const mainLine = d3.line()
+        .x(d => mainX(d.date))
+        .y(d => mainY(d.count));
+
+    const miniLine = d3.line()
+        .x(d => miniX(d.date))
+        .y(d => miniY(d.count));
+
+    const svg = d3.select("#watch-date")
+        .append("svg")
+        .attr("height", mainHeight + mainMargin.top + mainMargin.bottom)
+        .attr("width", width + mainMargin.left + mainMargin.right)
+
+    svg.append("defs")
+        .append("clipPath")
+        .attr("id", "clip")
+        .append("rect")
+        .attr("width", width)
+        .attr("height", mainHeight);
+
+    const main = svg.append("g")
+        .attr("class", "main")
+        .attr("transform", `translate(${mainMargin.left}, ${mainMargin.top})`);
+
+    const mini = svg.append("g")
+        .attr("class", "mini")
+        .attr("transform", `translate(${miniMargin.left}, ${miniMargin.top})`);
+
+    const brush = d3.brushX(miniX)
+        .extent([[0, 0], [width, miniHeight]])
+        .on("brush", brushed);
+
+    const mainXAxis = d3.axisBottom()
+        .scale(mainX)
+        .tickFormat(dateFormat)
+        .tickPadding(8);
+
+    const miniXAxis = d3.axisBottom()
+        .scale(miniX)
+        .tickFormat(dateFormat)
+        .tickPadding(8);
+
+    main.append("g")
+        .attr("class", "x axis")
+        .attr("transform", `translate(0, ${mainHeight})`)
+        .call(mainXAxis);
+
+    mini.append("g")
+        .attr("class", "x axis")
+        .attr("transform", `translate(0, ${miniHeight})`)
+        .call(miniXAxis);
+
+    const mainYAxis = d3.axisLeft()
+        .scale(mainY)
+        .tickSize(-width)
+        .ticks(6)
+        .tickPadding(10);
+
+    const legend = svg.append("g")
+        .attr("transform", "translate(0, 20)");
+
+    legend.append("line")
+        .attr("class", "mean")
+        .attr("x1", 0)
+        .attr("x2", 30)
+        .attr("y1", -3)
+        .attr("y2", -3);
+
+    legend.append("text")
+        .classed("legend", true)
+        .attr("x", "35px")
+        .text(`Monthly average films watched: ${round(averageFilms)}`)
+
+    main.append("g")
+        .attr("class", "y axis")
+        .style("stroke-opacity", 0.2)
+        .call(mainYAxis)
+        .select(".domain")
+        .attr("opacity", 0);
+
+    main.append("line")
+        .attr("class", "mean")
+        .attr("x1", 0)
+        .attr("x2", width)
+        .attr("y1", mainY(averageFilms))
+        .attr("y2", mainY(averageFilms));
+
+    main.append("path")
+        .attr("d", mainLine(data))
+        .attr("class", "line");
+
+    mini.append("path")
+        .attr("d", miniLine(data))
+        .attr("class", "line");
+
+    const tooltip = d3.select("#watch-date-tooltip");
+
+    const tooltipLine = main.append("line")
+        .attr("class", "mouse-line")
+        .style("stroke", "#c1abab")
+        .style("opacity", 0);
+
+    const bisectDate = d3.bisector(d => d.date).left;
+
+    const tooltipTime = d3.timeFormat("%B %Y");
+
+    const focus = main.append("g")
+        .attr("class", "focus")
+        .style("display", "none");
+
+    main.append("rect")
+        .attr("class", "overlay")
+        .attr("width", width)
+        .attr("height", mainHeight)
+        .on("mouseenter", function() {
+            focus.style("display", null);
+            tooltip.style("opacity", 1);
+            tooltipLine.style("opacity", 1);
+        })
+        .on("mouseleave", function() {
+            focus.style("display", "none");
+            tooltip.style("opacity", 0);
+            tooltipLine.style("opacity", 0);
+        })
+        .on("mousemove", mousemove);
+
+    function mousemove() {
+        const x0 = mainX.invert(d3.mouse(this)[0]),
+            i = bisectDate(data, x0, 1),
+            d0 = data[i - 1],
+            d1 = data[i],
+            /* work out which date value is closest to the mouse */
+            d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+
+        focus.attr("transform", `translate(${mainX(d.date)}, ${mainY(d.count)})`);
+        tooltip.style("left", `${d3.event.pageX + 30}px`);
+        tooltip.style("top", `${d3.event.pageY - 50}px`);
+        tooltipLine.attr("x1", mainX(d.date))
+            .attr("x2", mainX(d.date))
+            .attr("y1", 0)
+            .attr("y2", mainHeight);
+        d3.select("#watch-date-date")
+            .text(`${tooltipTime(d.date)}`);
+        d3.select("#films-watched")
+            .text(`${d.count} films watched`);
+    };
+
+    mini.append("g")
+        .attr("class", "x brush")
+        .call(brush)
+        .selectAll("rect")
+        .attr("y", 0)
+        .attr("height", miniHeight + 7);
+
+    function brushed() {
+        const selection = d3.event.selection;
+        let extent = selection.map(d => miniX.invert(d));
+
+        mainX.domain(extent);
+        d3.select("#watch-date .x.axis").call(mainXAxis);
+        main.selectAll("path.line")
+            .attr("d", mainLine(data))
+            .style("clip-path", "url(#clip)");
+    };
+
+}; watchDate();

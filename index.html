@@ -6,7 +6,7 @@
         <script type="text/javascript" src="js/scripts.js" defer></script>
         <script src="https://kit.fontawesome.com/853c57480c.js" crossorigin="anonymous"></script>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
-        <title>Film Analysis</title>
+        <!-- <title>Film Analysis</title> -->
     </head>
     <body>
         <div class="wrapper">
@@ -45,18 +45,30 @@
                 </div>
 
                 <h1 class="chart-title">Films seen by release year</h1>
+                <h2>Hover over bars for details</h2>
                 <div id="release-year" class="chart-container">
                     <div id="release-year-tooltip" class="year-tooltip"></div>
                 </div>
                 <div id="release-year-call-out"></div>
 
                 <h1 class="chart-title">Top 20 directors by films seen</h1>
+                <h2>Hover over bars for details</h2>
                 <div id="dir-bar" class="chart-container">
                     <div id="dir-bar-tooltip" class="chart-tooltip">
                         <h1 id="director-name"></h1>
                         <p class="year" id="director-summary"></p>
                     </div>
                 </div>
+
+                <h1 class="chart-title">Films seen by month</h1>
+                <h2>Click and drag mini chart to focus</h2>
+                <div id="watch-date" class="chart-container">
+                    <div id="watch-date-tooltip" class="chart-tooltip">
+                        <h1 id="watch-date-date"></h1>
+                        <p class="year" id="films-watched"></p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </body>
