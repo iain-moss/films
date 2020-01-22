@@ -18,8 +18,16 @@ $(document).ready(function() {
     })
 });
 
+// Clear input
+$(document).click(function(e) {
+    const input = $("#director-input");
+    if (e.target !== input) {
+        input.val("");
+    }
+});
+
 async function cards() {
-    let data = await d3.csv("./data/all_letterboxd.csv", d3.autoType);
+    let data = await d3.csv("../data/all_letterboxd.csv", d3.autoType);
     data.sort((a, b) => d3.descending(a.date_rated, b.date_rated));
 
     const buttons = d3.selectAll("div.dropdown-container  button");
@@ -516,6 +524,190 @@ async function cards() {
         };
     };
 
+    const directorInput = d3.select("#director-input");
+    
+    directorInput.on("input", function() {
+        const selectDirector = d3.select(this).property("value");
+        directorFilter(selectDirector);
+    });
+
+    function directorFilter(selectDirector) {
+        let selectedDirector = data.filter(d => d.director.toString().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(selectDirector.toString().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")));
+
+        const directorN = selectedDirector.length;
+        const pluralResults = directorN != 1 ? "results" : "result";
+        const searchResutltsP = d3.select("#search-results");
+
+        if (directorInput.property("value").length == 1) {
+            searchResutltsP.text(`${directorN} search ${pluralResults}`);
+        } else if (directorInput.property("value").length > 1) {
+            searchResutltsP.text(`${directorN} search ${pluralResults}`);
+        } else {
+            searchResutltsP.text("");
+        };
+
+        d3.selectAll(".card-panel")
+            .exit()
+            .remove();
+        
+        d3.select(".card-container")
+            .selectAll(".card-panel")
+            .data(selectedDirector)
+            .join("div")
+            .classed("card-panel", true)
+            .each(function(d) {
+                d3.select(this)
+                    .html(
+                        `<img src="${d.image}" class="poster">
+                        <div class="film-details">
+                            <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
+                            <p>${d.director}</p>
+                            <ul>
+                                <li>${d.duration} mins</li>
+                                <li style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</li>
+                            </ul>
+                        </div>`
+                    );
+            })
+            .on("click", function(d) {
+                tooltip.style("opacity", 1);
+                tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                            <div class="tooltip-film-details">
+                                <h1>${d.title} (${d.director})</h1>
+                                <p class="year">${d.genre}</p>
+                                <p class="year">Watched on ${dateFormat(d.date_rated)}</p>
+                                <p style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</p>
+                                <div class="tooltip-summary">
+                                    <p>${d.summary}</p>
+                                </div>
+                            </div>`);
+                d3.selectAll(".card-panel")
+                    .transition()
+                    .duration(100)
+                    .style("opacity", 0.1);
+                d3.select(this)
+                    .transition()
+                    .duration(100)
+                    .style("opacity", 1)
+                    .style("cursor", "none");
+            })
+            .on("mouseleave", function(d) {
+                tooltip.style("opacity", 0);
+                d3.selectAll(".card-panel")
+                    .transition()
+                    .duration(100)
+                    .style("opacity", 1)
+                    .style("cursor", "pointer");
+            })
+            .on("mousemove", function(d) {
+                tooltip.style("left", `${d3.event.pageX - 250}px`);
+                tooltip.style("top", `${d3.event.pageY - 172.5}px`);
+            });
+
+        let sortFilmsOrder = false;
+
+        d3.select("#sort-date")
+            .on("click", function() {
+                const attribute = d3.select(this).property("value");
+                sortFilms(attribute);
+                if (sortFilmsOrder) {
+                    d3.select(this).attr("class", "des")
+                } else {
+                    d3.select(this).attr("class", "asc");
+                };
+            });
+    
+        d3.select("#sort-rating")
+            .on("click", function() {
+                const attribute = d3.select(this).property("value");
+                sortFilms(attribute);
+                if (sortFilmsOrder) {
+                    d3.select(this).attr("class", "des")
+                } else {
+                    d3.select(this).attr("class", "asc");
+                };
+            });
+    
+        d3.select("#sort-year")
+            .on("click", function() {
+                const attribute = d3.select(this).property("value");
+                sortFilms(attribute);
+                if (sortFilmsOrder) {
+                    d3.select(this).attr("class", "des")
+                } else {
+                    d3.select(this).attr("class", "asc");
+                };
+            });
+
+        function sortFilms(attribute) {
+            sortFilmsOrder = !sortFilmsOrder;
+            buttons.attr("class", "buttons");
+            if (sortFilmsOrder) {
+                selectedDirector.sort((i, j) => j[attribute] - i[attribute]);
+            } else {
+                selectedDirector.sort((i, j) => i[attribute] - j[attribute]);
+            };
+
+            d3.selectAll(".card-panel")
+                .exit()
+                .remove();
+    
+            d3.select(".card-container")
+                .selectAll(".card-panel")
+                .data(selectedDirector)
+                .join("div")
+                .classed("card-panel", true)
+                .each(function(d) {
+                    d3.select(this)
+                        .html(
+                            `<img src="${d.image}" class="poster">
+                            <div class="film-details">
+                                <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
+                                <p>${d.director}</p>
+                                <ul>
+                                    <li>${d.duration} mins</li>
+                                    <li style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</li>
+                                </ul>
+                            </div>`
+                        );
+                })
+                .on("click", function(d) {
+                    tooltip.style("opacity", 1);
+                    tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                                <div class="tooltip-film-details">
+                                    <h1>${d.title} (${d.director})</h1>
+                                    <p class="year">${d.genre}</p>
+                                    <p class="year">Watched on ${dateFormat(d.date_rated)}</p>
+                                    <p style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</p>
+                                    <div class="tooltip-summary">
+                                        <p>${d.summary}</p>
+                                    </div>
+                                </div>`);
+                    d3.selectAll(".card-panel")
+                        .transition()
+                        .duration(100)
+                        .style("opacity", 0.1);
+                    d3.select(this)
+                        .transition()
+                        .duration(100)
+                        .style("opacity", 1)
+                        .style("cursor", "none");
+                })
+                .on("mouseleave", function(d) {
+                    tooltip.style("opacity", 0);
+                    d3.selectAll(".card-panel")
+                        .transition()
+                        .duration(100)
+                        .style("opacity", 1)
+                        .style("cursor", "pointer");
+                })
+                .on("mousemove", function(d) {
+                    tooltip.style("left", `${d3.event.pageX - 250}px`);
+                    tooltip.style("top", `${d3.event.pageY - 172.5}px`);
+                });
+            };
+    };
+
     d3.select("#film-count")
         .each(function() {
             d3.select(this)
@@ -563,7 +755,7 @@ async function cards() {
 async function releaseYear() {
     const parseDate = d3.timeParse("%Y");
     const yearFormat = d3.timeFormat("%Y");
-    const data = await d3.csv("./data/release_year.csv", d => ({
+    const data = await d3.csv("../data/release_year.csv", d => ({
         year: parseDate(d.year),
         count: +d.title
     }));
@@ -667,8 +859,8 @@ async function releaseYear() {
 }; releaseYear();
 
 async function dirBar() {
-    const data = await d3.csv("./data/dir_bar.csv", d3.autoType);
-    let allData = await d3.csv("./data/test.csv", d3.autoType);
+    const data = await d3.csv("../data/dir_bar.csv", d3.autoType);
+    let allData = await d3.csv("../data/test.csv", d3.autoType);
     allData = allData.filter(d => d.title == "All");
     
     const allDataNest = d3.nest()
@@ -766,7 +958,7 @@ async function dirBar() {
 
 async function watchDate() {
     const parseDate = d3.timeParse("%Y-%m-%d");
-    const data = await d3.csv("./data/watch_date.csv", d => ({
+    const data = await d3.csv("../data/watch_date.csv", d => ({
         date: parseDate(d.date),
         count: +d.count
     }));
@@ -967,3 +1159,73 @@ async function watchDate() {
     };
 
 }; watchDate();
+
+async function decadeScatter() {
+    const data = await d3.csv("../data/decade_breakdown.csv", d => ({
+        decade: d.decade,
+        avg_rating: +d.avg_rating,
+        count: +d.count
+    }));
+
+    const margin = {
+        top: 50,
+        right: 50,
+        bottom: 50,
+        left: 40
+    },
+    width = 500 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+    const svg = d3.select("#decade-scatter")
+        .append("svg")
+        .attr("height", height + margin.top + margin.bottom)
+        .attr("width", width + margin.left + margin.right)
+        .append("g")
+        .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+    const x = d3.scaleLinear()
+        .range([0, width])
+        .domain(d3.extent(data, d => d.avg_rating))
+        .nice();
+
+    const y = d3.scaleLinear()
+        .range([height, 0])
+        .domain(d3.extent(data, d => d.count))
+        .nice();
+
+    const xAxis = d3.axisBottom()
+        .scale(x)
+        .tickPadding(10);
+
+    const yAxis = d3.axisLeft()
+        .scale(y)
+        .tickPadding(10);
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", `translate(0, ${height})`)
+        .call(xAxis);
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+    svg.selectAll("circle")
+        .data(data)
+        .join("circle")
+        .attr("cx", d => x(d.avg_rating))
+        .attr("cy", d => y(d.count))
+        .attr("r", 8);
+
+    svg.selectAll(".decade-label")
+        .data(data)
+        .join("text")
+        .classed("year", true)
+        .style("font-size", "10px")
+        .style("opacity", 0.7)
+        .text(d => d.decade)
+        .attr("x", d => x(d.avg_rating) + 10)
+        .attr("y", d => y(d.count) + 5)
+        .attr("text-anchor", "start");
+
+}; decadeScatter();
