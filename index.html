@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="stylesheet.css" />
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="icon" type="image/png" href="favicon.png">
         <script type="text/javascript" src="js/d3.js"></script>
         <script type="text/javascript" src="js/scripts.js" defer></script>
         <script src="https://kit.fontawesome.com/853c57480c.js" crossorigin="anonymous"></script>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <!-- <title>Film Analysis</title> -->
     </head>
     <body>
@@ -36,6 +38,12 @@
                     <label for="director-input">Search directors: </label>
                     <input type="text" id="director-input" placeholder="Enter name">
                 </div>
+
+                <div class="dropdown-container">
+                    <label for="actor-input">Search actors: </label>
+                    <input type="text" id="actor-input" placeholder="Enter name">
+                </div>
+
                 <h1 style="margin-top: 20px; text-align: center;">Click film cards for more information</h1>
 
                 <p style="text-align: center" id="search-results"></p>

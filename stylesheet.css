@@ -64,6 +64,7 @@ body {
     background-color: #f9f7f7;
     padding: 10px;
     border-radius: 0 5px 5px 5px;
+    margin-bottom: 80px;
 }
 
 .card-container {
@@ -193,8 +194,13 @@ input {
 }
 
 select:hover,
-select:focus {
+select:focus,
+input:hover,
+input:focus,
+button:not(.tab-button):hover,
+button:not(.tab-button):focus {
     outline: none;
+    box-shadow: 0 0 1px 1px var(--main-red);
 }
 
 button {
