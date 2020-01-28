@@ -1,4 +1,5 @@
 const round = d3.format(".1f");
+const roundTwoDec = d3.format(".2f");
 
 // Tabs
 $(document).ready(function() {
@@ -30,6 +31,8 @@ async function cards() {
     let data = await d3.csv("./data/all_letterboxd.csv", d3.autoType);
     data.sort((a, b) => d3.descending(a.date_rated, b.date_rated));
 
+    let genreList = await d3.csv("./data/genre_list.csv");
+
     const buttons = d3.selectAll("div.dropdown-container  button");
 
     const minScore = d3.min(data, d => d.rating);
@@ -41,6 +44,8 @@ async function cards() {
     const formatTwoDec = d3.format(".2f");
     const dateFormat = d3.timeFormat("%-d %B %Y");
     const formatComma = d3.format(",");
+
+    const searchResutltsP = d3.select("#search-results");
 
     const tooltip = d3.select("#tooltip");
 
@@ -66,6 +71,19 @@ async function cards() {
         .classed("decade", true)
         .attr("value", d => d.key)
         .text(d => `${d.key} (${formatComma(d.value)} films)`);
+
+    const genreFilter = d3.select("#genre-filter");
+
+    genreFilter.append("option")
+        .attr("value", "all-genres")
+        .classed("default", true)
+        .text("All genres");
+
+    genreFilter.selectAll("option.genre")
+        .data(genreList)
+        .join("option")
+        .attr("value", d => d.genre)
+        .text(d => d.genre);
 
     const colours = d3.scaleLinear()
         .range(["#ACD9E5", "#E82632"])
@@ -261,6 +279,10 @@ async function cards() {
     decadeFilter.on("change", function() {
         const selectDecade = d3.select(this).property("value");
         filterFilms(selectDecade);
+    });
+
+    $("#decade-filter").change(function() {
+        $("#genre-filter").val("all-genres");
     });
 
     function filterFilms(selectDecade) {
@@ -525,6 +547,277 @@ async function cards() {
         };
     };
 
+    genreFilter.on("change", function() {
+        const selectGenre = d3.select(this).property("value");
+        filterGenre(selectGenre);
+    });
+
+    $("#genre-filter").change(function() {
+        $("#decade-filter").val("all");
+    });
+
+    function filterGenre(selectGenre) {
+        let selectedGenre = data.filter(d => d.genre.includes(selectGenre));
+        
+        if (selectGenre == "all-genres") {
+            d3.selectAll(".card-panel")
+                .exit()
+                .remove();
+            
+            d3.select(".card-container")
+                .selectAll(".card-panel")
+                .data(data)
+                .join("div")
+                .classed("card-panel", true)
+                .each(function(d) {
+                    d3.select(this)
+                        .html(
+                            `<img src="${d.image}" class="poster">
+                            <div class="film-details">
+                                <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
+                                <p>${d.director}</p>
+                                <ul>
+                                    <li>${d.duration} mins</li>
+                                    <li style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</li>
+                                </ul>
+                            </div>`
+                        );
+                })
+                .on("click", function(d) {
+                    tooltip.style("opacity", 1);
+                    tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                                <div class="tooltip-film-details">
+                                    <h1>${d.title} (${d.director})</h1>
+                                    <p class="year">${d.genre}</p>
+                                    <p class="year">Watched on ${dateFormat(d.date_rated)}</p>
+                                    <p style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</p>
+                                    <div class="tooltip-summary">
+                                        <p>${d.summary}</p>
+                                    </div>
+                                </div>`);
+                    d3.selectAll(".card-panel")
+                        .transition()
+                        .duration(100)
+                        .style("opacity", 0.1);
+                    d3.select(this)
+                        .transition()
+                        .duration(100)
+                        .style("opacity", 1)
+                        .style("cursor", "none");
+                })
+                .on("mouseleave", function(d) {
+                    tooltip.style("opacity", 0);
+                    d3.selectAll(".card-panel")
+                        .transition()
+                        .duration(100)
+                        .style("opacity", 1)
+                        .style("cursor", "pointer");
+                })
+                .on("mousemove", function(d) {
+                    tooltip.style("left", `${d3.event.pageX - 250}px`);
+                    tooltip.style("top", `${d3.event.pageY - 172.5}px`);
+                });
+
+            d3.select("#sort-date")
+                .on("click", function() {
+                    const attribute = d3.select(this).property("value");
+                    sortAllFilms(attribute);
+                    if (sortAllFilmsOrder) {
+                        d3.select(this).attr("class", "des")
+                    } else {
+                        d3.select(this).attr("class", "asc");
+                    };
+                });
+        
+            d3.select("#sort-rating")
+                .on("click", function() {
+                    const attribute = d3.select(this).property("value");
+                    sortAllFilms(attribute);
+                    if (sortAllFilmsOrder) {
+                        d3.select(this).attr("class", "des")
+                    } else {
+                        d3.select(this).attr("class", "asc");
+                    };
+                });
+        
+            d3.select("#sort-year")
+                .on("click", function() {
+                    const attribute = d3.select(this).property("value");
+                    sortAllFilms(attribute);
+                    if (sortAllFilmsOrder) {
+                        d3.select(this).attr("class", "des")
+                    } else {
+                        d3.select(this).attr("class", "asc");
+                    };
+                });
+
+            sortAllFilms(attribute);
+
+        } else {
+
+        d3.selectAll(".card-panel")
+            .exit()
+            .remove();
+        
+        d3.select(".card-container")
+            .selectAll(".card-panel")
+            .data(selectedGenre)
+            .join("div")
+            .classed("card-panel", true)
+            .each(function(d) {
+                d3.select(this)
+                    .html(
+                        `<img src="${d.image}" class="poster">
+                        <div class="film-details">
+                            <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
+                            <p>${d.director}</p>
+                            <ul>
+                                <li>${d.duration} mins</li>
+                                <li style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</li>
+                            </ul>
+                        </div>`
+                    );
+            })
+            .on("click", function(d) {
+                tooltip.style("opacity", 1);
+                tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                            <div class="tooltip-film-details">
+                                <h1>${d.title} (${d.director})</h1>
+                                <p class="year">${d.genre}</p>
+                                <p class="year">Watched on ${dateFormat(d.date_rated)}</p>
+                                <p style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</p>
+                                <div class="tooltip-summary">
+                                    <p>${d.summary}</p>
+                                </div>
+                            </div>`);
+                d3.selectAll(".card-panel")
+                    .transition()
+                    .duration(100)
+                    .style("opacity", 0.1);
+                d3.select(this)
+                    .transition()
+                    .duration(100)
+                    .style("opacity", 1)
+                    .style("cursor", "none");
+            })
+            .on("mouseleave", function(d) {
+                tooltip.style("opacity", 0);
+                d3.selectAll(".card-panel")
+                    .transition()
+                    .duration(100)
+                    .style("opacity", 1)
+                    .style("cursor", "pointer");
+            })
+            .on("mousemove", function(d) {
+                tooltip.style("left", `${d3.event.pageX - 250}px`);
+                tooltip.style("top", `${d3.event.pageY - 172.5}px`);
+            });
+
+        let sortFilmsOrder = false;
+
+        d3.select("#sort-date")
+            .on("click", function() {
+                const attribute = d3.select(this).property("value");
+                sortFilmsGenre(attribute);
+                if (sortFilmsOrder) {
+                    d3.select(this).attr("class", "des")
+                } else {
+                    d3.select(this).attr("class", "asc");
+                };
+            });
+    
+        d3.select("#sort-rating")
+            .on("click", function() {
+                const attribute = d3.select(this).property("value");
+                sortFilmsGenre(attribute);
+                if (sortFilmsOrder) {
+                    d3.select(this).attr("class", "des")
+                } else {
+                    d3.select(this).attr("class", "asc");
+                };
+            });
+    
+        d3.select("#sort-year")
+            .on("click", function() {
+                const attribute = d3.select(this).property("value");
+                sortFilmsGenre(attribute);
+                if (sortFilmsOrder) {
+                    d3.select(this).attr("class", "des")
+                } else {
+                    d3.select(this).attr("class", "asc");
+                };
+            });
+
+        function sortFilmsGenre(attribute) {
+            sortFilmsOrder = !sortFilmsOrder;
+            buttons.attr("class", "buttons");
+            if (sortFilmsOrder) {
+                selectedGenre.sort((i, j) => j[attribute] - i[attribute]);
+            } else {
+                selectedGenre.sort((i, j) => i[attribute] - j[attribute]);
+            };
+
+            d3.selectAll(".card-panel")
+                .exit()
+                .remove();
+    
+            d3.select(".card-container")
+                .selectAll(".card-panel")
+                .data(selectedGenre)
+                .join("div")
+                .classed("card-panel", true)
+                .each(function(d) {
+                    d3.select(this)
+                        .html(
+                            `<img src="${d.image}" class="poster">
+                            <div class="film-details">
+                                <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
+                                <p>${d.director}</p>
+                                <ul>
+                                    <li>${d.duration} mins</li>
+                                    <li style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</li>
+                                </ul>
+                            </div>`
+                        );
+                })
+                .on("click", function(d) {
+                    tooltip.style("opacity", 1);
+                    tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                                <div class="tooltip-film-details">
+                                    <h1>${d.title} (${d.director})</h1>
+                                    <p class="year">${d.genre}</p>
+                                    <p class="year">Watched on ${dateFormat(d.date_rated)}</p>
+                                    <p style="color: ${colours(d.rating)}">${convertToStars(d.rating)}</p>
+                                    <div class="tooltip-summary">
+                                        <p>${d.summary}</p>
+                                    </div>
+                                </div>`);
+                    d3.selectAll(".card-panel")
+                        .transition()
+                        .duration(100)
+                        .style("opacity", 0.1);
+                    d3.select(this)
+                        .transition()
+                        .duration(100)
+                        .style("opacity", 1)
+                        .style("cursor", "none");
+                })
+                .on("mouseleave", function(d) {
+                    tooltip.style("opacity", 0);
+                    d3.selectAll(".card-panel")
+                        .transition()
+                        .duration(100)
+                        .style("opacity", 1)
+                        .style("cursor", "pointer");
+                })
+                .on("mousemove", function(d) {
+                    tooltip.style("left", `${d3.event.pageX - 250}px`);
+                    tooltip.style("top", `${d3.event.pageY - 172.5}px`);
+                });
+            };
+        };
+    }
+
     const directorInput = d3.select("#director-input");
     
     directorInput.on("input", function() {
@@ -545,14 +838,12 @@ async function cards() {
         const directorN = selectedDirector.length;
         const directorAve = d3.mean(selectedDirector, d => d.rating);
         const pluralResults = directorN != 1 ? "films" : "film";
-        const searchResutltsP = d3.select("#search-results");
         const filteredDirectors = d3.map(selectedDirector, d => d.director).keys();
-        console.log(directorAve);
 
         if (directorInput.property("value").length == 1) {
-            searchResutltsP.text(`${directorN} ${pluralResults} found with average rating ${round(directorAve) / 2}`);
+            searchResutltsP.text(`${directorN} ${pluralResults} found with average rating ${directorAve.toFixed(2) / 2}`);
         } else if (directorInput.property("value").length > 1) {
-            searchResutltsP.text(`${directorN} ${pluralResults} found with average rating ${round(directorAve) / 2}`);
+            searchResutltsP.text(`${directorN} ${pluralResults} found with average rating ${directorAve.toFixed(2) / 2}`);
         } else {
             searchResutltsP.text("");
         };
@@ -560,10 +851,16 @@ async function cards() {
         if (directorInput.property("value").length >= 1) {
             buttons.attr("class", "buttons");
             decadeFilter.property("value", "all");
+            genreFilter.property("value", "all-genres")
             actorInput.property("value", "");
         };
 
         $("#decade-filter").change(function() {
+            $("#director-input").val("");
+            $("#search-results").text("");
+        });
+
+        $("#genre-filter").change(function() {
             $("#director-input").val("");
             $("#search-results").text("");
         });
@@ -736,13 +1033,12 @@ async function cards() {
         const actorN = selectedActor.length;
         const actorAve = d3.mean(selectedActor, d => d.rating);
         const pluralResults = actorN != 1 ? "films" : "film";
-        const searchResutltsP = d3.select("#search-results");
         const filteredActors = d3.map(selectedActor, d => d.actors).keys();
 
         if (actorInput.property("value").length == 1) {
-            searchResutltsP.text(`${actorN} ${pluralResults} found with average rating ${round(actorAve) / 2}`);
+            searchResutltsP.text(`${actorN} ${pluralResults} found with average rating ${actorAve.toFixed(2) / 2}`);
         } else if (actorInput.property("value").length > 1) {
-            searchResutltsP.text(`${actorN} ${pluralResults} found with average rating ${round(actorAve) / 2}`);
+            searchResutltsP.text(`${actorN} ${pluralResults} found with average rating ${actorAve.toFixed(2) / 2}`);
         } else {
             searchResutltsP.text("");
         };
@@ -750,10 +1046,16 @@ async function cards() {
         if (actorInput.property("value").length >= 1) {
             buttons.attr("class", "buttons");
             decadeFilter.property("value", "all");
+            genreFilter.property("value", "all-genres")
             directorInput.property("value", "");
         };
 
         $("#decade-filter").change(function() {
+            $("#actor-input").val("");
+            $("#search-results").text("");
+        });
+
+        $("#genre-filter").change(function() {
             $("#actor-input").val("");
             $("#search-results").text("");
         });
