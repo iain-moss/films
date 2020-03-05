@@ -1,6 +1,12 @@
 const round = d3.format(".1f");
 const roundTwoDec = d3.format(".2f");
 
+const stars = ["","&#189;","&#9733;","&#9733;&#189;","&#9733;&#9733;","&#9733;&#9733;&#189;","&#9733;&#9733;&#9733;","&#9733;&#9733;&#9733;&#189;","&#9733;&#9733;&#9733;&#9733;","&#9733;&#9733;&#9733;&#9733;&#189;","&#9733;&#9733;&#9733;&#9733;&#9733;"];
+
+function convertToStars(rating) {
+    return stars[rating];
+};
+
 // Tabs
 $(document).ready(function() {
     $(".tab-button:not(:first)").addClass("inactive");
@@ -28,12 +34,12 @@ $(document).ready(function() {
 // });
 
 async function cards() {
-    let data = await d3.csv("./data/all_letterboxd.csv", d3.autoType);
+    let data = await d3.csv("../data/all_letterboxd.csv", d3.autoType);
     data.sort((a, b) => d3.descending(a.date_rated, b.date_rated));
 
-    let genreList = await d3.csv("./data/genre_list.csv");
+    let genreList = await d3.csv("../data/genre_list.csv");
 
-    const buttons = d3.selectAll("div.dropdown-container  button");
+    const buttons = d3.selectAll("div.dropdown-container button");
 
     const minScore = d3.min(data, d => d.rating);
     const filmCount = data.length;
@@ -59,9 +65,8 @@ async function cards() {
 
     decadeFilter.append("option")
         .data(decades.map(d => d.key))
-        .attr("value", "all-films")
+        .attr("value", "all-decades")
         .classed("default", true)
-        .attr("value", "all")
         .text(`All decades (${formatComma(filmCount)} films)`)
         .enter();
 
@@ -95,12 +100,6 @@ async function cards() {
         } else {
             return title;
         }
-    };
-
-    const stars = ["","&#189;","&#9733;","&#9733;&#189;","&#9733;&#9733;","&#9733;&#9733;&#189;","&#9733;&#9733;&#9733;","&#9733;&#9733;&#9733;&#189;","&#9733;&#9733;&#9733;&#9733;","&#9733;&#9733;&#9733;&#9733;&#189;","&#9733;&#9733;&#9733;&#9733;&#9733;"];
-
-    function convertToStars(rating) {
-        return stars[rating];
     };
 
     // function truncateSummary(summary) {
@@ -288,7 +287,7 @@ async function cards() {
     function filterFilms(selectDecade) {
         let selectedDecade = data.filter(d => d.decade == selectDecade);
 
-        if (selectDecade == "all-films") {
+        if (selectDecade == "all-decades") {
             d3.selectAll(".card-panel")
                 .exit()
                 .remove();
@@ -553,7 +552,7 @@ async function cards() {
     });
 
     $("#genre-filter").change(function() {
-        $("#decade-filter").val("all");
+        $("#decade-filter").val("all-decades");
     });
 
     function filterGenre(selectGenre) {
@@ -1269,7 +1268,7 @@ async function cards() {
 async function releaseYear() {
     const parseDate = d3.timeParse("%Y");
     const yearFormat = d3.timeFormat("%Y");
-    const data = await d3.csv("./data/release_year.csv", d => ({
+    const data = await d3.csv("../data/release_year.csv", d => ({
         year: parseDate(d.year),
         count: +d.title
     }));
@@ -1373,8 +1372,8 @@ async function releaseYear() {
 }; releaseYear();
 
 async function dirBar() {
-    const data = await d3.csv("./data/dir_bar.csv", d3.autoType);
-    let allData = await d3.csv("./data/test.csv", d3.autoType);
+    const data = await d3.csv("../data/dir_bar.csv", d3.autoType);
+    let allData = await d3.csv("../data/test.csv", d3.autoType);
     allData = allData.filter(d => d.title == "All");
     
     const allDataNest = d3.nest()
@@ -1382,8 +1381,6 @@ async function dirBar() {
         .entries(allData)
         .sort((a, b) => d3.descending(a.values.len, b.values.len))
         .slice(0, 20);
-
-    console.log(allDataNest);
     
     const nest = d3.nest()
         .key(d => d.director)
@@ -1437,15 +1434,19 @@ async function dirBar() {
         .selectAll("rect")
         .data(nest)
         .join("rect")
+        .attr("class", "director-bar")
+        .attr("id", d => d.key)
         .attr("x", d => x(0))
         .attr("y", d => y(d.key))
         .attr("width", d => x(d.value.count) - x(0))
         .attr("height", y.bandwidth())
         .on("mouseenter", function() {
             tooltip.style("opacity", 1);
+            const thisDirector = d3.select(this).datum().key;
+            getTitles(thisDirector);
         })
         .on("mousemove", function(d) {
-            tooltip.style("left", `${d3.event.pageX - 100}px`);
+            tooltip.style("left", `${d3.event.pageX + 20}px`);
             tooltip.style("top", `${d3.event.pageY - 60}px`);
             d3.select("#director-name")
                 .text(d.key)
@@ -1455,6 +1456,33 @@ async function dirBar() {
         .on("mouseleave", function() {
             tooltip.style("opacity", 0);
         });
+
+    // d3.selectAll(".director-bar")
+    //     .on("mouseenter", function() {
+    //         const thisDirector = d3.select(this).datum().key;
+    //         getTitles(thisDirector);
+    //     });
+
+    function getTitles(thisDirector) {
+        let thisDirectorName = data.filter(d => d.director == thisDirector);
+        let titles = [];
+        const colourScale = d3.scaleLinear()
+            .range(["#ACD9E5", "#E82632"])
+            .domain([5, 10]);
+
+        thisDirectorName = thisDirectorName.sort((a, b) => d3.descending(a.rating, b.rating));
+            
+        thisDirectorName.forEach(d => titles.push(`${d.title} <span style="color: ${colourScale(d.rating)}">${convertToStars(d.rating)}</span>`));
+        // thisDirectorName.forEach(d => ratings.push(d.rating));
+
+        // let directorArray = titles.map((e, i) => `${e} ${convertToStars(ratings[i])}`);
+        // console.log(directorArray);
+
+        // titles = titles.slice(0, -1).join(", ");
+        
+        d3.select("#titles")
+            .html(titles.slice(0, -1).join("<br>"));
+    };
 
     svg.append("g")
         .selectAll("text")
@@ -1506,7 +1534,7 @@ async function dirBar() {
 
 async function watchDate() {
     const parseDate = d3.timeParse("%Y-%m-%d");
-    const data = await d3.csv("./data/watch_date.csv", d => ({
+    const data = await d3.csv("../data/watch_date.csv", d => ({
         date: parseDate(d.date),
         count: +d.count
     }));
@@ -1709,7 +1737,7 @@ async function watchDate() {
 }; watchDate();
 
 async function decadeScatter() {
-    const data = await d3.csv("./data/decade_breakdown.csv", d => ({
+    const data = await d3.csv("../data/decade_breakdown.csv", d => ({
         decade: d.decade,
         avg_rating: +d.avg_rating,
         count: +d.count
