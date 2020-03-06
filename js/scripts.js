@@ -34,10 +34,10 @@ $(document).ready(function() {
 // });
 
 async function cards() {
-    let data = await d3.csv("../data/all_letterboxd.csv", d3.autoType);
+    let data = await d3.csv("./data/all_letterboxd.csv", d3.autoType);
     data.sort((a, b) => d3.descending(a.date_rated, b.date_rated));
 
-    let genreList = await d3.csv("../data/genre_list.csv");
+    let genreList = await d3.csv("./data/genre_list.csv");
 
     const buttons = d3.selectAll("div.dropdown-container button");
 
@@ -1268,7 +1268,7 @@ async function cards() {
 async function releaseYear() {
     const parseDate = d3.timeParse("%Y");
     const yearFormat = d3.timeFormat("%Y");
-    const data = await d3.csv("../data/release_year.csv", d => ({
+    const data = await d3.csv("./data/release_year.csv", d => ({
         year: parseDate(d.year),
         count: +d.title
     }));
@@ -1372,8 +1372,8 @@ async function releaseYear() {
 }; releaseYear();
 
 async function dirBar() {
-    const data = await d3.csv("../data/dir_bar.csv", d3.autoType);
-    let allData = await d3.csv("../data/test.csv", d3.autoType);
+    const data = await d3.csv("./data/dir_bar.csv", d3.autoType);
+    let allData = await d3.csv("./data/test.csv", d3.autoType);
     allData = allData.filter(d => d.title == "All");
     
     const allDataNest = d3.nest()
@@ -1534,7 +1534,7 @@ async function dirBar() {
 
 async function watchDate() {
     const parseDate = d3.timeParse("%Y-%m-%d");
-    const data = await d3.csv("../data/watch_date.csv", d => ({
+    const data = await d3.csv("./data/watch_date.csv", d => ({
         date: parseDate(d.date),
         count: +d.count
     }));
@@ -1737,7 +1737,7 @@ async function watchDate() {
 }; watchDate();
 
 async function decadeScatter() {
-    const data = await d3.csv("../data/decade_breakdown.csv", d => ({
+    const data = await d3.csv("./data/decade_breakdown.csv", d => ({
         decade: d.decade,
         avg_rating: +d.avg_rating,
         count: +d.count
