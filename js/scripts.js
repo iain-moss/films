@@ -1,5 +1,6 @@
 const round = d3.format(".1f");
 const roundTwoDec = d3.format(".2f");
+const formatComma = d3.format(",");
 
 const stars = ["","&#189;","&#9733;","&#9733;&#189;","&#9733;&#9733;","&#9733;&#9733;&#189;","&#9733;&#9733;&#9733;","&#9733;&#9733;&#9733;&#189;","&#9733;&#9733;&#9733;&#9733;","&#9733;&#9733;&#9733;&#9733;&#189;","&#9733;&#9733;&#9733;&#9733;&#9733;"];
 
@@ -7,23 +8,33 @@ function convertToStars(rating) {
     return stars[rating];
 };
 
+const sorters = document.querySelectorAll("#side-nav button");
+sorters.forEach(btn => btn.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    });
+}));
+
+
 // Tabs
-$(document).ready(function() {
-    $(".tab-button:not(:first)").addClass("inactive");
-    $(".tab-content").hide();
-    $(".tab-content:first").show();
+// $(document).ready(function() {
+//     $(".tab-button:not(:first)").addClass("inactive");
+//     $(".tab-content").hide();
+//     $(".tab-content:first").show();
 
-    $(".tab-button").on("click", function() {
-        let t = $(this).attr("data-tab")
-        if ($(this).hasClass("inactive")) {
-            $(".tab-button").addClass("inactive")
-            $(this).removeClass("inactive");
+//     $(".tab-button").on("click", function() {
+//         let t = $(this).attr("data-tab")
+//         if ($(this).hasClass("inactive")) {
+//             $(".tab-button").addClass("inactive")
+//             $(this).removeClass("inactive");
 
-            $(".tab-content").hide();
-            $("#" + t).show();
-        };
-    })
-});
+//             $(".tab-content").hide();
+//             $("#" + t).show();
+//         };
+//     })
+// });
 
 // Clear input
 // $(document).click(function(e) {
@@ -34,17 +45,17 @@ $(document).ready(function() {
 // });
 
 async function cards() {
-    let data = await d3.csv("./data/all_letterboxd.csv", d3.autoType);
+    let data = await d3.csv("../data/all_letterboxd.csv", d3.autoType);
     data.sort((a, b) => d3.descending(a.date_rated, b.date_rated));
 
-    let genreList = await d3.csv("./data/genre_list.csv");
+    let genreList = await d3.csv("../data/genre_list.csv");
 
     const buttons = d3.selectAll("div.dropdown-container button");
 
     const minScore = d3.min(data, d => d.rating);
     const filmCount = data.length;
     const totalDuration = d3.sum(data, d => d.duration);
-    const aveRating = d3.mean(data, d => d.rating);
+    let aveRating = d3.mean(data, d => d.rating);
 
     const formatCommaOneDec = d3.format(",.1f");
     const formatTwoDec = d3.format(".2f");
@@ -167,6 +178,9 @@ async function cards() {
                 tooltip.style("top", `${d3.event.pageY - 172.5}px`);
             });
 
+        let cardsN = d3.selectAll(".card-panel").size();
+        searchResutltsP.text(`${formatComma(cardsN)} results found with average rating ${round(aveRating) / 2}`);
+
         let sortAllFilmsOrder = false;
 
         d3.select("#sort-date")
@@ -278,14 +292,29 @@ async function cards() {
     decadeFilter.on("change", function() {
         const selectDecade = d3.select(this).property("value");
         filterFilms(selectDecade);
+        document.getElementById("genre-filter").value = "all-genres";
+        document.getElementById("director-input").value = "";
+        document.getElementById("actor-input").value = "";
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
     });
 
-    $("#decade-filter").change(function() {
-        $("#genre-filter").val("all-genres");
-    });
+    // $("#decade-filter").change(function() {
+    //     $("#genre-filter").val("all-genres");
+    // });
+
+    // decadeFilter.on("change", function() {
+    //     document.getElementById("genre-filter").value = "all-genres";
+    // });
 
     function filterFilms(selectDecade) {
         let selectedDecade = data.filter(d => d.decade == selectDecade);
+        const decadeAve = d3.mean(selectedDecade, d => d.rating);
+
+        searchResutltsP.text(`${selectedDecade.length} results found with average rating ${round(decadeAve) / 2}`)
 
         if (selectDecade == "all-decades") {
             d3.selectAll(".card-panel")
@@ -345,6 +374,8 @@ async function cards() {
                     tooltip.style("left", `${d3.event.pageX - 250}px`);
                     tooltip.style("top", `${d3.event.pageY - 172.5}px`);
                 });
+
+            searchResutltsP.text(`${formatComma(cardsN)} results found with average rating ${round(aveRating) / 2}`)
 
             d3.select("#sort-date")
                 .on("click", function() {
@@ -549,14 +580,21 @@ async function cards() {
     genreFilter.on("change", function() {
         const selectGenre = d3.select(this).property("value");
         filterGenre(selectGenre);
+        document.getElementById("decade-filter").value = "all-decades";
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
     });
 
-    $("#genre-filter").change(function() {
-        $("#decade-filter").val("all-decades");
-    });
+    // $("#genre-filter").change(function() {
+    //     $("#decade-filter").val("all-decades");
+    // });
 
     function filterGenre(selectGenre) {
         let selectedGenre = data.filter(d => d.genre.includes(selectGenre));
+        const genreAve = d3.mean(selectedGenre, d => d.rating);
         
         if (selectGenre == "all-genres") {
             d3.selectAll(".card-panel")
@@ -616,6 +654,8 @@ async function cards() {
                     tooltip.style("left", `${d3.event.pageX - 250}px`);
                     tooltip.style("top", `${d3.event.pageY - 172.5}px`);
                 });
+
+            searchResutltsP.text(`${formatComma(cardsN)} results found with average rating ${round(aveRating) / 2}`)
 
             d3.select("#sort-date")
                 .on("click", function() {
@@ -711,6 +751,8 @@ async function cards() {
                 tooltip.style("left", `${d3.event.pageX - 250}px`);
                 tooltip.style("top", `${d3.event.pageY - 172.5}px`);
             });
+
+        searchResutltsP.text(`${selectedGenre.length} results found with average rating ${round(genreAve) / 2}`)
 
         let sortFilmsOrder = false;
 
@@ -822,13 +864,11 @@ async function cards() {
     directorInput.on("input", function() {
         const selectDirector = d3.select(this).property("value");
         directorFilter(selectDirector);
-    });
-
-    const actorInput = d3.select("#actor-input");
-    
-    actorInput.on("input", function() {
-        const selectActor = d3.select(this).property("value");
-        actorFilter(selectActor);
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
     });
 
     function directorFilter(selectDirector) {
@@ -840,29 +880,33 @@ async function cards() {
         const filteredDirectors = d3.map(selectedDirector, d => d.director).keys();
 
         if (directorInput.property("value").length == 1) {
-            searchResutltsP.text(`${directorN} ${pluralResults} found with average rating ${directorAve.toFixed(2) / 2}`);
+            searchResutltsP.text(`${directorN} ${pluralResults} found with average rating ${round(directorAve) / 2}`);
         } else if (directorInput.property("value").length > 1) {
-            searchResutltsP.text(`${directorN} ${pluralResults} found with average rating ${directorAve.toFixed(2) / 2}`);
+            searchResutltsP.text(`${directorN} ${pluralResults} found with average rating ${round(directorAve) / 2}`);
         } else {
-            searchResutltsP.text("");
+            searchResutltsP.text(`${formatComma(cardsN)} results found with average rating ${round(aveRating) / 2}`);
+        };
+
+        if (selectedDirector.length == 0) {
+            searchResutltsP.text("No results found");
         };
 
         if (directorInput.property("value").length >= 1) {
             buttons.attr("class", "buttons");
-            decadeFilter.property("value", "all");
+            decadeFilter.property("value", "all-decades");
             genreFilter.property("value", "all-genres")
             actorInput.property("value", "");
         };
 
-        $("#decade-filter").change(function() {
-            $("#director-input").val("");
-            $("#search-results").text("");
-        });
+        // $("#decade-filter").change(function() {
+        //     $("#director-input").val("");
+        //     $("#search-results").text("");
+        // });
 
-        $("#genre-filter").change(function() {
-            $("#director-input").val("");
-            $("#search-results").text("");
-        });
+        // $("#genre-filter").change(function() {
+        //     $("#director-input").val("");
+        //     $("#search-results").text("");
+        // });
 
         d3.selectAll(".card-panel")
             .exit()
@@ -1026,6 +1070,18 @@ async function cards() {
             };
     };
 
+    const actorInput = d3.select("#actor-input");
+    
+    actorInput.on("input", function() {
+        const selectActor = d3.select(this).property("value");
+        actorFilter(selectActor);
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
+    });
+
     function actorFilter(selectActor) {
         let selectedActor = data.filter(d => d.actors.toString().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(selectActor.toString().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")));
 
@@ -1035,29 +1091,41 @@ async function cards() {
         const filteredActors = d3.map(selectedActor, d => d.actors).keys();
 
         if (actorInput.property("value").length == 1) {
-            searchResutltsP.text(`${actorN} ${pluralResults} found with average rating ${actorAve.toFixed(2) / 2}`);
+            searchResutltsP.text(`${actorN} ${pluralResults} found with average rating ${round(actorAve) / 2}`);
         } else if (actorInput.property("value").length > 1) {
-            searchResutltsP.text(`${actorN} ${pluralResults} found with average rating ${actorAve.toFixed(2) / 2}`);
+            searchResutltsP.text(`${actorN} ${pluralResults} found with average rating ${round(actorAve) / 2}`);
         } else {
-            searchResutltsP.text("");
+            searchResutltsP.text(`${formatComma(cardsN)} results found with average rating ${round(aveRating) / 2}`);
+        };
+
+        if (selectedActor.length == 0) {
+            searchResutltsP.text("No results found");
         };
 
         if (actorInput.property("value").length >= 1) {
             buttons.attr("class", "buttons");
-            decadeFilter.property("value", "all");
+            decadeFilter.property("value", "all-decades");
             genreFilter.property("value", "all-genres")
             directorInput.property("value", "");
         };
 
-        $("#decade-filter").change(function() {
-            $("#actor-input").val("");
-            $("#search-results").text("");
-        });
+        // $("#decade-filter").change(function() {
+        //     $("#actor-input").val("");
+        //     $("#search-results").text("");
+        // });
 
-        $("#genre-filter").change(function() {
-            $("#actor-input").val("");
-            $("#search-results").text("");
-        });
+        // decadeFilter.on("change", function() {
+        //     document.getElementById("actor-input").value = "";
+        // });
+
+        // genreFilter.on("change", function() {
+        //     document.getElementById("actor-input").value = "";
+        // });
+
+        // $("#genre-filter").change(function() {
+        //     $("#actor-input").val("");
+        //     $("#search-results").text("");
+        // });
 
         d3.selectAll(".card-panel")
             .exit()
@@ -1232,7 +1300,7 @@ async function cards() {
                 .append("text")
                 .classed("year", true)
                 .style("display", "block")
-                .text(`films seen`)
+                .text(`films rated`)
         });
 
     d3.select("#duration")
@@ -1268,7 +1336,7 @@ async function cards() {
 async function releaseYear() {
     const parseDate = d3.timeParse("%Y");
     const yearFormat = d3.timeFormat("%Y");
-    const data = await d3.csv("./data/release_year.csv", d => ({
+    const data = await d3.csv("../data/release_year.csv", d => ({
         year: parseDate(d.year),
         count: +d.title
     }));
@@ -1372,8 +1440,8 @@ async function releaseYear() {
 }; releaseYear();
 
 async function dirBar() {
-    const data = await d3.csv("./data/dir_bar.csv", d3.autoType);
-    let allData = await d3.csv("./data/test.csv", d3.autoType);
+    const data = await d3.csv("../data/dir_bar.csv", d3.autoType);
+    let allData = await d3.csv("../data/test.csv", d3.autoType);
     allData = allData.filter(d => d.title == "All");
     
     const allDataNest = d3.nest()
@@ -1473,12 +1541,6 @@ async function dirBar() {
         thisDirectorName = thisDirectorName.sort((a, b) => d3.descending(a.rating, b.rating));
             
         thisDirectorName.forEach(d => titles.push(`${d.title} <span style="color: ${colourScale(d.rating)}">${convertToStars(d.rating)}</span>`));
-        // thisDirectorName.forEach(d => ratings.push(d.rating));
-
-        // let directorArray = titles.map((e, i) => `${e} ${convertToStars(ratings[i])}`);
-        // console.log(directorArray);
-
-        // titles = titles.slice(0, -1).join(", ");
         
         d3.select("#titles")
             .html(titles.slice(0, -1).join("<br>"));
@@ -1534,7 +1596,7 @@ async function dirBar() {
 
 async function watchDate() {
     const parseDate = d3.timeParse("%Y-%m-%d");
-    const data = await d3.csv("./data/watch_date.csv", d => ({
+    const data = await d3.csv("../data/watch_date.csv", d => ({
         date: parseDate(d.date),
         count: +d.count
     }));
@@ -1737,7 +1799,7 @@ async function watchDate() {
 }; watchDate();
 
 async function decadeScatter() {
-    const data = await d3.csv("./data/decade_breakdown.csv", d => ({
+    const data = await d3.csv("../data/decade_breakdown.csv", d => ({
         decade: d.decade,
         avg_rating: +d.avg_rating,
         count: +d.count

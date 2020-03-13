@@ -11,55 +11,61 @@
         <!-- <title>Film Analysis</title> -->
     </head>
     <body>
-        <div class="wrapper">
+        <!-- <div class="wrapper">
             <div style="display: flex">
                 <button class="tab-button" data-tab="tab-1">Film Grid</button>
                 <button class="tab-button" data-tab="tab-2">Analysis</button>
-            </div>
-            <div id="tab-1" class="tab-content">
+            </div> -->
+        <div class="wrapper">
+            <nav id="side-nav"> 
                 
-                <div class="dropdown-container">
-                    <label for="decade-filter">Filter by decade: </label>
-                    <select id="decade-filter">
-                        <!-- <option>All decades</option> -->
-                    </select>
+                <a class="nav-link" href="analysis.html">View analysis page</a>
+
+                <div class="control-wrapper">
+                    <div class="dropdown-container">
+                        <label for="decade-filter">Filter by decade: </label>
+                        <select id="decade-filter">
+                            <!-- <option>All decades</option> -->
+                        </select>
+                    </div>
+
+                    <div class="dropdown-container">
+                        <label for="genre-filter">Filter by genre: </label>
+                        <select id="genre-filter">
+                            <!-- <option>All decades</option> -->
+                        </select>
+                    </div>
+
+                    <div class="dropdown-container">
+                        <label for="order-sort">Sort films by: </label>
+                        <button id="sort-date" value="date_rated">
+                            Rating Date
+                        </button>
+                        <button id="sort-rating" value="rating">Rating</button>
+                        <button id="sort-year" value="year">Release Year</button>
+                    </div>
+
+                    <div class="dropdown-container">
+                        <label for="director-input">Search directors: </label>
+                        <input type="text" id="director-input" placeholder="Enter name">
+                    </div>
+
+                    <div class="dropdown-container">
+                        <label for="actor-input">Search actors: </label>
+                        <input type="text" id="actor-input" placeholder="Enter name">
+                    </div>
+                        
                 </div>
+            </nav>
 
-                <div class="dropdown-container">
-                    <label for="genre-filter">Filter by genre: </label>
-                    <select id="genre-filter">
-                        <!-- <option>All decades</option> -->
-                    </select>
-                </div>
+            <div class="card-container">
+                <div style="grid-column: 1 / -1;"><h1 style="margin-top: 20px; text-align: center;">Click film cards for more information</h1>
 
-                <div class="dropdown-container">
-                    <label for="order-sort">Sort films by: </label>
-                    <button id="sort-date" value="date_rated">
-                        Rating Date
-                    </button>
-                    <button id="sort-rating" value="rating">Rating</button>
-                    <button id="sort-year" value="year">Release Year</button>
-                </div>
-
-                <div class="dropdown-container">
-                    <label for="director-input">Search directors: </label>
-                    <input type="text" id="director-input" placeholder="Enter name">
-                </div>
-
-                <div class="dropdown-container">
-                    <label for="actor-input">Search actors: </label>
-                    <input type="text" id="actor-input" placeholder="Enter name">
-                </div>
-
-                <h1 style="margin-top: 20px; text-align: center;">Click film cards for more information</h1>
-
-                <p style="text-align: center" id="search-results"></p>
-
-                <div class="card-container">
-                    <div id="tooltip" class="tooltip"></div>
-                </div>
+                    <p style="text-align: center" id="search-results"></p></div>
+                <div id="tooltip" class="tooltip"></div>
             </div>
-            <div id="tab-2" class="tab-content">
+        </div>
+            <!-- <div id="tab-2" class="tab-content">
                 
                 <div class="bans">
                     <div id="film-count"></div>
@@ -98,7 +104,7 @@
                 <div id="decade-scatter" class="chart-container">
                 </div>
 
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
     </body>
 </html>
