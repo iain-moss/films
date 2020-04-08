@@ -29,6 +29,12 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Public Sans";
+    src: url("Public-Sans-Roman-VF.ttf") format("truetype-variations");
+    font-weight: 1 999;
+}
+
 /* @font-face {
     font-family: Univers;
     src: url("https://www.kesterblack.com/assets/fonts/36B68B_0_0.woff2") format("woff2");
@@ -65,6 +71,10 @@ body {
     width: 70%;
 }
 
+ul {
+    all: unset;
+}
+
 #side-nav {
     position: fixed;
     height: 100vh;
@@ -88,9 +98,8 @@ body {
 .card-container {
     margin: 20px 50px 20px calc(var(--side-nav-width) + 50px);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    column-gap: 5px;
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px 3px;
     width: 100%;
     /* align-items: stretch;
     justify-content: space-between; */
@@ -99,7 +108,7 @@ body {
 .card-panel {
     display: flex;
     flex-direction: column;
-    width: 180px;
+    /* width: 180px; */
     /* background-color: white; */
     /* min-width: var(--panel-width);
     width: 100%; */
@@ -113,16 +122,16 @@ body {
     cursor: pointer;
 }
 
-.card-panel:hover {
-    /* box-shadow: 0 0 20px 5px rgba(179, 179, 179, 0.4); */
-    /* transform: translateX(5px);
-    transform: translateY(-5px); */
+/* .card-panel:hover {
+    box-shadow: 0 0 20px 5px rgba(179, 179, 179, 0.4);
+    transform: translateX(5px);
+    transform: translateY(-5px); 
     transform: translate(-5px, -5px);
-}
+} */
 
 .poster {
     /* height: var(--panel-height); */
-    height: 200px;
+    width: 100%;
 }
 
 .film-details {
@@ -148,7 +157,7 @@ body {
 }
 
 h1 {
-    font-family: /*Univers, */GT America, sofia-pro, neue-haas-unica, sans-serif;
+    font-family: /*Univers, */Public Sans, GT America, sofia-pro, neue-haas-unica, sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 12px;
@@ -157,7 +166,7 @@ h1 {
 }
 
 h2 {
-    font-family: /*Univers, */GT America, sofia-pro, neue-haas-unica, sans-serif;
+    font-family: /*Univers, */Public Sans, GT America, sofia-pro, neue-haas-unica, sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 12px;
@@ -179,7 +188,7 @@ label,
 .legend,
 input,
 a {
-    font-family: /*nzz-sans-serif, Univers, */GT America, sofia-pro, neue-haas-unica, sans-serif;
+    font-family: /*nzz-sans-serif, Univers, */Public Sans, GT America, sofia-pro, neue-haas-unica, sans-serif;
     font-weight: 400;
     font-style: normal;
     color: var(--main-text-color);
@@ -204,7 +213,7 @@ p {
 
 .year,
 .axis text {
-    font-family: nzz-sans-serif, sofia-pro, neue-haas-unica, sans-serif;
+    font-family: Public Sans, nzz-sans-serif, sofia-pro, neue-haas-unica, sans-serif;
     font-weight: 300;
     font-style: normal;
     color: var(--main-text-color);
@@ -337,10 +346,11 @@ button {
     pointer-events: none;
     display: flex;
     align-items: flex-start;
-    height: var(--tooltip-height);
-    width: 500px;
+    /* height: var(--tooltip-height); */
+    width: 300px;
     border-radius: 5px;
     overflow: hidden;
+    flex-direction: column;
 }
 
 .tooltip:hover {
@@ -348,17 +358,19 @@ button {
 }
 
 .tooltip-film-details {
-    height: 345px;
+    /* height: 345px; */
     padding: 10px 5px;
 }
 
 .tooltip-poster {
     display: block;
     /* max-width: 100%; */
-    height: var(--tooltip-height);
+    /* height: var(--tooltip-height); */
     top: 0;
     left: 0;
     bottom: 0;
+    width: 100%;
+    background-size: cover;
 }
 
 .tooltip-summary {

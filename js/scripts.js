@@ -124,7 +124,7 @@ async function cards() {
     d3.select(".card-container")
         .selectAll(".card-panel")
         .data(data)
-        .join("div")
+        .join("li")
         .classed("card-panel", true)
         .each(function(d) {
             d3.select(this)
@@ -144,7 +144,7 @@ async function cards() {
                 tooltip.style("opacity", 1);
                 tooltip.style("left", `${d3.event.pageX - 250}px`);
                 tooltip.style("top", `${d3.event.pageY - 172.5}px`);
-                tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                tooltip.html(`<img src="${d.backdrop ? d.backdrop : ""}" class="tooltip-poster">
                             <div class="tooltip-film-details">
                                 <h1>${d.title} (${d.director})</h1>
                                 <p class="year">${d.genre}</p>
@@ -250,7 +250,7 @@ async function cards() {
                 })
                 .on("click", function(d) {
                     tooltip.style("opacity", 1);
-                    tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                    tooltip.html(`<img src="${d.backdrop ? d.backdrop : ""}" class="tooltip-poster">
                                 <div class="tooltip-film-details">
                                     <h1>${d.title} (${d.director})</h1>
                                     <p class="year">${d.genre}</p>
@@ -342,7 +342,7 @@ async function cards() {
                 })
                 .on("click", function(d) {
                     tooltip.style("opacity", 1);
-                    tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                    tooltip.html(`<img src="${d.backdrop ? d.backdrop : ""}" class="tooltip-poster">
                                 <div class="tooltip-film-details">
                                     <h1>${d.title} (${d.director})</h1>
                                     <p class="year">${d.genre}</p>
@@ -439,7 +439,7 @@ async function cards() {
             })
             .on("click", function(d) {
                 tooltip.style("opacity", 1);
-                tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                tooltip.html(`<img src="${d.backdrop ? d.backdrop : ""}" class="tooltip-poster">
                             <div class="tooltip-film-details">
                                 <h1>${d.title} (${d.director})</h1>
                                 <p class="year">${d.genre}</p>
@@ -541,7 +541,7 @@ async function cards() {
                 })
                 .on("click", function(d) {
                     tooltip.style("opacity", 1);
-                    tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                    tooltip.html(`<img src="${d.backdrop ? d.backdrop : ""}" class="tooltip-poster">
                                 <div class="tooltip-film-details">
                                     <h1>${d.title} (${d.director})</h1>
                                     <p class="year">${d.genre}</p>
@@ -622,7 +622,7 @@ async function cards() {
                 })
                 .on("click", function(d) {
                     tooltip.style("opacity", 1);
-                    tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                    tooltip.html(`<img src="${d.backdrop ? d.backdrop : ""}" class="tooltip-poster">
                                 <div class="tooltip-film-details">
                                     <h1>${d.title} (${d.director})</h1>
                                     <p class="year">${d.genre}</p>
@@ -719,7 +719,7 @@ async function cards() {
             })
             .on("click", function(d) {
                 tooltip.style("opacity", 1);
-                tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                tooltip.html(`<img src="${d.backdrop ? d.backdrop : ""}" class="tooltip-poster">
                             <div class="tooltip-film-details">
                                 <h1>${d.title} (${d.director})</h1>
                                 <p class="year">${d.genre}</p>
@@ -823,7 +823,7 @@ async function cards() {
                 })
                 .on("click", function(d) {
                     tooltip.style("opacity", 1);
-                    tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                    tooltip.html(`<img src="${d.backdrop ? d.backdrop : ""}" class="tooltip-poster">
                                 <div class="tooltip-film-details">
                                     <h1>${d.title} (${d.director})</h1>
                                     <p class="year">${d.genre}</p>
@@ -933,7 +933,7 @@ async function cards() {
             })
             .on("click", function(d) {
                 tooltip.style("opacity", 1);
-                tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                tooltip.html(`<img src="${d.backdrop ? d.backdrop : ""}" class="tooltip-poster">
                             <div class="tooltip-film-details">
                                 <h1>${d.title} (${d.director})</h1>
                                 <p class="year">${d.genre}</p>
@@ -1035,7 +1035,7 @@ async function cards() {
                 })
                 .on("click", function(d) {
                     tooltip.style("opacity", 1);
-                    tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                    tooltip.html(`<img src="${d.backdrop ? d.backdrop : ""}" class="tooltip-poster">
                                 <div class="tooltip-film-details">
                                     <h1>${d.title} (${d.director})</h1>
                                     <p class="year">${d.genre}</p>
@@ -1152,7 +1152,7 @@ async function cards() {
             })
             .on("click", function(d) {
                 tooltip.style("opacity", 1);
-                tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                tooltip.html(`<img src="${d.backdrop ? d.backdrop : ""}" class="tooltip-poster">
                             <div class="tooltip-film-details">
                                 <h1>${d.title} (${d.director})</h1>
                                 <p class="year">${d.genre}</p>
@@ -1254,7 +1254,7 @@ async function cards() {
                 })
                 .on("click", function(d) {
                     tooltip.style("opacity", 1);
-                    tooltip.html(`<img src="${d.image}" class="tooltip-poster">
+                    tooltip.html(`<img src="${d.backdrop ? d.backdrop : ""}" class="tooltip-poster">
                                 <div class="tooltip-film-details">
                                     <h1>${d.title} (${d.director})</h1>
                                     <p class="year">${d.genre}</p>
@@ -1543,7 +1543,7 @@ async function dirBar() {
         thisDirectorName.forEach(d => titles.push(`${d.title} <span style="color: ${colourScale(d.rating)}">${convertToStars(d.rating)}</span>`));
         
         d3.select("#titles")
-            .html(titles.slice(0, -1).join("<br>"));
+            .html(titles.join("<br>"));
     };
 
     svg.append("g")

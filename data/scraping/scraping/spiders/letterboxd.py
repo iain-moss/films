@@ -39,5 +39,6 @@ class CareerhubSpider(scrapy.Spider):
             'genre': response.xpath('//a[contains(@class, "text-slug") and contains(@href, "/films/genre")]/text()').extract(),
             'actors': response.css('#tab-cast > div > p > a::text').extract(),
             'image': response.css('#js-poster-col img::attr(src)').extract_first(),
+            'backdrop': response.css("#backdrop::attr(data-backdrop)").extract_first(),
             'summary': response.css('div.truncate > p::text').extract_first()
         }
