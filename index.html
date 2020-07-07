@@ -17,11 +17,24 @@
                 <button class="tab-button" data-tab="tab-2">Analysis</button>
             </div> -->
         <div class="wrapper">
+
+            <div class="button-wrapper">
+                <button class="nav-link" disabled><img src="images/grid.svg"></button>
+                <button class="nav-link"><a href="analysis.html"><img src="images/bar-chart-2.svg"></a></button>
+            </div>
+            
             <nav id="side-nav"> 
-                
-                <a class="nav-link" href="analysis.html">View analysis page</a>
+                <!-- <div class="accordion">
+
+                <div class="accordion-header">Decades</div>
+                <div class="accordion-content">
+                    <ul id="test-decades"></ul>
+                    </div>
+
+                </div> -->
 
                 <div class="control-wrapper">
+
                     <div class="dropdown-container">
                         <label for="decade-filter">Filter by decade: </label>
                         <select id="decade-filter">
@@ -34,6 +47,12 @@
                         <select id="genre-filter">
                             <!-- <option>All decades</option> -->
                         </select>
+                    </div>
+
+                    <div class="dropdown-container">
+                        <label for="country-filter">Filter by country:</label>
+                        <input id="country-filter" type="text" list="country-list" placeholder="Enter country">
+                        <datalist id="country-list"></datalist>
                     </div>
 
                     <div class="dropdown-container">

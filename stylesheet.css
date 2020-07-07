@@ -56,8 +56,7 @@ body {
     --main-text-color: #242424;
     --main-red: #906c6c;
     --tooltip-height: 345px;
-    --side-nav-width: 164px;
-    background-color: var(--background-color);
+    --side-nav-width: 168px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
@@ -81,12 +80,40 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: linear-gradient(to right, #F5E3E4, #F2F4F5);
+    padding: 15px;
+    left: 0;
+    top: 0;
+    border-right: 1px solid var(--background-color);
 }
 
-.control-wrapper {
+.button-wrapper {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    z-index: 999;
+}
+
+/* .accordion-header {
+    text-transform: uppercase;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+#test-decades > li {
+    list-style-type: none;
+    margin: 7px 0;
+    cursor: pointer;
+} */
+
+/* .control-wrapper {
     padding: 145px 25px 145px 0px;
     border-right: 1px solid #ddd2d2;
-}
+} */
 
 .tab-content {
     background-color: #f9f7f7;
@@ -96,10 +123,10 @@ ul {
 }
 
 .card-container {
-    margin: 20px 50px 20px calc(var(--side-nav-width) + 50px);
+    margin: 20px 50px 20px calc(var(--side-nav-width) + 66px);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 10px 3px;
+    grid-template-columns: repeat(auto-fit, 120px);
+    gap: 20px 20px;
     width: 100%;
     /* align-items: stretch;
     justify-content: space-between; */
@@ -122,6 +149,11 @@ ul {
     cursor: pointer;
 }
 
+.card-panel:hover {
+    transform: scale(1.075);
+    z-index: 1;
+}
+
 /* .card-panel:hover {
     box-shadow: 0 0 20px 5px rgba(179, 179, 179, 0.4);
     transform: translateX(5px);
@@ -135,7 +167,7 @@ ul {
 }
 
 .film-details {
-    padding: 5px 0px;
+    margin: 10px 0px;
     width: -webkit-fill-available;
     width: 100%;
 }
@@ -150,8 +182,15 @@ ul {
     display: inline-block;
 }
 
+.film-details > h1,
+.film-details > p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .dropdown-container {
-    margin: 5px 0;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
 }
@@ -182,6 +221,7 @@ h2 {
 
 p,
 li, 
+.decade-header,
 select,
 button,
 label,
@@ -201,14 +241,6 @@ label {
 
 p {
     margin: 2px;
-}
-
-.nav-link {
-    font-size: 14px;
-    font-weight: 700;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .year,
