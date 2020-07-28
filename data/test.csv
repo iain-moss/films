@@ -149,8 +149,7 @@ Anna Boden,All,1.0,6.0
 Anna Boden,Half Nelson,1.0,6.0
 Anna Rose Holmer,All,1.0,7.0
 Anna Rose Holmer,The Fits,1.0,7.0
-Anthony Mann,All,2.0,7.0
-Anthony Mann,He Walked by Night,1.0,7.0
+Anthony Mann,All,1.0,7.0
 Anthony Mann,The Far Country,1.0,7.0
 Apichatpong Weerasethakul,All,4.0,7.5
 Apichatpong Weerasethakul,Cemetery of Splendor,1.0,7.0
@@ -306,6 +305,8 @@ Chris Petit,All,1.0,7.0
 Chris Petit,Radio On,1.0,7.0
 Chris Williams,All,1.0,7.0
 Chris Williams,Big Hero 6,1.0,7.0
+Christian Petzold,All,1.0,7.0
+Christian Petzold,Transit,1.0,7.0
 Christopher Guest,All,2.0,7.5
 Christopher Guest,Best in Show,1.0,7.0
 Christopher Guest,Waiting for Guffman,1.0,8.0
@@ -552,14 +553,15 @@ Fritz Lang,The Big Heat,1.0,8.0
 Fritz Lang,The Testament of Dr. Mabuse,1.0,7.0
 Fritz Lang,The Woman in the Window,1.0,7.0
 G.W. Pabst,All,1.0,8.0
-G.W. Pabst,Comradeship,1.0,8.0
+G.W. Pabst,Kameradschaft,1.0,8.0
 Gabriel Axel,All,1.0,8.0
 Gabriel Axel,Babette's Feast,1.0,8.0
 Gareth Evans,All,2.0,8.0
 Gareth Evans,The Raid,1.0,8.0
 Gareth Evans,The Raid 2,1.0,8.0
-Gaspar Noé,All,1.0,8.0
+Gaspar Noé,All,2.0,7.5
 Gaspar Noé,Climax,1.0,8.0
+Gaspar Noé,Enter the Void,1.0,7.0
 Gene Kelly,All,1.0,8.0
 Gene Kelly,Singin' in the Rain,1.0,8.0
 Geoffrey Wright,All,1.0,6.0
@@ -645,10 +647,11 @@ Herbert Ross,All,1.0,8.0
 Herbert Ross,"Play It Again, Sam",1.0,8.0
 Herk Harvey,All,1.0,6.0
 Herk Harvey,Carnival of Souls,1.0,6.0
-Hirokazu Kore-eda,All,3.0,7.666666666666667
+Hirokazu Kore-eda,All,4.0,7.75
 Hirokazu Kore-eda,Maborosi,1.0,8.0
 Hirokazu Kore-eda,Our Little Sister,1.0,7.0
 Hirokazu Kore-eda,Shoplifters,1.0,8.0
+Hirokazu Kore-eda,Still Walking,1.0,8.0
 Hiromasa Yonebayashi,All,2.0,6.5
 Hiromasa Yonebayashi,The Secret World of Arrietty,1.0,6.0
 Hiromasa Yonebayashi,When Marnie Was There,1.0,7.0
@@ -705,6 +708,8 @@ J.J. Abrams,All,1.0,5.0
 J.J. Abrams,Star Wars: The Force Awakens,1.0,5.0
 JR,All,1.0,7.0
 JR,Faces Places,1.0,7.0
+Jack Hill,All,1.0,7.0
+Jack Hill,Pit Stop,1.0,7.0
 Jackie Chan,All,2.0,7.0
 Jackie Chan,Police Story,1.0,7.0
 Jackie Chan,Police Story 2,1.0,7.0
@@ -718,7 +723,8 @@ Jacques Tati,PlayTime,1.0,7.0
 Jafar Panahi,All,1.0,7.0
 Jafar Panahi,Taxi,1.0,7.0
 James Cameron,Aliens,1.0,8.0
-James Cameron,All,2.0,7.5
+James Cameron,All,3.0,7.333333333333333
+James Cameron,Terminator 2: Judgment Day,1.0,7.0
 James Cameron,The Terminator,1.0,7.0
 James Foley,All,1.0,8.0
 James Foley,Glengarry Glen Ross,1.0,8.0
@@ -774,7 +780,7 @@ Jean-Pierre Melville,Army of Shadows,1.0,8.0
 Jean-Pierre Melville,Bob le Flambeur,1.0,7.0
 Jean-Pierre Melville,Le Cercle Rouge,1.0,8.0
 Jean-Pierre Melville,Le Doulos,1.0,7.0
-Jean-Pierre Melville,Un flic,1.0,7.0
+Jean-Pierre Melville,Un Flic,1.0,7.0
 Jemaine Clement,All,1.0,6.0
 Jemaine Clement,What We Do in the Shadows,1.0,6.0
 Jennifer Kent,All,1.0,8.0
@@ -791,9 +797,6 @@ Jerzy Kawalerowicz,All,1.0,8.0
 Jerzy Kawalerowicz,Mother Joan of the Angels,1.0,8.0
 Jerzy Skolimowski,All,1.0,7.0
 Jerzy Skolimowski,Deep End,1.0,7.0
-Jia Zhangke,24 City,1.0,7.0
-Jia Zhangke,A Touch of Sin,1.0,7.0
-Jia Zhangke,All,2.0,7.0
 Jim Abrahams,Airplane!,1.0,8.0
 Jim Abrahams,All,2.0,8.0
 Jim Abrahams,Top Secret!,1.0,8.0
@@ -1000,7 +1003,8 @@ Kleber Mendonça Filho,Aquarius,1.0,7.0
 Kleber Mendonça Filho,Bacurau,1.0,8.0
 Kogonada,All,1.0,7.0
 Kogonada,Columbus,1.0,7.0
-Kon Ichikawa,All,1.0,9.0
+Kon Ichikawa,All,2.0,8.0
+Kon Ichikawa,An Actor's Revenge,1.0,7.0
 Kon Ichikawa,The Burmese Harp,1.0,9.0
 Kornél Mundruczó,All,1.0,7.0
 Kornél Mundruczó,White God,1.0,7.0
@@ -1033,7 +1037,8 @@ Leo McCarey,Duck Soup,1.0,7.0
 Leo McCarey,Make Way for Tomorrow,1.0,7.0
 Leonard Kastle,All,1.0,7.0
 Leonard Kastle,The Honeymoon Killers,1.0,7.0
-Leos Carax,All,3.0,7.333333333333333
+Leos Carax,All,4.0,7.25
+Leos Carax,Boy Meets Girl,1.0,7.0
 Leos Carax,Holy Motors,1.0,8.0
 Leos Carax,Mauvais Sang,1.0,7.0
 Leos Carax,The Lovers on the Bridge,1.0,7.0
@@ -1284,16 +1289,20 @@ Paul Thomas Anderson,Phantom Thread,1.0,8.0
 Paul Thomas Anderson,Punch-Drunk Love,1.0,8.0
 Paul Thomas Anderson,The Master,1.0,8.0
 Paul Thomas Anderson,There Will Be Blood,1.0,8.0
-Paul Verhoeven,All,3.0,6.666666666666667
+Paul Verhoeven,All,6.0,7.0
+Paul Verhoeven,Black Book,1.0,7.0
 Paul Verhoeven,Elle,1.0,7.0
 Paul Verhoeven,RoboCop,1.0,7.0
 Paul Verhoeven,Showgirls,1.0,6.0
+Paul Verhoeven,Starship Troopers,1.0,8.0
+Paul Verhoeven,Total Recall,1.0,7.0
 Paweł Pawlikowski,All,2.0,8.0
 Paweł Pawlikowski,Cold War,1.0,8.0
 Paweł Pawlikowski,Ida,1.0,8.0
-Pedro Almodóvar,All,6.0,6.666666666666667
+Pedro Almodóvar,All,7.0,6.714285714285714
 Pedro Almodóvar,Broken Embraces,1.0,6.0
 Pedro Almodóvar,Julieta,1.0,7.0
+Pedro Almodóvar,Live Flesh,1.0,7.0
 Pedro Almodóvar,Matador,1.0,6.0
 Pedro Almodóvar,Pain and Glory,1.0,7.0
 Pedro Almodóvar,Talk to Her,1.0,8.0
@@ -1469,6 +1478,8 @@ Sam Taylor,Safety Last!,1.0,8.0
 Sam Taylor,The Freshman,1.0,7.0
 Sammo Hung,All,1.0,7.0
 Sammo Hung,Eastern Condors,1.0,7.0
+Samuel Fuller,All,1.0,8.0
+Samuel Fuller,Pickup on South Street,1.0,8.0
 Satoshi Kon,All,1.0,7.0
 Satoshi Kon,Paprika,1.0,7.0
 Satyajit Ray,All,1.0,8.0
@@ -1515,6 +1526,8 @@ Shinji Aoyama,Eureka,1.0,8.0
 Shinya Tsukamoto,All,2.0,7.0
 Shinya Tsukamoto,Tetsuo: The Iron Man,1.0,7.0
 Shinya Tsukamoto,Tokyo Fist,1.0,7.0
+Shunya Ito,All,1.0,8.0
+Shunya Ito,Female Prisoner #701: Scorpion,1.0,8.0
 Shōhei Imamura,All,2.0,7.0
 Shōhei Imamura,The Ballad of Narayama,1.0,7.0
 Shōhei Imamura,Vengeance Is Mine,1.0,7.0
@@ -1534,8 +1547,9 @@ Spike Jonze,Adaptation.,1.0,8.0
 Spike Jonze,All,3.0,8.333333333333334
 Spike Jonze,Being John Malkovich,1.0,9.0
 Spike Jonze,Her,1.0,8.0
-Spike Lee,All,1.0,8.0
+Spike Lee,All,2.0,7.5
 Spike Lee,Do the Right Thing,1.0,8.0
+Spike Lee,She's Gotta Have It,1.0,7.0
 Stanley Donen,All,1.0,8.0
 Stanley Donen,Singin' in the Rain,1.0,8.0
 Stanley Kubrick,2001: A Space Odyssey,1.0,10.0
@@ -1773,6 +1787,8 @@ Yorgos Lanthimos,The Killing of a Sacred Deer,1.0,8.0
 Yorgos Lanthimos,The Lobster,1.0,6.0
 Yoshiyuki Kuroda,All,1.0,7.0
 Yoshiyuki Kuroda,Lone Wolf and Cub: White Heaven in Hell,1.0,7.0
+Youssef Chahine,All,1.0,6.0
+Youssef Chahine,Cairo Station,1.0,6.0
 Yuen Woo-ping,All,1.0,8.0
 Yuen Woo-ping,Drunken Master,1.0,8.0
 Zhang Yimou,All,4.0,7.5
@@ -1780,6 +1796,9 @@ Zhang Yimou,Hero,1.0,7.0
 Zhang Yimou,Ju Dou,1.0,8.0
 Zhang Yimou,Raise the Red Lantern,1.0,8.0
 Zhang Yimou,Shadow,1.0,7.0
+Zhangke Jia,24 City,1.0,7.0
+Zhangke Jia,A Touch of Sin,1.0,7.0
+Zhangke Jia,All,2.0,7.0
 Ágnes Hranitzky,All,2.0,7.0
 Ágnes Hranitzky,The Turin Horse,1.0,7.0
 Ágnes Hranitzky,Werckmeister Harmonies,1.0,7.0
@@ -1787,3 +1806,5 @@ Zhang Yimou,Shadow,1.0,7.0
 Éric Rohmer,My Night at Maud's,1.0,8.0
 Éric Rohmer,Pauline at the Beach,1.0,8.0
 Éric Rohmer,The Green Ray,1.0,8.0
+徐克,All,1.0,7.0
+徐克,Once Upon a Time in China,1.0,7.0
