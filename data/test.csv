@@ -22,9 +22,10 @@ Agnès Varda,Cléo from 5 to 7,1.0,8.0
 Agnès Varda,Faces Places,1.0,7.0
 Agnès Varda,Le Bonheur,1.0,7.0
 Agnès Varda,Vagabond,1.0,7.0
-Aki Kaurismäki,All,4.0,7.75
+Aki Kaurismäki,All,5.0,7.6
 Aki Kaurismäki,Drifting Clouds,1.0,8.0
 Aki Kaurismäki,Le Havre,1.0,7.0
+Aki Kaurismäki,Lights in the Dusk,1.0,7.0
 Aki Kaurismäki,The Man Without a Past,1.0,8.0
 Aki Kaurismäki,The Match Factory Girl,1.0,8.0
 Akira Kurosawa,All,17.0,8.117647058823529
@@ -93,9 +94,10 @@ Alfonso Cuarón,Roma,1.0,8.0
 Alfonso Cuarón,Y Tu Mamá También,1.0,7.0
 Alfonso Gomez-Rejon,All,1.0,6.0
 Alfonso Gomez-Rejon,Me and Earl and the Dying Girl,1.0,6.0
-Alfred Hitchcock,All,18.0,7.333333333333333
+Alfred Hitchcock,All,19.0,7.315789473684211
 Alfred Hitchcock,Dial M for Murder,1.0,7.0
 Alfred Hitchcock,I Confess,1.0,7.0
+Alfred Hitchcock,Lifeboat,1.0,7.0
 Alfred Hitchcock,North by Northwest,1.0,8.0
 Alfred Hitchcock,Notorious,1.0,8.0
 Alfred Hitchcock,Psycho,1.0,8.0
@@ -150,9 +152,12 @@ Anna Boden,All,1.0,6.0
 Anna Boden,Half Nelson,1.0,6.0
 Anna Rose Holmer,All,1.0,7.0
 Anna Rose Holmer,The Fits,1.0,7.0
-Anthony Mann,All,1.0,7.0
+Anthony Mann,All,3.0,7.0
+Anthony Mann,He Walked by Night,1.0,7.0
 Anthony Mann,The Far Country,1.0,7.0
-Apichatpong Weerasethakul,All,4.0,7.5
+Anthony Mann,Winchester '73,1.0,7.0
+Apichatpong Weerasethakul,All,5.0,7.6
+Apichatpong Weerasethakul,Blissfully Yours,1.0,8.0
 Apichatpong Weerasethakul,Cemetery of Splendor,1.0,7.0
 Apichatpong Weerasethakul,Syndromes and a Century,1.0,8.0
 Apichatpong Weerasethakul,Tropical Malady,1.0,7.0
@@ -180,8 +185,8 @@ Barry Jenkins,All,1.0,7.0
 Barry Jenkins,Moonlight,1.0,7.0
 Barry Levinson,All,1.0,6.0
 Barry Levinson,Rain Man,1.0,6.0
-Ben Wheatley,All,4.0,6.25
-Ben Wheatley,Free Fire,1.0,7.0
+Ben Wheatley,All,4.0,6.0
+Ben Wheatley,Free Fire,1.0,6.0
 Ben Wheatley,High-Rise,1.0,5.0
 Ben Wheatley,Kill List,1.0,7.0
 Ben Wheatley,Sightseers,1.0,6.0
@@ -200,8 +205,9 @@ Bernard Queysanne,The Man Who Sleeps,1.0,7.0
 Bernardo Bertolucci,All,2.0,7.5
 Bernardo Bertolucci,Last Tango in Paris,1.0,7.0
 Bernardo Bertolucci,The Conformist,1.0,8.0
-Bi Gan,All,1.0,8.0
+Bi Gan,All,2.0,8.0
 Bi Gan,Kaili Blues,1.0,8.0
+Bi Gan,Long Day's Journey Into Night,1.0,8.0
 Bill Forsyth,All,1.0,8.0
 Bill Forsyth,Local Hero,1.0,8.0
 Billy Wilder,Ace in the Hole,1.0,8.0
@@ -226,10 +232,11 @@ Boots Riley,All,1.0,7.0
 Boots Riley,Sorry to Bother You,1.0,7.0
 Brett Morgen,All,1.0,7.0
 Brett Morgen,Cobain: Montage of Heck,1.0,7.0
-Brian De Palma,All,8.0,6.625
+Brian De Palma,All,9.0,6.666666666666667
 Brian De Palma,Blow Out,1.0,8.0
 Brian De Palma,Carlito's Way,1.0,7.0
 Brian De Palma,Carrie,1.0,8.0
+Brian De Palma,Dressed to Kill,1.0,7.0
 Brian De Palma,Obsession,1.0,6.0
 Brian De Palma,Passion,1.0,6.0
 Brian De Palma,Scarface,1.0,6.0
@@ -286,8 +293,9 @@ Charlie Chaplin,The Gold Rush,1.0,7.0
 Charlie Chaplin,The Great Dictator,1.0,8.0
 Charlie Chaplin,The Immigrant,1.0,7.0
 Charlie Chaplin,The Pawnshop,1.0,7.0
-Charlie Kaufman,All,2.0,7.5
+Charlie Kaufman,All,3.0,7.666666666666667
 Charlie Kaufman,Anomalisa,1.0,8.0
+Charlie Kaufman,I'm Thinking of Ending Things,1.0,8.0
 Charlie Kaufman,"Synecdoche, New York",1.0,7.0
 Cheryl Dunye,All,1.0,7.0
 Cheryl Dunye,The Watermelon Woman,1.0,7.0
@@ -330,7 +338,9 @@ Claude Barras,All,1.0,7.0
 Claude Barras,My Life as a Zucchini,1.0,7.0
 Claude Chabrol,All,1.0,7.0
 Claude Chabrol,La Ceremonie,1.0,7.0
-Clint Eastwood,All,1.0,8.0
+Clint Eastwood,All,3.0,6.666666666666667
+Clint Eastwood,Gran Torino,1.0,6.0
+Clint Eastwood,Million Dollar Baby,1.0,6.0
 Clint Eastwood,Unforgiven,1.0,8.0
 Clio Barnard,All,1.0,7.0
 Clio Barnard,The Selfish Giant,1.0,7.0
@@ -476,7 +486,8 @@ Edgar Wright,Scott Pilgrim vs. the World,1.0,7.0
 Edgar Wright,Shaun of the Dead,1.0,8.0
 Edward Sedgwick,All,1.0,8.0
 Edward Sedgwick,The Cameraman,1.0,8.0
-Edward Yang,All,1.0,8.0
+Edward Yang,All,2.0,8.0
+Edward Yang,The Terrorizers,1.0,8.0
 Edward Yang,Yi Yi,1.0,8.0
 Elaine May,All,1.0,7.0
 Elaine May,Mikey and Nicky,1.0,7.0
@@ -651,7 +662,8 @@ Herbert Ross,All,1.0,8.0
 Herbert Ross,"Play It Again, Sam",1.0,8.0
 Herk Harvey,All,1.0,6.0
 Herk Harvey,Carnival of Souls,1.0,6.0
-Hirokazu Kore-eda,All,4.0,7.75
+Hirokazu Kore-eda,After Life,1.0,8.0
+Hirokazu Kore-eda,All,5.0,7.8
 Hirokazu Kore-eda,Maborosi,1.0,8.0
 Hirokazu Kore-eda,Our Little Sister,1.0,7.0
 Hirokazu Kore-eda,Shoplifters,1.0,8.0
@@ -717,9 +729,12 @@ Jack Hill,Pit Stop,1.0,7.0
 Jackie Chan,All,2.0,7.0
 Jackie Chan,Police Story,1.0,7.0
 Jackie Chan,Police Story 2,1.0,7.0
-Jacques Becker,All,2.0,8.5
+Jacques Audiard,A Prophet,1.0,7.0
+Jacques Audiard,All,1.0,7.0
+Jacques Becker,All,3.0,8.0
 Jacques Becker,Casque d'Or,1.0,8.0
 Jacques Becker,Le Trou,1.0,9.0
+Jacques Becker,Touchez Pas au Grisbi,1.0,7.0
 Jacques Demy,All,1.0,7.0
 Jacques Demy,The Umbrellas of Cherbourg,1.0,7.0
 Jacques Tati,All,1.0,7.0
@@ -801,6 +816,9 @@ Jerzy Kawalerowicz,All,1.0,8.0
 Jerzy Kawalerowicz,Mother Joan of the Angels,1.0,8.0
 Jerzy Skolimowski,All,1.0,7.0
 Jerzy Skolimowski,Deep End,1.0,7.0
+Jia Zhangke,24 City,1.0,7.0
+Jia Zhangke,A Touch of Sin,1.0,7.0
+Jia Zhangke,All,2.0,7.0
 Jim Abrahams,Airplane!,1.0,8.0
 Jim Abrahams,All,2.0,8.0
 Jim Abrahams,Top Secret!,1.0,8.0
@@ -907,6 +925,8 @@ Jon Nguyen,All,1.0,6.0
 Jon Nguyen,David Lynch: The Art Life,1.0,6.0
 Jon S. Baird,All,1.0,6.0
 Jon S. Baird,Stan & Ollie,1.0,6.0
+Jonas Mekas,All,1.0,7.0
+Jonas Mekas,Reminiscences of a Journey to Lithuania,1.0,7.0
 Jonathan Caouette,All,1.0,6.0
 Jonathan Caouette,All Tomorrow's Parties,1.0,6.0
 Jonathan Demme,All,2.0,8.5
@@ -993,7 +1013,8 @@ Kevin Smith,All,1.0,7.0
 Kevin Smith,Clerks,1.0,7.0
 Kihachi Okamoto,All,1.0,7.0
 Kihachi Okamoto,The Sword of Doom,1.0,7.0
-King Hu,All,2.0,7.5
+King Hu,A Touch of Zen,1.0,8.0
+King Hu,All,3.0,7.666666666666667
 King Hu,Come Drink with Me,1.0,7.0
 King Hu,Dragon Inn,1.0,8.0
 King Vidor,All,1.0,8.0
@@ -1014,7 +1035,8 @@ Kon Ichikawa,The Burmese Harp,1.0,9.0
 Kornél Mundruczó,All,1.0,7.0
 Kornél Mundruczó,White God,1.0,7.0
 Krzysztof Kieślowski,A Short Film About Killing,1.0,8.0
-Krzysztof Kieślowski,All,6.0,7.666666666666667
+Krzysztof Kieślowski,A Short Film About Love,1.0,8.0
+Krzysztof Kieślowski,All,7.0,7.714285714285714
 Krzysztof Kieślowski,Blind Chance,1.0,8.0
 Krzysztof Kieślowski,The Double Life of Véronique,1.0,7.0
 Krzysztof Kieślowski,Three Colors: Blue,1.0,8.0
@@ -1046,10 +1068,11 @@ Leo McCarey,Duck Soup,1.0,7.0
 Leo McCarey,Make Way for Tomorrow,1.0,7.0
 Leonard Kastle,All,1.0,7.0
 Leonard Kastle,The Honeymoon Killers,1.0,7.0
-Leos Carax,All,4.0,7.25
+Leos Carax,All,5.0,7.2
 Leos Carax,Boy Meets Girl,1.0,7.0
 Leos Carax,Holy Motors,1.0,8.0
 Leos Carax,Mauvais Sang,1.0,7.0
+Leos Carax,Pola X,1.0,7.0
 Leos Carax,The Lovers on the Bridge,1.0,7.0
 Les Blank,All,1.0,7.0
 Les Blank,Burden of Dreams,1.0,7.0
@@ -1059,7 +1082,8 @@ Lisa Barros D'Sa,All,1.0,8.0
 Lisa Barros D'Sa,Good Vibrations,1.0,8.0
 Lisa Cholodenko,All,1.0,6.0
 Lisa Cholodenko,The Kids Are All Right,1.0,6.0
-Liu Chia-Liang,All,2.0,8.0
+Liu Chia-Liang,All,3.0,7.666666666666667
+Liu Chia-Liang,Return to the 36th Chamber,1.0,7.0
 Liu Chia-Liang,The 36th Chamber of Shaolin,1.0,8.0
 Liu Chia-Liang,The 8 Diagram Pole Fighter,1.0,8.0
 Lo Wei,All,1.0,6.0
@@ -1265,9 +1289,10 @@ Ondi Timoner,All,1.0,8.0
 Ondi Timoner,Dig!,1.0,8.0
 One9,All,1.0,7.0
 One9,Nas: Time Is Illmatic,1.0,7.0
-Orson Welles,All,5.0,7.4
+Orson Welles,All,6.0,7.333333333333333
 Orson Welles,Citizen Kane,1.0,9.0
 Orson Welles,F for Fake,1.0,8.0
+Orson Welles,The Immortal Story,1.0,7.0
 Orson Welles,The Lady from Shanghai,1.0,7.0
 Orson Welles,The Magnificent Ambersons,1.0,6.0
 Orson Welles,Touch of Evil,1.0,7.0
@@ -1313,7 +1338,8 @@ Paul Verhoeven,Total Recall,1.0,7.0
 Paweł Pawlikowski,All,2.0,8.0
 Paweł Pawlikowski,Cold War,1.0,8.0
 Paweł Pawlikowski,Ida,1.0,8.0
-Pedro Almodóvar,All,8.0,6.625
+Pedro Almodóvar,All,9.0,6.666666666666667
+Pedro Almodóvar,All About My Mother,1.0,7.0
 Pedro Almodóvar,Broken Embraces,1.0,6.0
 Pedro Almodóvar,Julieta,1.0,7.0
 Pedro Almodóvar,Live Flesh,1.0,7.0
@@ -1446,6 +1472,8 @@ Robert Hamer,All,1.0,7.0
 Robert Hamer,Kind Hearts and Coronets,1.0,7.0
 Robert J. Flaherty,All,1.0,7.0
 Robert J. Flaherty,Nanook of the North,1.0,7.0
+Robert Siodmak,All,1.0,7.0
+Robert Siodmak,The Killers,1.0,7.0
 Robert Wiene,All,1.0,6.0
 Robert Wiene,The Cabinet of Dr. Caligari,1.0,6.0
 Roberto Rossellini,All,3.0,7.666666666666667
@@ -1453,7 +1481,8 @@ Roberto Rossellini,Germany Year Zero,1.0,8.0
 Roberto Rossellini,Journey to Italy,1.0,7.0
 Roberto Rossellini,"Rome, Open City",1.0,8.0
 Roger Corman,A Bucket of Blood,1.0,8.0
-Roger Corman,All,1.0,8.0
+Roger Corman,All,2.0,7.5
+Roger Corman,The Masque of the Red Death,1.0,7.0
 Roger Ross Williams,All,1.0,7.0
 Roger Ross Williams,"Life, Animated",1.0,7.0
 Roman Polanski,All,5.0,8.0
@@ -1540,7 +1569,8 @@ Shane Meadows,Dead Man's Shoes,1.0,7.0
 Shane Meadows,Somers Town,1.0,7.0
 Shinji Aoyama,All,1.0,8.0
 Shinji Aoyama,Eureka,1.0,8.0
-Shinya Tsukamoto,All,2.0,7.0
+Shinya Tsukamoto,A Snake of June,1.0,7.0
+Shinya Tsukamoto,All,3.0,7.0
 Shinya Tsukamoto,Tetsuo: The Iron Man,1.0,7.0
 Shinya Tsukamoto,Tokyo Fist,1.0,7.0
 Shunya Ito,All,1.0,8.0
@@ -1604,16 +1634,19 @@ Stéphane Aubier,Ernest & Celestine,1.0,7.0
 Taika Waititi,All,2.0,6.5
 Taika Waititi,Hunt for the Wilderpeople,1.0,7.0
 Taika Waititi,What We Do in the Shadows,1.0,6.0
-Takashi Miike,All,3.0,7.0
+Takashi Miike,All,4.0,6.75
 Takashi Miike,Audition,1.0,8.0
 Takashi Miike,Ichi the Killer,1.0,6.0
+Takashi Miike,Shinjuku Triad Society,1.0,6.0
 Takashi Miike,The Happiness of the Katakuris,1.0,7.0
-Takeshi Kitano,All,5.0,7.2
+Takeshi Kitano,All,7.0,7.142857142857143
 Takeshi Kitano,Boiling Point,1.0,6.0
 Takeshi Kitano,Dolls,1.0,8.0
 Takeshi Kitano,Fireworks,1.0,8.0
+Takeshi Kitano,Kids Return,1.0,7.0
 Takeshi Kitano,Kikujiro,1.0,7.0
 Takeshi Kitano,Sonatine,1.0,7.0
+Takeshi Kitano,Violent Cop,1.0,7.0
 Ted Demme,All,1.0,6.0
 Ted Demme,Blow,1.0,6.0
 Ted Wilde,All,2.0,8.0
@@ -1622,6 +1655,8 @@ Ted Wilde,The Kid Brother,1.0,8.0
 Terence Davies,All,2.0,7.0
 Terence Davies,"Distant Voices, Still Lives",1.0,7.0
 Terence Davies,Of Time and the City,1.0,7.0
+Terence Young,All,1.0,7.0
+Terence Young,Red Sun,1.0,7.0
 Terrence Malick,A Hidden Life,1.0,8.0
 Terrence Malick,All,6.0,8.333333333333334
 Terrence Malick,Badlands,1.0,9.0
@@ -1738,6 +1773,8 @@ Wes Anderson,The Life Aquatic with Steve Zissou,1.0,7.0
 Wes Anderson,The Royal Tenenbaums,1.0,8.0
 Wes Craven,A Nightmare on Elm Street,1.0,6.0
 Wes Craven,All,1.0,6.0
+Whit Stillman,All,1.0,8.0
+Whit Stillman,Metropolitan,1.0,8.0
 William Friedkin,All,5.0,7.4
 William Friedkin,Killer Joe,1.0,6.0
 William Friedkin,Sorcerer,1.0,8.0
@@ -1817,9 +1854,6 @@ Zhang Yimou,Hero,1.0,7.0
 Zhang Yimou,Ju Dou,1.0,8.0
 Zhang Yimou,Raise the Red Lantern,1.0,8.0
 Zhang Yimou,Shadow,1.0,7.0
-Zhangke Jia,24 City,1.0,7.0
-Zhangke Jia,A Touch of Sin,1.0,7.0
-Zhangke Jia,All,2.0,7.0
 Ágnes Hranitzky,All,2.0,7.0
 Ágnes Hranitzky,The Turin Horse,1.0,7.0
 Ágnes Hranitzky,Werckmeister Harmonies,1.0,7.0
