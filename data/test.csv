@@ -62,8 +62,9 @@ Alan Mak,Infernal Affairs,1.0,7.0
 Alejandro González Iñárritu,All,2.0,7.5
 Alejandro González Iñárritu,Amores Perros,1.0,8.0
 Alejandro González Iñárritu,Birdman or (The Unexpected Virtue of Ignorance),1.0,7.0
-Alejandro Jodorowsky,All,2.0,7.5
+Alejandro Jodorowsky,All,3.0,7.666666666666667
 Alejandro Jodorowsky,El Topo,1.0,7.0
+Alejandro Jodorowsky,The Dance of Reality,1.0,8.0
 Alejandro Jodorowsky,The Holy Mountain,1.0,8.0
 Alejandro Landes,All,1.0,7.0
 Alejandro Landes,Monos,1.0,7.0
@@ -915,7 +916,8 @@ John Schlesinger,Billy Liar,1.0,8.0
 John Schlesinger,Midnight Cowboy,1.0,7.0
 John Singleton,All,1.0,7.0
 John Singleton,Boyz n the Hood,1.0,7.0
-John Woo,All,3.0,8.0
+John Woo,A Better Tomorrow,1.0,6.0
+John Woo,All,4.0,7.5
 John Woo,Bullet in the Head,1.0,8.0
 John Woo,Hard Boiled,1.0,8.0
 John Woo,The Killer,1.0,8.0
@@ -1082,7 +1084,8 @@ Lisa Barros D'Sa,All,1.0,8.0
 Lisa Barros D'Sa,Good Vibrations,1.0,8.0
 Lisa Cholodenko,All,1.0,6.0
 Lisa Cholodenko,The Kids Are All Right,1.0,6.0
-Liu Chia-Liang,All,3.0,7.666666666666667
+Liu Chia-Liang,All,4.0,7.5
+Liu Chia-Liang,Dirty Ho,1.0,7.0
 Liu Chia-Liang,Return to the 36th Chamber,1.0,7.0
 Liu Chia-Liang,The 36th Chamber of Shaolin,1.0,8.0
 Liu Chia-Liang,The 8 Diagram Pole Fighter,1.0,8.0
@@ -1381,8 +1384,9 @@ Peter Yates,All,1.0,7.0
 Peter Yates,Bullitt,1.0,7.0
 Phil Lord,All,1.0,7.0
 Phil Lord,The Lego Movie,1.0,7.0
-Philip Kaufman,All,1.0,8.0
+Philip Kaufman,All,2.0,8.0
 Philip Kaufman,Invasion of the Body Snatchers,1.0,8.0
+Philip Kaufman,The Wanderers,1.0,8.0
 Philip Ridley,All,1.0,7.0
 Philip Ridley,The Reflecting Skin,1.0,7.0
 Pierre Morel,All,1.0,5.0
@@ -1610,6 +1614,8 @@ Stanley Kubrick,Lolita,1.0,6.0
 Stanley Kubrick,Paths of Glory,1.0,9.0
 Stanley Kubrick,The Killing,1.0,8.0
 Stanley Kubrick,The Shining,1.0,8.0
+Stephen Chow,All,1.0,7.0
+Stephen Chow,Shaolin Soccer,1.0,7.0
 Stephen Frears,All,3.0,7.0
 Stephen Frears,High Fidelity,1.0,7.0
 Stephen Frears,Philomena,1.0,6.0
