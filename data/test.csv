@@ -13,6 +13,8 @@ Abel Ferrara,The Addiction,1.0,7.0
 Abel Ferrara,The Blackout,1.0,7.0
 Abel Ferrara,The Driller Killer,1.0,6.0
 Abel Ferrara,The Funeral,1.0,7.0
+Adam Curtis,All,1.0,7.0
+Adam Curtis,HyperNormalisation,1.0,7.0
 Adam Elliot,All,1.0,8.0
 Adam Elliot,Mary and Max,1.0,8.0
 Adam McKay,All,1.0,7.0
@@ -62,9 +64,10 @@ Alan Mak,Infernal Affairs,1.0,7.0
 Alejandro González Iñárritu,All,2.0,7.5
 Alejandro González Iñárritu,Amores Perros,1.0,8.0
 Alejandro González Iñárritu,Birdman or (The Unexpected Virtue of Ignorance),1.0,7.0
-Alejandro Jodorowsky,All,4.0,7.5
+Alejandro Jodorowsky,All,5.0,7.4
 Alejandro Jodorowsky,El Topo,1.0,7.0
 Alejandro Jodorowsky,Endless Poetry,1.0,7.0
+Alejandro Jodorowsky,Santa Sangre,1.0,7.0
 Alejandro Jodorowsky,The Dance of Reality,1.0,8.0
 Alejandro Jodorowsky,The Holy Mountain,1.0,8.0
 Alejandro Landes,All,1.0,7.0
@@ -235,11 +238,12 @@ Boots Riley,All,1.0,7.0
 Boots Riley,Sorry to Bother You,1.0,7.0
 Brett Morgen,All,1.0,7.0
 Brett Morgen,Cobain: Montage of Heck,1.0,7.0
-Brian De Palma,All,9.0,6.666666666666667
+Brian De Palma,All,10.0,6.7
 Brian De Palma,Blow Out,1.0,8.0
 Brian De Palma,Carlito's Way,1.0,7.0
 Brian De Palma,Carrie,1.0,8.0
 Brian De Palma,Dressed to Kill,1.0,7.0
+Brian De Palma,Femme Fatale,1.0,7.0
 Brian De Palma,Obsession,1.0,6.0
 Brian De Palma,Passion,1.0,6.0
 Brian De Palma,Scarface,1.0,6.0
@@ -255,8 +259,9 @@ Bryn Higgins,All,1.0,6.0
 Bryn Higgins,Electricity,1.0,6.0
 Buichi Saito,All,1.0,8.0
 Buichi Saito,Lone Wolf and Cub: Baby Cart in Peril,1.0,8.0
-Buster Keaton,All,7.0,7.714285714285714
+Buster Keaton,All,8.0,7.75
 Buster Keaton,Battling Butler,1.0,7.0
+Buster Keaton,One Week,1.0,8.0
 Buster Keaton,Our Hospitality,1.0,7.0
 Buster Keaton,"Sherlock, Jr.",1.0,8.0
 Buster Keaton,"Steamboat Bill, Jr.",1.0,7.0
@@ -490,6 +495,8 @@ Edgar Wright,Baby Driver,1.0,5.0
 Edgar Wright,Hot Fuzz,1.0,7.0
 Edgar Wright,Scott Pilgrim vs. the World,1.0,7.0
 Edgar Wright,Shaun of the Dead,1.0,8.0
+Edward F. Cline,All,1.0,8.0
+Edward F. Cline,One Week,1.0,8.0
 Edward Sedgwick,All,1.0,8.0
 Edward Sedgwick,The Cameraman,1.0,8.0
 Edward Yang,All,2.0,8.0
@@ -510,6 +517,8 @@ Emeric Pressburger,A Matter of Life and Death,1.0,8.0
 Emeric Pressburger,All,3.0,8.0
 Emeric Pressburger,Black Narcissus,1.0,8.0
 Emeric Pressburger,The Red Shoes,1.0,8.0
+Emir Kusturica,All,1.0,8.0
+Emir Kusturica,Underground,1.0,8.0
 Enrique Tovar Ávalos,All,1.0,6.0
 Enrique Tovar Ávalos,Drácula,1.0,6.0
 Enzo G. Castellari,All,1.0,7.0
@@ -580,9 +589,10 @@ Gabriel Axel,Babette's Feast,1.0,8.0
 Gareth Evans,All,2.0,8.0
 Gareth Evans,The Raid,1.0,8.0
 Gareth Evans,The Raid 2,1.0,8.0
-Gaspar Noé,All,2.0,7.5
+Gaspar Noé,All,3.0,7.333333333333333
 Gaspar Noé,Climax,1.0,8.0
 Gaspar Noé,Enter the Void,1.0,7.0
+Gaspar Noé,Irreversible,1.0,7.0
 Gene Kelly,All,1.0,8.0
 Gene Kelly,Singin' in the Rain,1.0,8.0
 Geoffrey Wright,All,1.0,6.0
@@ -594,6 +604,8 @@ George A. Romero,Martin,1.0,6.0
 George A. Romero,Night of the Living Dead,1.0,8.0
 George Amponsah,All,1.0,7.0
 George Amponsah,The Hard Stop,1.0,7.0
+George Cukor,All,1.0,7.0
+George Cukor,Gaslight,1.0,7.0
 George Lucas,All,3.0,7.333333333333333
 George Lucas,American Graffiti,1.0,7.0
 George Lucas,Star Wars,1.0,8.0
@@ -669,6 +681,8 @@ Herbert Ross,All,1.0,8.0
 Herbert Ross,"Play It Again, Sam",1.0,8.0
 Herk Harvey,All,1.0,6.0
 Herk Harvey,Carnival of Souls,1.0,6.0
+Hideo Nakata,All,1.0,6.0
+Hideo Nakata,Ringu,1.0,6.0
 Hirokazu Kore-eda,After Life,1.0,8.0
 Hirokazu Kore-eda,All,6.0,7.833333333333333
 Hirokazu Kore-eda,Maborosi,1.0,8.0
@@ -851,6 +865,8 @@ Jiří Menzel,All,1.0,8.0
 Jiří Menzel,Closely Watched Trains,1.0,8.0
 Joe Cornish,All,1.0,7.0
 Joe Cornish,Attack the Block,1.0,7.0
+Joe Dante,All,1.0,6.0
+Joe Dante,The 'Burbs,1.0,6.0
 Joel Coen,A Serious Man,1.0,7.0
 Joel Coen,All,14.0,7.571428571428571
 Joel Coen,Barton Fink,1.0,9.0
@@ -1288,6 +1304,8 @@ Neill Blomkamp,District 9,1.0,6.0
 Nicholas Ray,All,2.0,7.0
 Nicholas Ray,Johnny Guitar,1.0,7.0
 Nicholas Ray,On Dangerous Ground,1.0,7.0
+Nick Rowland,All,1.0,7.0
+Nick Rowland,Calm with Horses,1.0,7.0
 Nicolas Roeg,All,3.0,7.0
 Nicolas Roeg,Don't Look Now,1.0,7.0
 Nicolas Roeg,Performance,1.0,7.0
@@ -1352,12 +1370,13 @@ Paul Thomas Anderson,Phantom Thread,1.0,8.0
 Paul Thomas Anderson,Punch-Drunk Love,1.0,8.0
 Paul Thomas Anderson,The Master,1.0,8.0
 Paul Thomas Anderson,There Will Be Blood,1.0,8.0
-Paul Verhoeven,All,7.0,6.857142857142857
+Paul Verhoeven,All,8.0,6.875
 Paul Verhoeven,Black Book,1.0,7.0
 Paul Verhoeven,Elle,1.0,7.0
 Paul Verhoeven,Hollow Man,1.0,6.0
 Paul Verhoeven,RoboCop,1.0,7.0
 Paul Verhoeven,Showgirls,1.0,6.0
+Paul Verhoeven,Soldier of Orange,1.0,7.0
 Paul Verhoeven,Starship Troopers,1.0,8.0
 Paul Verhoeven,Total Recall,1.0,7.0
 Paweł Pawlikowski,All,2.0,8.0
@@ -1517,6 +1536,8 @@ Roman Polanski,Knife in the Water,1.0,8.0
 Roman Polanski,Repulsion,1.0,8.0
 Roman Polanski,Rosemary's Baby,1.0,8.0
 Roman Polanski,The Tenant,1.0,7.0
+Ron Fricke,All,1.0,8.0
+Ron Fricke,Samsara,1.0,8.0
 Ron Howard,All,1.0,7.0
 Ron Howard,The Beatles: Eight Days a Week - The Touring Years,1.0,7.0
 Roy Andersson,A Pigeon Sat on a Branch Reflecting on Existence,1.0,5.0
@@ -1568,8 +1589,9 @@ Sean Penn,All,1.0,6.0
 Sean Penn,Into the Wild,1.0,6.0
 Sebastian Schipper,All,1.0,7.0
 Sebastian Schipper,Victoria,1.0,7.0
-Seijun Suzuki,All,1.0,7.0
+Seijun Suzuki,All,2.0,7.0
 Seijun Suzuki,Youth of the Beast,1.0,7.0
+Seijun Suzuki,Zigeunerweisen,1.0,7.0
 Sergei Eisenstein,All,3.0,6.666666666666667
 Sergei Eisenstein,Battleship Potemkin,1.0,7.0
 Sergei Eisenstein,"Ivan the Terrible, Part I",1.0,7.0
@@ -1803,7 +1825,8 @@ Wes Anderson,The Grand Budapest Hotel,1.0,8.0
 Wes Anderson,The Life Aquatic with Steve Zissou,1.0,7.0
 Wes Anderson,The Royal Tenenbaums,1.0,8.0
 Wes Craven,A Nightmare on Elm Street,1.0,6.0
-Wes Craven,All,1.0,6.0
+Wes Craven,All,2.0,6.0
+Wes Craven,The Hills Have Eyes,1.0,6.0
 Whit Stillman,All,1.0,8.0
 Whit Stillman,Metropolitan,1.0,8.0
 William Friedkin,All,5.0,7.4
@@ -1888,7 +1911,8 @@ Zhang Yimou,Shadow,1.0,7.0
 Ágnes Hranitzky,All,2.0,7.0
 Ágnes Hranitzky,The Turin Horse,1.0,7.0
 Ágnes Hranitzky,Werckmeister Harmonies,1.0,7.0
-Éric Rohmer,All,4.0,8.0
+Éric Rohmer,All,5.0,7.8
+Éric Rohmer,Full Moon in Paris,1.0,7.0
 Éric Rohmer,My Night at Maud's,1.0,8.0
 Éric Rohmer,Pauline at the Beach,1.0,8.0
 Éric Rohmer,The Aviator's Wife,1.0,8.0

@@ -164,6 +164,7 @@ ul {
 .poster {
     /* height: var(--panel-height); */
     width: 100%;
+    box-shadow: 0 1px 2px 0 hsl(0 0% 0% / 20%);
 }
 
 .film-details {

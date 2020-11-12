@@ -160,7 +160,7 @@ async function cards() {
         .each(function(d) {
             d3.select(this)
                 .html(
-                    `<img src="${d.image}" class="poster">
+                    `<img src="${d.image}" class="poster" loading="lazy">
                     <div class="film-details">
                         <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
                         <p>${d.director}</p>
@@ -268,7 +268,7 @@ async function cards() {
                 .each(function(d) {
                     d3.select(this)
                         .html(
-                            `<img src="${d.image}" class="poster">
+                            `<img src="${d.image}" class="poster" loading="lazy">
                             <div class="film-details">
                                 <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
                                 <p>${d.director}</p>
@@ -368,7 +368,7 @@ async function cards() {
                 .each(function(d) {
                     d3.select(this)
                         .html(
-                            `<img src="${d.image}" class="poster">
+                            `<img src="${d.image}" class="poster" loading="lazy">
                             <div class="film-details">
                                 <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
                                 <p>${d.director}</p>
@@ -465,7 +465,7 @@ async function cards() {
             .each(function(d) {
                 d3.select(this)
                     .html(
-                        `<img src="${d.image}" class="poster">
+                        `<img src="${d.image}" class="poster" loading="lazy">
                         <div class="film-details">
                             <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
                             <p>${d.director}</p>
@@ -567,7 +567,7 @@ async function cards() {
                 .each(function(d) {
                     d3.select(this)
                         .html(
-                            `<img src="${d.image}" class="poster">
+                            `<img src="${d.image}" class="poster" loading="lazy">
                             <div class="film-details">
                                 <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
                                 <p>${d.director}</p>
@@ -651,7 +651,7 @@ async function cards() {
                 .each(function(d) {
                     d3.select(this)
                         .html(
-                            `<img src="${d.image}" class="poster">
+                            `<img src="${d.image}" class="poster" loading="lazy">
                             <div class="film-details">
                                 <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
                                 <p>${d.director}</p>
@@ -748,7 +748,7 @@ async function cards() {
             .each(function(d) {
                 d3.select(this)
                     .html(
-                        `<img src="${d.image}" class="poster">
+                        `<img src="${d.image}" class="poster" loading="lazy">
                         <div class="film-details">
                             <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
                             <p>${d.director}</p>
@@ -852,7 +852,7 @@ async function cards() {
                 .each(function(d) {
                     d3.select(this)
                         .html(
-                            `<img src="${d.image}" class="poster">
+                            `<img src="${d.image}" class="poster" loading="lazy">
                             <div class="film-details">
                                 <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
                                 <p>${d.director}</p>
@@ -933,7 +933,7 @@ async function cards() {
                 .each(function(d) {
                     d3.select(this)
                         .html(
-                            `<img src="${d.image}" class="poster">
+                            `<img src="${d.image}" class="poster" loading="lazy">
                             <div class="film-details">
                                 <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
                                 <p>${d.director}</p>
@@ -1030,7 +1030,7 @@ async function cards() {
             .each(function(d) {
                 d3.select(this)
                     .html(
-                        `<img src="${d.image}" class="poster">
+                        `<img src="${d.image}" class="poster" loading="lazy">
                         <div class="film-details">
                             <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
                             <p>${d.director}</p>
@@ -1134,7 +1134,7 @@ async function cards() {
                 .each(function(d) {
                     d3.select(this)
                         .html(
-                            `<img src="${d.image}" class="poster">
+                            `<img src="${d.image}" class="poster" loading="lazy">
                             <div class="film-details">
                                 <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
                                 <p>${d.director}</p>
@@ -1248,7 +1248,7 @@ async function cards() {
             .each(function(d) {
                 d3.select(this)
                     .html(
-                        `<img src="${d.image}" class="poster">
+                        `<img src="${d.image}" class="poster" loading="lazy">
                         <div class="film-details">
                             <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
                             <p>${d.director}</p>
@@ -1350,7 +1350,7 @@ async function cards() {
                 .each(function(d) {
                     d3.select(this)
                         .html(
-                            `<img src="${d.image}" class="poster">
+                            `<img src="${d.image}" class="poster" loading="lazy">
                             <div class="film-details">
                                 <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
                                 <p>${d.director}</p>
@@ -1471,7 +1471,7 @@ async function cards() {
             .each(function(d) {
                 d3.select(this)
                     .html(
-                        `<img src="${d.image}" class="poster">
+                        `<img src="${d.image}" class="poster" loading="lazy">
                         <div class="film-details">
                             <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
                             <p>${d.director}</p>
@@ -1573,7 +1573,7 @@ async function cards() {
                 .each(function(d) {
                     d3.select(this)
                         .html(
-                            `<img src="${d.image}" class="poster">
+                            `<img src="${d.image}" class="poster" loading="lazy">
                             <div class="film-details">
                                 <h1>${truncateTitle(d.title)} <span class="year">(${d.year})</span></h1>
                                 <p>${d.director}</p>
