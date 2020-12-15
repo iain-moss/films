@@ -219,11 +219,12 @@ Bi Gan,Long Day's Journey Into Night,1.0,8.0
 Bill Forsyth,All,1.0,8.0
 Bill Forsyth,Local Hero,1.0,8.0
 Billy Wilder,Ace in the Hole,1.0,8.0
-Billy Wilder,All,6.0,7.666666666666667
+Billy Wilder,All,7.0,7.571428571428571
 Billy Wilder,Double Indemnity,1.0,8.0
 Billy Wilder,Some Like It Hot,1.0,7.0
 Billy Wilder,Sunset Boulevard,1.0,8.0
 Billy Wilder,The Apartment,1.0,8.0
+Billy Wilder,The Lost Weekend,1.0,7.0
 Billy Wilder,Witness for the Prosecution,1.0,7.0
 Bob Peterson,All,1.0,7.0
 Bob Peterson,Up,1.0,7.0
@@ -457,6 +458,8 @@ Declan Lowney,Alan Partridge: Alpha Papa,1.0,7.0
 Declan Lowney,All,1.0,7.0
 Delbert Mann,All,1.0,7.0
 Delbert Mann,Marty,1.0,7.0
+Delmer Daves,All,1.0,6.0
+Delmer Daves,Broken Arrow,1.0,6.0
 Denis Villeneuve,All,2.0,7.0
 Denis Villeneuve,Enemy,1.0,7.0
 Denis Villeneuve,Sicario,1.0,7.0
@@ -655,10 +658,11 @@ Guillermo del Toro,All,3.0,7.333333333333333
 Guillermo del Toro,Crimson Peak,1.0,7.0
 Guillermo del Toro,Pan's Labyrinth,1.0,8.0
 Guillermo del Toro,The Devil's Backbone,1.0,7.0
-Gus Van Sant,All,3.0,6.666666666666667
+Gus Van Sant,All,4.0,6.5
 Gus Van Sant,Drugstore Cowboy,1.0,6.0
 Gus Van Sant,Elephant,1.0,7.0
 Gus Van Sant,My Own Private Idaho,1.0,7.0
+Gus Van Sant,Paranoid Park,1.0,6.0
 Guy Ritchie,All,2.0,6.0
 Guy Ritchie,"Lock, Stock and Two Smoking Barrels",1.0,6.0
 Guy Ritchie,Snatch,1.0,6.0
@@ -708,6 +712,8 @@ Hiromasa Yonebayashi,The Secret World of Arrietty,1.0,6.0
 Hiromasa Yonebayashi,When Marnie Was There,1.0,7.0
 Hiroshi Teshigahara,All,1.0,10.0
 Hiroshi Teshigahara,Woman in the Dunes,1.0,10.0
+Hong Sang-soo,All,1.0,7.0
+Hong Sang-soo,Tale of Cinema,1.0,7.0
 Hou Hsiao-hsien,All,1.0,6.0
 Hou Hsiao-hsien,The Assassin,1.0,6.0
 Howard Hawks,All,5.0,7.6
@@ -1579,6 +1585,8 @@ Ruben Fleischer,All,1.0,6.0
 Ruben Fleischer,Zombieland,1.0,6.0
 Ryan Fleck,All,1.0,6.0
 Ryan Fleck,Half Nelson,1.0,6.0
+S. Craig Zahler,All,1.0,7.0
+S. Craig Zahler,Bone Tomahawk,1.0,7.0
 Sacha Gervasi,All,1.0,8.0
 Sacha Gervasi,Anvil! The Story of Anvil,1.0,8.0
 Sadao Yamanaka,All,1.0,7.0
@@ -1608,7 +1616,8 @@ Samuel Fuller,All,1.0,8.0
 Samuel Fuller,Pickup on South Street,1.0,8.0
 Satoshi Kon,All,1.0,7.0
 Satoshi Kon,Paprika,1.0,7.0
-Satyajit Ray,All,1.0,8.0
+Satyajit Ray,All,2.0,8.0
+Satyajit Ray,Pather Panchali,1.0,8.0
 Satyajit Ray,The Music Room,1.0,8.0
 Scott Teems,All,1.0,7.0
 Scott Teems,That Evening Sun,1.0,7.0
@@ -1829,7 +1838,7 @@ Walter Salles,The Motorcycle Diaries,1.0,7.0
 Wash Westmoreland,All,1.0,5.0
 Wash Westmoreland,Still Alice,1.0,5.0
 Werner Herzog,"Aguirre, the Wrath of God",1.0,9.0
-Werner Herzog,All,19.0,7.315789473684211
+Werner Herzog,All,20.0,7.35
 Werner Herzog,Cave of Forgotten Dreams,1.0,7.0
 Werner Herzog,Cobra Verde,1.0,6.0
 Werner Herzog,Encounters at the End of the World,1.0,8.0
@@ -1839,6 +1848,7 @@ Werner Herzog,God's Angry Man,1.0,6.0
 Werner Herzog,Grizzly Man,1.0,9.0
 Werner Herzog,Heart of Glass,1.0,6.0
 Werner Herzog,Into the Inferno,1.0,7.0
+Werner Herzog,Land of Silence and Darkness,1.0,8.0
 Werner Herzog,Lo and Behold: Reveries of the Connected World,1.0,6.0
 Werner Herzog,Nosferatu the Vampyre,1.0,8.0
 Werner Herzog,Rescue Dawn,1.0,7.0
