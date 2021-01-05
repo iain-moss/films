@@ -49,9 +49,10 @@ Akira Kurosawa,The Bad Sleep Well,1.0,8.0
 Akira Kurosawa,The Hidden Fortress,1.0,8.0
 Akira Kurosawa,Throne of Blood,1.0,8.0
 Akira Kurosawa,Yojimbo,1.0,9.0
-Alain Resnais,All,2.0,7.5
+Alain Resnais,All,3.0,7.666666666666667
 Alain Resnais,Hiroshima Mon Amour,1.0,7.0
 Alain Resnais,Last Year at Marienbad,1.0,8.0
+Alain Resnais,My American Uncle,1.0,8.0
 Alain Robbe-Grillet,All,2.0,6.5
 Alain Robbe-Grillet,Eden and After,1.0,6.0
 Alain Robbe-Grillet,Trans-Europ-Express,1.0,7.0
@@ -160,8 +161,9 @@ Anna Boden,All,1.0,6.0
 Anna Boden,Half Nelson,1.0,6.0
 Anna Rose Holmer,All,1.0,7.0
 Anna Rose Holmer,The Fits,1.0,7.0
-Anthony Mann,All,3.0,7.0
+Anthony Mann,All,4.0,7.0
 Anthony Mann,He Walked by Night,1.0,7.0
+Anthony Mann,Man of the West,1.0,7.0
 Anthony Mann,The Far Country,1.0,7.0
 Anthony Mann,Winchester '73,1.0,7.0
 Apichatpong Weerasethakul,All,5.0,7.6
@@ -219,9 +221,10 @@ Bi Gan,Long Day's Journey Into Night,1.0,8.0
 Bill Forsyth,All,1.0,8.0
 Bill Forsyth,Local Hero,1.0,8.0
 Billy Wilder,Ace in the Hole,1.0,8.0
-Billy Wilder,All,7.0,7.571428571428571
+Billy Wilder,All,8.0,7.5
 Billy Wilder,Double Indemnity,1.0,8.0
 Billy Wilder,Some Like It Hot,1.0,7.0
+Billy Wilder,Stalag 17,1.0,7.0
 Billy Wilder,Sunset Boulevard,1.0,8.0
 Billy Wilder,The Apartment,1.0,8.0
 Billy Wilder,The Lost Weekend,1.0,7.0
@@ -286,6 +289,8 @@ Carol Reed,All,3.0,8.0
 Carol Reed,Odd Man Out,1.0,8.0
 Carol Reed,The Fallen Idol,1.0,7.0
 Carol Reed,The Third Man,1.0,9.0
+Catherine Breillat,All,1.0,5.0
+Catherine Breillat,Romance,1.0,5.0
 Chang Cheh,All,1.0,8.0
 Chang Cheh,The One-Armed Swordsman,1.0,8.0
 Charles Crichton,A Fish Called Wanda,1.0,7.0
@@ -588,7 +593,7 @@ Fred C. Newmeyer,Safety Last!,1.0,8.0
 Fred C. Newmeyer,The Freshman,1.0,7.0
 Fred Zinnemann,All,1.0,6.0
 Fred Zinnemann,High Noon,1.0,6.0
-Fritz Lang,All,7.0,7.571428571428571
+Fritz Lang,All,8.0,7.5
 Fritz Lang,M,1.0,9.0
 Fritz Lang,Metropolis,1.0,8.0
 Fritz Lang,Rancho Notorious,1.0,7.0
@@ -596,8 +601,9 @@ Fritz Lang,Scarlet Street,1.0,7.0
 Fritz Lang,The Big Heat,1.0,8.0
 Fritz Lang,The Testament of Dr. Mabuse,1.0,7.0
 Fritz Lang,The Woman in the Window,1.0,7.0
+Fritz Lang,You Only Live Once,1.0,7.0
 G.W. Pabst,All,1.0,8.0
-G.W. Pabst,Kameradschaft,1.0,8.0
+G.W. Pabst,Comradeship,1.0,8.0
 Gabriel Axel,All,1.0,8.0
 Gabriel Axel,Babette's Feast,1.0,8.0
 Gareth Evans,All,2.0,8.0
@@ -712,8 +718,9 @@ Hiromasa Yonebayashi,The Secret World of Arrietty,1.0,6.0
 Hiromasa Yonebayashi,When Marnie Was There,1.0,7.0
 Hiroshi Teshigahara,All,1.0,10.0
 Hiroshi Teshigahara,Woman in the Dunes,1.0,10.0
-Hong Sang-soo,All,1.0,7.0
+Hong Sang-soo,All,2.0,7.0
 Hong Sang-soo,Tale of Cinema,1.0,7.0
+Hong Sang-soo,The Woman Who Ran,1.0,7.0
 Hou Hsiao-hsien,All,1.0,6.0
 Hou Hsiao-hsien,The Assassin,1.0,6.0
 Howard Hawks,All,5.0,7.6
@@ -730,7 +737,8 @@ Iain Forsyth,20.000 Days on Earth,1.0,7.0
 Iain Forsyth,All,1.0,7.0
 Ian MacNaughton,All,1.0,7.0
 Ian MacNaughton,And Now for Something Completely Different,1.0,7.0
-Ida Lupino,All,2.0,7.0
+Ida Lupino,All,3.0,7.0
+Ida Lupino,On Dangerous Ground,1.0,7.0
 Ida Lupino,The Bigamist,1.0,7.0
 Ida Lupino,The Hitch-Hiker,1.0,7.0
 Ildikó Enyedi,All,1.0,7.0
@@ -785,6 +793,8 @@ Jacques Tati,All,1.0,7.0
 Jacques Tati,PlayTime,1.0,7.0
 Jafar Panahi,All,1.0,7.0
 Jafar Panahi,Taxi,1.0,7.0
+Jake Paltrow,All,1.0,7.0
+Jake Paltrow,De Palma,1.0,7.0
 James Cameron,Aliens,1.0,8.0
 James Cameron,All,3.0,7.333333333333333
 James Cameron,Terminator 2: Judgment Day,1.0,7.0
@@ -1100,6 +1110,8 @@ Kuei Chih-Hung,All,1.0,6.0
 Kuei Chih-Hung,Killer Constable,1.0,6.0
 Kátia Lund,All,2.0,8.0
 Kátia Lund,City of God,2.0,8.0
+Lana Wachowski,All,1.0,8.0
+Lana Wachowski,The Matrix,1.0,8.0
 Larisa Shepitko,All,1.0,8.0
 Larisa Shepitko,The Ascent,1.0,8.0
 Larry Cohen,All,1.0,5.0
@@ -1130,6 +1142,8 @@ Leos Carax,Pola X,1.0,7.0
 Leos Carax,The Lovers on the Bridge,1.0,7.0
 Les Blank,All,1.0,7.0
 Les Blank,Burden of Dreams,1.0,7.0
+Lilly Wachowski,All,1.0,8.0
+Lilly Wachowski,The Matrix,1.0,8.0
 Lindsay Anderson,All,1.0,8.0
 Lindsay Anderson,if....,1.0,8.0
 Lisa Barros D'Sa,All,1.0,8.0
@@ -1190,6 +1204,8 @@ Mamoru Hosoda,All,1.0,8.0
 Mamoru Hosoda,Wolf Children,1.0,8.0
 Mamoru Oshii,All,1.0,7.0
 Mamoru Oshii,Ghost in the Shell,1.0,7.0
+Marco Ferreri,All,1.0,7.0
+Marco Ferreri,La Grande Bouffe,1.0,7.0
 Maren Ade,All,1.0,8.0
 Maren Ade,Toni Erdmann,1.0,8.0
 Marjane Satrapi,All,1.0,8.0
@@ -1324,6 +1340,8 @@ Monte Hellman,Cockfighter,1.0,7.0
 Monte Hellman,The Shooting,1.0,6.0
 Morgan Neville,All,1.0,7.0
 Morgan Neville,Best of Enemies,1.0,7.0
+Nagisa Ōshima,All,1.0,7.0
+Nagisa Ōshima,"Merry Christmas, Mr. Lawrence",1.0,7.0
 Neill Blomkamp,All,1.0,6.0
 Neill Blomkamp,District 9,1.0,6.0
 Nicholas Ray,All,4.0,7.25
@@ -1337,12 +1355,14 @@ Nicolas Roeg,All,3.0,7.0
 Nicolas Roeg,Don't Look Now,1.0,7.0
 Nicolas Roeg,Performance,1.0,7.0
 Nicolas Roeg,Walkabout,1.0,7.0
-Nicolas Winding Refn,All,2.0,6.5
+Nicolas Winding Refn,All,3.0,6.333333333333333
 Nicolas Winding Refn,Bronson,1.0,6.0
 Nicolas Winding Refn,Drive,1.0,7.0
+Nicolas Winding Refn,Only God Forgives,1.0,6.0
 Niels Arden Oplev,All,1.0,6.0
 Niels Arden Oplev,The Girl with the Dragon Tattoo,1.0,6.0
-Noah Baumbach,All,3.0,7.333333333333333
+Noah Baumbach,All,4.0,7.25
+Noah Baumbach,De Palma,1.0,7.0
 Noah Baumbach,Frances Ha,1.0,7.0
 Noah Baumbach,The Squid and the Whale,1.0,8.0
 Noah Baumbach,While We're Young,1.0,7.0
@@ -1412,7 +1432,7 @@ Paul Verhoeven,RoboCop,1.0,7.0
 Paul Verhoeven,Showgirls,1.0,6.0
 Paul Verhoeven,Soldier of Orange,1.0,7.0
 Paul Verhoeven,Starship Troopers,1.0,8.0
-Paul Verhoeven,The Fourth Man,1.0,7.0
+Paul Verhoeven,The 4th Man,1.0,7.0
 Paul Verhoeven,Total Recall,1.0,7.0
 Paweł Pawlikowski,All,2.0,8.0
 Paweł Pawlikowski,Cold War,1.0,8.0
@@ -1578,7 +1598,8 @@ Ron Howard,The Beatles: Eight Days a Week - The Touring Years,1.0,7.0
 Ronald Neame,All,1.0,7.0
 Ronald Neame,Hopscotch,1.0,7.0
 Roy Andersson,A Pigeon Sat on a Branch Reflecting on Existence,1.0,5.0
-Roy Andersson,All,3.0,5.666666666666667
+Roy Andersson,About Endlessness,1.0,6.0
+Roy Andersson,All,4.0,5.75
 Roy Andersson,Songs from the Second Floor,1.0,6.0
 Roy Andersson,"You, the Living",1.0,6.0
 Ruben Fleischer,All,1.0,6.0
@@ -1603,7 +1624,8 @@ Sam Peckinpah,Straw Dogs,1.0,7.0
 Sam Peckinpah,The Ballad of Cable Hogue,1.0,7.0
 Sam Peckinpah,The Getaway,1.0,7.0
 Sam Peckinpah,The Wild Bunch,1.0,8.0
-Sam Raimi,All,3.0,7.333333333333333
+Sam Raimi,A Simple Plan,1.0,8.0
+Sam Raimi,All,4.0,7.5
 Sam Raimi,Army of Darkness,1.0,7.0
 Sam Raimi,Evil Dead II,1.0,7.0
 Sam Raimi,The Evil Dead,1.0,8.0
@@ -1732,7 +1754,8 @@ Takashi Miike,Audition,1.0,8.0
 Takashi Miike,Ichi the Killer,1.0,6.0
 Takashi Miike,Shinjuku Triad Society,1.0,6.0
 Takashi Miike,The Happiness of the Katakuris,1.0,7.0
-Takeshi Kitano,All,7.0,7.142857142857143
+Takeshi Kitano,A Scene at the Sea,1.0,7.0
+Takeshi Kitano,All,8.0,7.125
 Takeshi Kitano,Boiling Point,1.0,6.0
 Takeshi Kitano,Dolls,1.0,8.0
 Takeshi Kitano,Fireworks,1.0,8.0
@@ -1810,7 +1833,8 @@ Travis Knight,Kubo and the Two Strings,1.0,6.0
 Trey Parker,All,2.0,7.0
 Trey Parker,"South Park: Bigger, Longer & Uncut",1.0,7.0
 Trey Parker,Team America: World Police,1.0,7.0
-Tsai Ming-liang,All,2.0,7.0
+Tsai Ming-liang,All,3.0,7.333333333333333
+Tsai Ming-liang,"Goodbye, Dragon Inn",1.0,8.0
 Tsai Ming-liang,Stray Dogs,1.0,7.0
 Tsai Ming-liang,The Wayward Cloud,1.0,7.0
 Tsui Hark,All,1.0,7.0
@@ -1872,13 +1896,15 @@ Wes Craven,All,2.0,6.0
 Wes Craven,The Hills Have Eyes,1.0,6.0
 Whit Stillman,All,1.0,8.0
 Whit Stillman,Metropolitan,1.0,8.0
-William Friedkin,All,5.0,7.4
+William Friedkin,All,6.0,7.333333333333333
+William Friedkin,Cruising,1.0,7.0
 William Friedkin,Killer Joe,1.0,6.0
 William Friedkin,Sorcerer,1.0,8.0
 William Friedkin,The Exorcist,1.0,8.0
 William Friedkin,The French Connection,1.0,8.0
 William Friedkin,To Live and Die in L.A.,1.0,7.0
-William Peter Blatty,All,1.0,8.0
+William Peter Blatty,All,2.0,7.5
+William Peter Blatty,The Exorcist III,1.0,7.0
 William Peter Blatty,The Ninth Configuration,1.0,8.0
 William Wyler,All,1.0,7.0
 William Wyler,The Westerner,1.0,7.0
@@ -1924,7 +1950,9 @@ Yang Fengliang,All,1.0,8.0
 Yang Fengliang,Ju Dou,1.0,8.0
 Yann Demange,'71,1.0,7.0
 Yann Demange,All,1.0,7.0
-Yasujirō Ozu,All,8.0,8.0
+Yasuharu Hasebe,All,1.0,6.0
+Yasuharu Hasebe,Stray Cat Rock: Delinquent Girl Boss,1.0,6.0
+Yasujirō Ozu,All,9.0,8.0
 Yasujirō Ozu,An Autumn Afternoon,1.0,8.0
 Yasujirō Ozu,Early Summer,1.0,8.0
 Yasujirō Ozu,Equinox Flower,1.0,8.0
@@ -1933,6 +1961,7 @@ Yasujirō Ozu,Good Morning,1.0,8.0
 Yasujirō Ozu,Late Autumn,1.0,8.0
 Yasujirō Ozu,Late Spring,1.0,8.0
 Yasujirō Ozu,Tokyo Story,1.0,8.0
+Yasujirō Ozu,Tokyo Twilight,1.0,8.0
 Yeon Sang-ho,All,1.0,7.0
 Yeon Sang-ho,Train to Busan,1.0,7.0
 Yorgos Lanthimos,All,4.0,7.0
