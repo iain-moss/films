@@ -308,7 +308,7 @@ Charles Reisner,"Steamboat Bill, Jr.",1.0,7.0
 Charles Roxburgh,All,2.0,6.5
 Charles Roxburgh,Don't Let the Riverbeast Get You!,1.0,7.0
 Charles Roxburgh,Freaky Farley,1.0,6.0
-Charlie Chaplin,All,10.0,7.6
+Charlie Chaplin,All,11.0,7.636363636363637
 Charlie Chaplin,City Lights,1.0,10.0
 Charlie Chaplin,Easy Street,1.0,7.0
 Charlie Chaplin,Modern Times,1.0,8.0
@@ -318,6 +318,7 @@ Charlie Chaplin,The Cure,1.0,8.0
 Charlie Chaplin,The Gold Rush,1.0,7.0
 Charlie Chaplin,The Great Dictator,1.0,8.0
 Charlie Chaplin,The Immigrant,1.0,7.0
+Charlie Chaplin,The Kid,1.0,8.0
 Charlie Chaplin,The Pawnshop,1.0,7.0
 Charlie Kaufman,All,3.0,7.666666666666667
 Charlie Kaufman,Anomalisa,1.0,8.0
@@ -417,13 +418,14 @@ Darren Aronofsky,Black Swan,1.0,7.0
 Darren Aronofsky,Requiem for a Dream,1.0,7.0
 Darren Aronofsky,mother!,1.0,7.0
 David Cronenberg,A History of Violence,1.0,6.0
-David Cronenberg,All,13.0,6.846153846153846
+David Cronenberg,All,14.0,6.857142857142857
 David Cronenberg,Cosmopolis,1.0,6.0
 David Cronenberg,Crash,1.0,7.0
 David Cronenberg,Dead Ringers,1.0,8.0
 David Cronenberg,Eastern Promises,1.0,7.0
 David Cronenberg,Maps to the Stars,1.0,6.0
 David Cronenberg,Naked Lunch,1.0,6.0
+David Cronenberg,Rabid,1.0,7.0
 David Cronenberg,Scanners,1.0,5.0
 David Cronenberg,Spider,1.0,7.0
 David Cronenberg,The Brood,1.0,7.0
@@ -994,6 +996,8 @@ John Maclean,All,1.0,7.0
 John Maclean,Slow West,1.0,7.0
 John Michael McDonagh,All,1.0,7.0
 John Michael McDonagh,Calvary,1.0,7.0
+John Sayles,All,1.0,9.0
+John Sayles,Matewan,1.0,9.0
 John Schlesinger,All,2.0,7.5
 John Schlesinger,Billy Liar,1.0,8.0
 John Schlesinger,Midnight Cowboy,1.0,7.0
@@ -1112,8 +1116,9 @@ King Hu,Come Drink with Me,1.0,7.0
 King Hu,Dragon Inn,1.0,8.0
 King Vidor,All,1.0,8.0
 King Vidor,Our Daily Bread,1.0,8.0
-Kinji Fukasaku,All,1.0,6.0
+Kinji Fukasaku,All,2.0,6.5
 Kinji Fukasaku,Battle Royale,1.0,6.0
+Kinji Fukasaku,Battles Without Honor and Humanity,1.0,7.0
 Kiyoshi Kurosawa,All,2.0,7.5
 Kiyoshi Kurosawa,Cure,1.0,8.0
 Kiyoshi Kurosawa,Pulse,1.0,7.0
@@ -1182,14 +1187,16 @@ Lisa Barros D'Sa,All,1.0,8.0
 Lisa Barros D'Sa,Good Vibrations,1.0,8.0
 Lisa Cholodenko,All,1.0,6.0
 Lisa Cholodenko,The Kids Are All Right,1.0,6.0
-Liu Chia-Liang,All,7.0,7.428571428571429
+Liu Chia-Liang,All,9.0,7.444444444444445
 Liu Chia-Liang,Challenge of the Masters,1.0,7.0
 Liu Chia-Liang,Dirty Ho,1.0,7.0
 Liu Chia-Liang,Heroes of the East,1.0,8.0
+Liu Chia-Liang,Legendary Weapons of China,1.0,7.0
 Liu Chia-Liang,Return to the 36th Chamber,1.0,7.0
 Liu Chia-Liang,Shaolin Mantis,1.0,7.0
 Liu Chia-Liang,The 36th Chamber of Shaolin,1.0,8.0
 Liu Chia-Liang,The 8 Diagram Pole Fighter,1.0,8.0
+Liu Chia-Liang,The Legend of Drunken Master,1.0,8.0
 Lo Wei,All,1.0,6.0
 Lo Wei,Fist of Fury,1.0,6.0
 Louis Malle,All,4.0,7.25
