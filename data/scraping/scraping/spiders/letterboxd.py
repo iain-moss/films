@@ -1,4 +1,10 @@
 import scrapy
+from datetime import datetime
+import pandas as pd
+
+df = pd.read_csv("../all_letterboxd.csv")
+df.date_rated = pd.to_datetime(df.date_rated, format='%Y-%m-%d')
+max_date = df.date_rated.max()
 
 class CareerhubSpider(scrapy.Spider):
     name = 'letterboxd'
@@ -11,8 +17,9 @@ class CareerhubSpider(scrapy.Spider):
         rating_dates = response.css('#diary-table > tbody > tr > td.td-day.diary-day.center > a::attr(href)').extract()
 
         for link, rating, rating_date in zip(links, ratings, rating_dates):
-            link = response.urljoin(link)
-            yield scrapy.Request(url=link, callback=self.parse_review, meta={'rating': rating, 'date_rated': rating_date})
+            if datetime.strptime(rating_date[-11:], '%Y/%m/%d/') > max_date:
+                link = response.urljoin(link)
+                yield scrapy.Request(url=link, callback=self.parse_review, meta={'rating': rating, 'date_rated': rating_date})
 
         next_page = response.css(
             'a.next::attr(href)').extract_first()
