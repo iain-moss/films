@@ -1,5 +1,0 @@
-6a58af477fa1fa76fbe7cb2ec2412d43faad18b6
-
-git remote add origin https://iain-moss:6a58af477fa1fa76fbe7cb2ec2412d43faad18b6@github.com/iain-moss/films.git
-
-git push https://$6a58af477fa1fa76fbe7cb2ec2412d43faad18b6@github.com/iain-moss/films.git

@@ -238,12 +238,13 @@ Bob Peterson,Up,1.0,7.0
 Bob Rafelson,All,2.0,7.0
 Bob Rafelson,Five Easy Pieces,1.0,8.0
 Bob Rafelson,The King of Marvin Gardens,1.0,6.0
-Bong Joon-ho,All,5.0,7.2
+Bong Joon-ho,All,6.0,7.166666666666667
 Bong Joon-ho,Memories of Murder,1.0,8.0
 Bong Joon-ho,Mother,1.0,7.0
 Bong Joon-ho,Parasite,1.0,8.0
 Bong Joon-ho,Snowpiercer,1.0,6.0
 Bong Joon-ho,The Host,1.0,7.0
+Bong Joon-ho,Tokyo!,1.0,7.0
 Boots Riley,All,1.0,7.0
 Boots Riley,Sorry to Bother You,1.0,7.0
 Brett Morgen,All,1.0,7.0
@@ -637,11 +638,12 @@ Gene Kelly,All,1.0,8.0
 Gene Kelly,Singin' in the Rain,1.0,8.0
 Geoffrey Wright,All,1.0,6.0
 Geoffrey Wright,Romper Stomper,1.0,6.0
-George A. Romero,All,4.0,7.25
+George A. Romero,All,5.0,7.2
 George A. Romero,Dawn of the Dead,1.0,8.0
 George A. Romero,Day of the Dead,1.0,7.0
 George A. Romero,Martin,1.0,6.0
 George A. Romero,Night of the Living Dead,1.0,8.0
+George A. Romero,The Crazies,1.0,7.0
 George Amponsah,All,1.0,7.0
 George Amponsah,The Hard Stop,1.0,7.0
 George Cukor,All,1.0,7.0
@@ -1048,10 +1050,11 @@ Josh Safdie,All,3.0,8.0
 Josh Safdie,Good Time,1.0,8.0
 Josh Safdie,Heaven Knows What,1.0,7.0
 Josh Safdie,Uncut Gems,1.0,9.0
-Jules Dassin,All,3.0,7.666666666666667
+Jules Dassin,All,4.0,7.5
 Jules Dassin,Brute Force,1.0,8.0
 Jules Dassin,Night and the City,1.0,7.0
 Jules Dassin,Rififi,1.0,8.0
+Jules Dassin,The Naked City,1.0,7.0
 Julia Ducournau,All,1.0,7.0
 Julia Ducournau,Raw,1.0,7.0
 Julian Farino,All,1.0,8.0
@@ -1174,12 +1177,13 @@ Leo McCarey,Duck Soup,1.0,7.0
 Leo McCarey,Make Way for Tomorrow,1.0,7.0
 Leonard Kastle,All,1.0,7.0
 Leonard Kastle,The Honeymoon Killers,1.0,7.0
-Leos Carax,All,5.0,7.2
+Leos Carax,All,6.0,7.166666666666667
 Leos Carax,Boy Meets Girl,1.0,7.0
 Leos Carax,Holy Motors,1.0,8.0
 Leos Carax,Mauvais Sang,1.0,7.0
 Leos Carax,Pola X,1.0,7.0
 Leos Carax,The Lovers on the Bridge,1.0,7.0
+Leos Carax,Tokyo!,1.0,7.0
 Les Blank,All,1.0,7.0
 Les Blank,Burden of Dreams,1.0,7.0
 Lilly Wachowski,All,1.0,8.0
@@ -1216,8 +1220,9 @@ Luc Dardenne,The Kid with a Bike,1.0,8.0
 Luc Dardenne,The Son,1.0,9.0
 Luc Dardenne,The Unknown Girl,1.0,7.0
 Luc Dardenne,"Two Days, One Night",1.0,9.0
-Lucio Fulci,All,2.0,6.0
+Lucio Fulci,All,3.0,6.333333333333333
 Lucio Fulci,City of the Living Dead,1.0,6.0
+Lucio Fulci,Don't Torture a Duckling,1.0,7.0
 Lucio Fulci,The Beyond,1.0,6.0
 Lucrecia Martel,All,1.0,7.0
 Lucrecia Martel,Zama,1.0,7.0
@@ -1271,7 +1276,7 @@ Martin McDonagh,In Bruges,1.0,7.0
 Martin Scorsese,A Personal Journey with Martin Scorsese Through American Movies,1.0,8.0
 Martin Scorsese,After Hours,1.0,9.0
 Martin Scorsese,Alice Doesn't Live Here Anymore,1.0,8.0
-Martin Scorsese,All,17.0,7.764705882352941
+Martin Scorsese,All,18.0,7.777777777777778
 Martin Scorsese,Bringing Out the Dead,1.0,7.0
 Martin Scorsese,Cape Fear,1.0,5.0
 Martin Scorsese,Casino,1.0,8.0
@@ -1281,6 +1286,7 @@ Martin Scorsese,Raging Bull,1.0,8.0
 Martin Scorsese,Shutter Island,1.0,7.0
 Martin Scorsese,Silence,1.0,6.0
 Martin Scorsese,Taxi Driver,1.0,9.0
+Martin Scorsese,The Color of Money,1.0,8.0
 Martin Scorsese,The Departed,1.0,7.0
 Martin Scorsese,The Irishman,1.0,8.0
 Martin Scorsese,The King of Comedy,1.0,9.0
@@ -1347,8 +1353,9 @@ Michael Reeves,Witchfinder General,1.0,7.0
 Michael Winterbottom,24 Hour Party People,1.0,7.0
 Michael Winterbottom,A Cock and Bull Story,1.0,7.0
 Michael Winterbottom,All,2.0,7.0
-Michel Gondry,All,1.0,8.0
+Michel Gondry,All,2.0,7.5
 Michel Gondry,Eternal Sunshine of the Spotless Mind,1.0,8.0
+Michel Gondry,Tokyo!,1.0,7.0
 Michelangelo Antonioni,All,6.0,7.333333333333333
 Michelangelo Antonioni,Blow-Up,1.0,7.0
 Michelangelo Antonioni,L'Avventura,1.0,7.0
@@ -1452,7 +1459,8 @@ Paddy Considine,All,1.0,7.0
 Paddy Considine,Tyrannosaur,1.0,7.0
 Panos Cosmatos,All,1.0,8.0
 Panos Cosmatos,Mandy,1.0,8.0
-Park Chan-wook,All,3.0,7.666666666666667
+Park Chan-wook,All,4.0,7.75
+Park Chan-wook,Joint Security Area,1.0,8.0
 Park Chan-wook,Oldboy,1.0,8.0
 Park Chan-wook,Sympathy for Mr. Vengeance,1.0,7.0
 Park Chan-wook,The Handmaiden,1.0,8.0
