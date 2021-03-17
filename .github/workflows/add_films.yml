@@ -27,6 +27,7 @@ jobs:
         run: scrapy crawl letterboxd -t csv -o - >new_films.csv
         
       - name: transform data
+        working-directory: data/scraping
         run: python test.py
         
       - name: commit files
