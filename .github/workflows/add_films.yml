@@ -23,6 +23,7 @@ jobs:
           pip install -r requirements.txt
           
       - name: scrape letterboxd
+        working-directory: data/scraping
         run: scrapy crawl letterboxd -t csv -o - >new_films.csv
         
       - name: transform data
