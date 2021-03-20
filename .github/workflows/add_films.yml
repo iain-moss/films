@@ -26,9 +26,6 @@ jobs:
         working-directory: data/scraping
         run: scrapy crawl letterboxd -t csv -o - >new_films.csv
         
-      - name: checkout repo content
-        uses: actions/checkout@v2
-        
       - name: transform data
         working-directory: data/scraping
         run: python test.py
