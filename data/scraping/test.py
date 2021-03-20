@@ -47,6 +47,7 @@ else:
     all_letterboxd.sort_values(by='date_rated', inplace=True)
     all_letterboxd.drop_duplicates(subset=['title', 'year', 'director'], keep='last', inplace=True)
     all_letterboxd.reset_index(drop=True, inplace=True)
+	all_letterboxd.to_csv("all_letterboxd.csv")
     all_letterboxd.to_csv("./all_letterboxd.csv")
     
     directors = all_letterboxd["director"].str.split(",", expand=True)
