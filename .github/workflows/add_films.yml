@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: transform data
-        working-directory: data
+        working-directory: data/scraping
         run: python test.py
         
       - name: commit files
