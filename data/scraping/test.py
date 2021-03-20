@@ -47,7 +47,7 @@ else:
     all_letterboxd.sort_values(by='date_rated', inplace=True)
     all_letterboxd.drop_duplicates(subset=['title', 'year', 'director'], keep='last', inplace=True)
     all_letterboxd.reset_index(drop=True, inplace=True)
-    all_letterboxd.to_csv("all_letterboxd.csv")
+    all_letterboxd.to_csv("../all_letterboxd.csv")
     
     directors = all_letterboxd["director"].str.split(",", expand=True)
     directors = directors.unstack().reset_index(name="director")
@@ -58,7 +58,7 @@ else:
     directors = pd.DataFrame(directors.groupby("director")["count"].sum())
     directors.sort_values(by="count", ascending=False, inplace=True)
     directors = directors[:20]
-    directors.to_csv("directors.csv")
+    directors.to_csv("../directors.csv")
     dir_bar = all_letterboxd.iloc[:,[0, 2, 5]]
     dir_bar.head()
     dir_bar = dir_bar.assign(director=dir_bar["director"].str.split(",")).explode("director")
@@ -69,18 +69,18 @@ else:
     pivot = pivot.loc[pivot.director != "All"]
     pivot.columns = pivot.columns.droplevel(1)
     pivot
-    pivot.to_csv("test.csv", index=False)
-    dir_bar.to_csv("dir_bar.csv", index=False)
+    pivot.to_csv("../test.csv", index=False)
+    dir_bar.to_csv("../dir_bar.csv", index=False)
     decade = all_letterboxd.groupby("decade").agg({"title": "size", "rating": "mean"}).rename(columns={"title": "count", "rating": "avg_rating"})
     decade
-    decade.to_csv("decade_breakdown.csv")
+    decade.to_csv("../decade_breakdown.csv")
     release_year = all_letterboxd.iloc[:, [0, 1]]
     min_year = release_year["year"].min()
     max_year = release_year["year"].max()
     year_range = np.arange(min_year, max_year + 1)
     release_year_group = release_year.groupby(["year"]).count()
     release_year_group = release_year_group.reindex(year_range).fillna(0)
-    release_year_group.to_csv("release_year.csv")
+    release_year_group.to_csv("../release_year.csv")
     w_date = all_letterboxd.set_index("date_rated")
     w_date = w_date.groupby("date_rated").count()
     w_date = pd.DataFrame(w_date.iloc[:, 1])
@@ -90,7 +90,7 @@ else:
     w_date = w_date.reindex(w_date_range).fillna(0)
     monthly = w_date.groupby(pd.Grouper(freq="MS")).sum()
     monthly.rename(columns={"year": "count"}, inplace=True)
-    monthly.to_csv("watch_date.csv", index_label="date")
+    monthly.to_csv("../watch_date.csv", index_label="date")
     genres = all_letterboxd.iloc[:, [0, 7]]
     genres = genres.assign(genre=genres["genre"].str.split(", ")).explode("genre")
     genres.drop(columns="title", inplace=True)
@@ -98,10 +98,10 @@ else:
     genres = genres[genres["genre"] != "Tv Movie"]
     genres = genres[genres["genre"] != "Genre not specified"]
     genres = genres.sort_values("genre")
-    genres.to_csv("genre_list.csv", index=False)
+    genres.to_csv("../genre_list.csv", index=False)
     countries = all_letterboxd.iloc[:, [0, 6]]
     countries = countries.assign(country=countries["country"].str.split(",")).explode("country")
     countries.drop(columns="title", inplace=True)
     countries = countries.drop_duplicates().dropna()
     countries.sort_values(by="country", inplace=True)
-    countries.to_csv("countries.csv", index=False)
+    countries.to_csv("../countries.csv", index=False)
