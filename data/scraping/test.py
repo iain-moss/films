@@ -3,7 +3,6 @@ from datetime import datetime
 import numpy as np
 import os
 
-
 file_path = "new_films.csv"
 
 if os.stat(file_path).st_size == 0:
