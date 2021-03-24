@@ -21,11 +21,11 @@ class CareerhubSpider(scrapy.Spider):
                 link = response.urljoin(link)
                 yield scrapy.Request(url=link, callback=self.parse_review, meta={'rating': rating, 'date_rated': rating_date})
 
-        next_page = response.css(
-            'a.next::attr(href)').extract_first()
-        if next_page:
-            next_page = response.urljoin(next_page)
-            yield scrapy.Request(next_page, callback=self.parse)
+#         next_page = response.css(
+#             'a.next::attr(href)').extract_first()
+#         if next_page:
+#             next_page = response.urljoin(next_page)
+#             yield scrapy.Request(next_page, callback=self.parse)
 
     def parse_review(self, response):
         title_links = response.css('#content > div > div > section > section > section > h2 > span.film-title-wrapper > a::attr(href)').extract()
