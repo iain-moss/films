@@ -1,30 +1,99 @@
 title,rating,director
 American Beauty,7,Sam Mendes
-Blow,6,Ted Demme
-Cobain: Montage of Heck,7,Brett Morgen
-Taxi Driver,9,Martin Scorsese
-Being John Malkovich,9,Spike Jonze
-Trainspotting,7,Danny Boyle
-Before Midnight,7,Richard Linklater
-Love and Death,7,Woody Allen
-Calvary,7,John Michael McDonagh
-The Departed,7,Martin Scorsese
-Rain Man,6,Barry Levinson
-24 Hour Party People,7,Michael Winterbottom
-Grizzly Man,9,Werner Herzog
-American History X,7,Tony Kaye
-The Grand Budapest Hotel,8,Wes Anderson
-A Cock and Bull Story,7,Michael Winterbottom
-La Haine,8,Mathieu Kassovitz
-The Shawshank Redemption,7,Frank Darabont
-Matador,6,Pedro Almodóvar
-Gone Girl,6,David Fincher
-Scarface,6,Brian De Palma
-Four Lions,7,Chris Morris
-"Two Days, One Night",9,Luc Dardenne
-"Two Days, One Night",9,Jean-Pierre Dardenne
-Belle,7,Amma Asante
-The Brood,7,David Cronenberg
+Team America: World Police,7,Trey Parker
+Paddington,7,Paul King
+"O Brother, Where Art Thou?",8,Joel Coen
+The Girl with the Dragon Tattoo,6,David Fincher
+The Exorcist,8,William Friedkin
+"South Park: Bigger, Longer & Uncut",7,Trey Parker
+Casino,8,Martin Scorsese
+Snatch,6,Guy Ritchie
+Badlands,9,Terrence Malick
+127 Hours,6,Danny Boyle
+Vertigo,8,Alfred Hitchcock
+Frank,8,Lenny Abrahamson
+Children of Men,8,Alfonso Cuarón
+Some Like It Hot,7,Billy Wilder
+It Follows,8,David Robert Mitchell
+Apocalypse Now,10,Francis Ford Coppola
+While We're Young,7,Noah Baumbach
+Amores Perros,8,Alejandro González Iñárritu
+Under the Skin,8,Jonathan Glazer
+The Usual Suspects,6,Bryan Singer
+Up,7,Pete Docter
+Up,7,Bob Peterson
+Taken,5,Pierre Morel
+Mulholland Drive,9,David Lynch
+Nas: Time Is Illmatic,7,One9
+Winter's Bone,8,Debra Granik
+The Life Aquatic with Steve Zissou,7,Wes Anderson
+Only Lovers Left Alive,7,Jim Jarmusch
+Talk to Her,8,Pedro Almodóvar
+Before Sunrise,9,Richard Linklater
+The Big Lebowski,8,Joel Coen
+Dallas Buyers Club,6,Jean-Marc Vallée
+Attack the Block,7,Joe Cornish
+No,7,Pablo Larraín
+Ghost World,7,Terry Zwigoff
+Lost in Translation,7,Sofia Coppola
+Obvious Child,6,Gillian Robespierre
+Ida,8,Paweł Pawlikowski
+28 Days Later,6,Danny Boyle
+Before Sunset,10,Richard Linklater
+Moonrise Kingdom,8,Wes Anderson
+Un Chien Andalou,7,Luis Buñuel
+Sexy Beast,7,Jonathan Glazer
+Boyhood,9,Richard Linklater
+Reservoir Dogs,8,Quentin Tarantino
+The Selfish Giant,7,Clio Barnard
+The Lego Movie,7,Phil Lord
+The Lego Movie,7,Christopher Miller
+White God,7,Kornél Mundruczó
+Punch-Drunk Love,8,Paul Thomas Anderson
+Fight Club,7,David Fincher
+Battle Royale,6,Kinji Fukasaku
+The Babadook,8,Jennifer Kent
+Let the Right One In,8,Tomas Alfredson
+Whiplash,8,Damien Chazelle
+Wild at Heart,7,David Lynch
+The Punk Singer,7,Sini Anderson
+The Double,6,Richard Ayoade
+Y Tu Mamá También,7,Alfonso Cuarón
+Inception,7,Christopher Nolan
+Electricity,6,Bryn Higgins
+Good Vibrations,8,Lisa Barros D'Sa
+Good Vibrations,8,Glenn Leyburn
+Mr. Turner,7,Mike Leigh
+Into the Wild,6,Sean Penn
+Naked Lunch,6,David Cronenberg
+The Girl with the Dragon Tattoo,6,Niels Arden Oplev
+In the Loop,8,Armando Iannucci
+Frances Ha,7,Noah Baumbach
+Kick-Ass,6,Matthew Vaughn
+Eternal Sunshine of the Spotless Mind,8,Michel Gondry
+Shutter Island,7,Martin Scorsese
+Her,8,Spike Jonze
+Se7en,7,David Fincher
+Barton Fink,9,Joel Coen
+District 9,6,Neill Blomkamp
+The Wackness,6,Jonathan Levine
+Kill Bill: Vol. 1,6,Quentin Tarantino
+A Serious Man,7,Joel Coen
+A Serious Man,7,Ethan Coen
+Twin Peaks: Fire Walk with Me,7,David Lynch
+Cosmopolis,6,David Cronenberg
+20.000 Days on Earth,7,Iain Forsyth
+20.000 Days on Earth,7,Jane Pollard
+Submarine,7,Richard Ayoade
+Slacker,7,Richard Linklater
+Blue Ruin,7,Jeremy Saulnier
+Groundhog Day,8,Harold Ramis
+Killing Them Softly,6,Andrew Dominik
+Miller's Crossing,7,Joel Coen
+Beasts of the Southern Wild,7,Benh Zeitlin
+Inside Llewyn Davis,8,Joel Coen
+Inside Llewyn Davis,8,Ethan Coen
+Bronson,6,Nicolas Winding Refn
 Donnie Brasco,7,Mike Newell
 No Manifesto: A Film About Manic Street Preachers,7,Director not specified
 "Pulp: a Film About Life, Death & Supermarkets",7,Florian Habicht
@@ -42,32 +111,33 @@ Dead Ringers,8,David Cronenberg
 "Lock, Stock and Two Smoking Barrels",6,Guy Ritchie
 Ocean's Eleven,6,Steven Soderbergh
 Juno,6,Jason Reitman
-Bronson,6,Nicolas Winding Refn
+The Brood,7,David Cronenberg
+Belle,7,Amma Asante
+"Two Days, One Night",9,Luc Dardenne
+"Two Days, One Night",9,Jean-Pierre Dardenne
+Four Lions,7,Chris Morris
+Taxi Driver,9,Martin Scorsese
+Being John Malkovich,9,Spike Jonze
+Trainspotting,7,Danny Boyle
+Before Midnight,7,Richard Linklater
+Love and Death,7,Woody Allen
+Calvary,7,John Michael McDonagh
+The Departed,7,Martin Scorsese
+Rain Man,6,Barry Levinson
+Rushmore,8,Wes Anderson
+24 Hour Party People,7,Michael Winterbottom
+American History X,7,Tony Kaye
+The Grand Budapest Hotel,8,Wes Anderson
+A Cock and Bull Story,7,Michael Winterbottom
+La Haine,8,Mathieu Kassovitz
+The Shawshank Redemption,7,Frank Darabont
+Matador,6,Pedro Almodóvar
+Gone Girl,6,David Fincher
+Scarface,6,Brian De Palma
+Grizzly Man,9,Werner Herzog
 Rear Window,9,Alfred Hitchcock
 Down by Law,8,Jim Jarmusch
 Alan Partridge: Alpha Papa,7,Declan Lowney
-"Aguirre, the Wrath of God",9,Werner Herzog
-Halloween,8,John Carpenter
-In Bruges,7,Martin McDonagh
-The Untouchables,6,Brian De Palma
-Volver,6,Pedro Almodóvar
-Network,9,Sidney Lumet
-Scott Pilgrim vs. the World,7,Edgar Wright
-The Godfather,10,Francis Ford Coppola
-Starred Up,8,David Mackenzie
-The Young and the Damned,8,Luis Buñuel
-We Are the Best!,8,Lukas Moodysson
-Dig!,8,Ondi Timoner
-The Godfather: Part III,5,Francis Ford Coppola
-Serpico,7,Sidney Lumet
-School of Rock,6,Richard Linklater
-Inland Empire,7,David Lynch
-Black Swan,7,Darren Aronofsky
-Eraserhead,9,David Lynch
-Stranger Than Paradise,8,Jim Jarmusch
-Inglourious Basterds,7,Quentin Tarantino
-Mistaken for Strangers,7,Tom Berninger
-Videodrome,8,David Cronenberg
 Maps to the Stars,6,David Cronenberg
 High Fidelity,7,Stephen Frears
 Nightcrawler,7,Dan Gilroy
@@ -76,8 +146,8 @@ The Royal Tenenbaums,8,Wes Anderson
 Broken Embraces,6,Pedro Almodóvar
 Manhattan,8,Woody Allen
 Pan's Labyrinth,8,Guillermo del Toro
+Videodrome,8,David Cronenberg
 The Mosquito Coast,5,Peter Weir
-Collateral,7,Michael Mann
 if....,8,Lindsay Anderson
 Fargo,10,Joel Coen
 Annie Hall,8,Woody Allen
@@ -86,105 +156,35 @@ Blade Runner,8,Ridley Scott
 Zombieland,6,Ruben Fleischer
 The Man Who Wasn't There,8,Joel Coen
 Raising Arizona,7,Joel Coen
-Rushmore,8,Wes Anderson
-Beasts of the Southern Wild,7,Benh Zeitlin
-Inside Llewyn Davis,8,Joel Coen
-Inside Llewyn Davis,8,Ethan Coen
-Sexy Beast,7,Jonathan Glazer
-Mulholland Drive,9,David Lynch
-Nas: Time Is Illmatic,7,One9
-Winter's Bone,8,Debra Granik
-The Life Aquatic with Steve Zissou,7,Wes Anderson
-Only Lovers Left Alive,7,Jim Jarmusch
-Talk to Her,8,Pedro Almodóvar
-Before Sunrise,9,Richard Linklater
-The Big Lebowski,8,Joel Coen
-Attack the Block,7,Joe Cornish
-Un Chien Andalou,7,Luis Buñuel
-No,7,Pablo Larraín
-Ghost World,7,Terry Zwigoff
-Lost in Translation,7,Sofia Coppola
-Obvious Child,6,Gillian Robespierre
-Ida,8,Paweł Pawlikowski
-28 Days Later,6,Danny Boyle
-Before Sunset,10,Richard Linklater
-Moonrise Kingdom,8,Wes Anderson
-Taken,5,Pierre Morel
-Dallas Buyers Club,6,Jean-Marc Vallée
-Up,7,Pete Docter
-Up,7,Bob Peterson
-Badlands,9,Terrence Malick
-Team America: World Police,7,Trey Parker
-Paddington,7,Paul King
-"O Brother, Where Art Thou?",8,Joel Coen
-The Girl with the Dragon Tattoo,6,David Fincher
-The Exorcist,8,William Friedkin
-"South Park: Bigger, Longer & Uncut",7,Trey Parker
-Casino,8,Martin Scorsese
-Snatch,6,Guy Ritchie
-127 Hours,6,Danny Boyle
-Under the Skin,8,Jonathan Glazer
-Vertigo,8,Alfred Hitchcock
-Frank,8,Lenny Abrahamson
-Children of Men,8,Alfonso Cuarón
-Some Like It Hot,7,Billy Wilder
-It Follows,8,David Robert Mitchell
-Apocalypse Now,10,Francis Ford Coppola
-While We're Young,7,Noah Baumbach
-Amores Perros,8,Alejandro González Iñárritu
-The Usual Suspects,6,Bryan Singer
-Boyhood,9,Richard Linklater
-The Girl with the Dragon Tattoo,6,Niels Arden Oplev
-Reservoir Dogs,8,Quentin Tarantino
-Kick-Ass,6,Matthew Vaughn
-Eternal Sunshine of the Spotless Mind,8,Michel Gondry
-Shutter Island,7,Martin Scorsese
-Her,8,Spike Jonze
-Se7en,7,David Fincher
-Barton Fink,9,Joel Coen
-District 9,6,Neill Blomkamp
-The Wackness,6,Jonathan Levine
-A Serious Man,7,Joel Coen
-A Serious Man,7,Ethan Coen
-Miller's Crossing,7,Joel Coen
-Twin Peaks: Fire Walk with Me,7,David Lynch
-Cosmopolis,6,David Cronenberg
-20.000 Days on Earth,7,Iain Forsyth
-20.000 Days on Earth,7,Jane Pollard
-Submarine,7,Richard Ayoade
-Slacker,7,Richard Linklater
-Blue Ruin,7,Jeremy Saulnier
-Groundhog Day,8,Harold Ramis
-Killing Them Softly,6,Andrew Dominik
-Frances Ha,7,Noah Baumbach
-Kill Bill: Vol. 1,6,Quentin Tarantino
-In the Loop,8,Armando Iannucci
-Whiplash,8,Damien Chazelle
-The Selfish Giant,7,Clio Barnard
-The Lego Movie,7,Phil Lord
-The Lego Movie,7,Christopher Miller
-White God,7,Kornél Mundruczó
-Punch-Drunk Love,8,Paul Thomas Anderson
-Fight Club,7,David Fincher
-Battle Royale,6,Kinji Fukasaku
-The Babadook,8,Jennifer Kent
-Let the Right One In,8,Tomas Alfredson
-Wild at Heart,7,David Lynch
-Naked Lunch,6,David Cronenberg
-The Punk Singer,7,Sini Anderson
-The Double,6,Richard Ayoade
-Y Tu Mamá También,7,Alfonso Cuarón
-Inception,7,Christopher Nolan
-Electricity,6,Bryn Higgins
-Good Vibrations,8,Lisa Barros D'Sa
-Good Vibrations,8,Glenn Leyburn
-Mr. Turner,7,Mike Leigh
-Into the Wild,6,Sean Penn
-'71,7,Yann Demange
+Collateral,7,Michael Mann
+Cobain: Montage of Heck,7,Brett Morgen
+Mistaken for Strangers,7,Tom Berninger
+Stranger Than Paradise,8,Jim Jarmusch
+"Aguirre, the Wrath of God",9,Werner Herzog
+Halloween,8,John Carpenter
+In Bruges,7,Martin McDonagh
+The Untouchables,6,Brian De Palma
+Volver,6,Pedro Almodóvar
+Network,9,Sidney Lumet
+Scott Pilgrim vs. the World,7,Edgar Wright
+The Godfather,10,Francis Ford Coppola
+Inglourious Basterds,7,Quentin Tarantino
+Starred Up,8,David Mackenzie
+We Are the Best!,8,Lukas Moodysson
+Dig!,8,Ondi Timoner
+The Godfather: Part III,5,Francis Ford Coppola
+Serpico,7,Sidney Lumet
+School of Rock,6,Richard Linklater
+Inland Empire,7,David Lynch
+Black Swan,7,Darren Aronofsky
+Eraserhead,9,David Lynch
+The Young and the Damned,8,Luis Buñuel
+Blow,6,Ted Demme
 Still Life,6,Uberto Pasolini
+'71,7,Yann Demange
 Mary and Max,8,Adam Elliot
-The Kids Are All Right,6,Lisa Cholodenko
 Adaptation.,8,Spike Jonze
+The Kids Are All Right,6,Lisa Cholodenko
 Nirvana: Live At Reading,8,Director not specified
 What We Do in the Shadows,6,Taika Waititi
 What We Do in the Shadows,6,Jemaine Clement
@@ -268,18 +268,18 @@ Elephant,7,Gus Van Sant
 Léon: The Professional,7,Luc Besson
 Star Wars,8,George Lucas
 A Most Violent Year,7,J.C. Chandor
+The Empire Strikes Back,8,Irvin Kershner
 Return of the Jedi,7,Richard Marquand
 Girlhood,7,Céline Sciamma
-The Empire Strikes Back,8,Irvin Kershner
 Persepolis,8,Vincent Paronnaud
 Persepolis,8,Marjane Satrapi
 Star Wars: The Force Awakens,5,J.J. Abrams
 Safe,8,Todd Haynes
 Mad Max: Fury Road,7,George Miller
 Night on Earth,7,Jim Jarmusch
+My Neighbor Totoro,9,Hayao Miyazaki
 Marvellous,8,Julian Farino
 Dog Day Afternoon,8,Sidney Lumet
-My Neighbor Totoro,9,Hayao Miyazaki
 Bicycle Thieves,8,Vittorio De Sica
 Rosetta,8,Luc Dardenne
 Rosetta,8,Jean-Pierre Dardenne
@@ -321,18 +321,18 @@ The Wolfpack,6,Crystal Moselle
 Monty Python and the Holy Grail,8,Terry Gilliam
 Monty Python and the Holy Grail,8,Terry Jones
 Mystery Train,8,Jim Jarmusch
+Ran,10,Akira Kurosawa
+Rashomon,8,Akira Kurosawa
 The 39 Steps,7,Alfred Hitchcock
 Life of Brian,8,Terry Jones
-Rashomon,8,Akira Kurosawa
-Ran,10,Akira Kurosawa
 Brief Encounter,8,David Lean
 The Great Ecstasy of Woodcarver Steiner,8,Werner Herzog
 "The Cook, the Thief, His Wife & Her Lover",9,Peter Greenaway
 Battleship Potemkin,7,Sergei Eisenstein
 Stroszek,8,Werner Herzog
 Rope,8,Alfred Hitchcock
-Drowning by Numbers,8,Peter Greenaway
 Woyzeck,7,Werner Herzog
+Drowning by Numbers,8,Peter Greenaway
 The Rules of the Game,8,Jean Renoir
 99 Homes,7,Ramin Bahrani
 The Enigma of Kaspar Hauser,9,Werner Herzog
@@ -356,8 +356,8 @@ Three Businessmen,7,Alex Cox
 Vivre Sa Vie,8,Jean-Luc Godard
 Zodiac,7,David Fincher
 Ratcatcher,8,Lynne Ramsay
-Germany Year Zero,8,Roberto Rossellini
 Ghost Dog: The Way of the Samurai,8,Jim Jarmusch
+Germany Year Zero,8,Roberto Rossellini
 The Third Man,9,Carol Reed
 The Squid and the Whale,8,Noah Baumbach
 Throne of Blood,8,Akira Kurosawa
@@ -378,10 +378,10 @@ Fata Morgana,7,Werner Herzog
 Listen to Me Marlon,7,Stevan Riley
 Repo Man,7,Alex Cox
 Sanjuro,8,Akira Kurosawa
-Oldboy,8,Park Chan-wook
 Eastern Promises,7,David Cronenberg
-Fantastic Mr. Fox,6,Wes Anderson
+Oldboy,8,Park Chan-wook
 Beauty and the Beast,8,Jean Cocteau
+Fantastic Mr. Fox,6,Wes Anderson
 Journey to Italy,7,Roberto Rossellini
 The Red Shoes,8,Emeric Pressburger
 The Red Shoes,8,Michael Powell
@@ -405,8 +405,8 @@ Knife in the Water,8,Roman Polanski
 Cool Hand Luke,8,Stuart Rosenberg
 Ikiru,9,Akira Kurosawa
 Under the Shadow,7,Babak Anvari
-A History of Violence,6,David Cronenberg
 Hitchcock/Truffaut,7,Kent Jones
+A History of Violence,6,David Cronenberg
 The Lodger: A Story of the London Fog,7,Alfred Hitchcock
 Aliens,8,James Cameron
 Prevenge,5,Alice Lowe
@@ -418,8 +418,8 @@ A Matter of Life and Death,8,Michael Powell
 Drácula,6,Enrique Tovar Ávalos
 Drácula,6,George Melford
 Victoria,7,Sebastian Schipper
-I Am Belfast,6,Mark Cousins
 Crimes and Misdemeanors,8,Woody Allen
+I Am Belfast,6,Mark Cousins
 The Birds,6,Alfred Hitchcock
 Green Room,7,Jeremy Saulnier
 Escape from New York,7,John Carpenter
@@ -464,8 +464,8 @@ Close-Up,9,Abbas Kiarostami
 Contempt,8,Jean-Luc Godard
 Night of the Living Dead,8,George A. Romero
 Highway Patrolman,8,Alex Cox
-Modern Times,8,Charlie Chaplin
 Everybody Wants Some!!,8,Richard Linklater
+Modern Times,8,Charlie Chaplin
 Notorious,8,Alfred Hitchcock
 Red Beard,8,Akira Kurosawa
 The Exterminating Angel,8,Luis Buñuel
@@ -474,11 +474,11 @@ The Pawnshop,7,Charlie Chaplin
 The Cure,8,Charlie Chaplin
 Easy Street,7,Charlie Chaplin
 Scanners,5,David Cronenberg
-The Discreet Charm of the Bourgeoisie,8,Luis Buñuel
 The Deer Hunter,7,Michael Cimino
+The Discreet Charm of the Bourgeoisie,8,Luis Buñuel
+Metropolis,8,Fritz Lang
 Birdman or (The Unexpected Virtue of Ignorance),7,Alejandro González Iñárritu
 Sicario,7,Denis Villeneuve
-Metropolis,8,Fritz Lang
 Au Hasard Balthazar,7,Robert Bresson
 Happiness,8,Todd Solondz
 The Evil Dead,8,Sam Raimi
@@ -500,8 +500,8 @@ Suspiria,8,Dario Argento
 Kagemusha,8,Akira Kurosawa
 Best of Enemies,7,Morgan Neville
 Best of Enemies,7,Robert Gordon
-Sunset Boulevard,8,Billy Wilder
 Red Road,7,Andrea Arnold
+Sunset Boulevard,8,Billy Wilder
 The Big Sleep,7,Howard Hawks
 City Lights,10,Charlie Chaplin
 The Devil's Backbone,7,Guillermo del Toro
@@ -515,9 +515,9 @@ F for Fake,8,François Reichenbach
 The Searchers,7,John Ford
 The Straight Story,8,David Lynch
 Three Colors: Red,8,Krzysztof Kieślowski
+"Sherlock, Jr.",8,Buster Keaton
 Our Hospitality,7,Buster Keaton
 Our Hospitality,7,John G. Blystone
-"Sherlock, Jr.",8,Buster Keaton
 Jules and Jim,7,François Truffaut
 Viridiana,7,Luis Buñuel
 The Lady from Shanghai,7,Orson Welles
@@ -526,8 +526,8 @@ Secrets & Lies,9,Mike Leigh
 Waking Life,8,Richard Linklater
 Captain Fantastic,6,Matt Ross
 Permanent Vacation,6,Jim Jarmusch
-High and Low,9,Akira Kurosawa
 The Great Dictator,8,Charlie Chaplin
+High and Low,9,Akira Kurosawa
 Embrace of the Serpent,7,Ciro Guerra
 Hannah and Her Sisters,8,Woody Allen
 Tampopo,9,Juzo Itami
@@ -536,8 +536,8 @@ Toni Erdmann,8,Maren Ade
 Holy Motors,8,Leos Carax
 The Testament of Dr. Mabuse,7,Fritz Lang
 Possession,8,Andrzej Żuławski
-Far from Heaven,7,Todd Haynes
 Dreams,7,Akira Kurosawa
+Far from Heaven,7,Todd Haynes
 Solaris,8,Andrei Tarkovsky
 Inside Out,7,Pete Docter
 Ferris Bueller's Day Off,6,John Hughes
@@ -574,8 +574,8 @@ Welcome to the Dollhouse,7,Todd Solondz
 Wrong Move,7,Wim Wenders
 Repulsion,8,Roman Polanski
 McCabe & Mrs. Miller,8,Robert Altman
-Kings of the Road,8,Wim Wenders
 The Magnificent Ambersons,6,Orson Welles
+Kings of the Road,8,Wim Wenders
 The General,9,Buster Keaton
 The General,9,Clyde Bruckman
 Safety Last!,8,Fred C. Newmeyer
@@ -602,8 +602,8 @@ The Fits,7,Anna Rose Holmer
 Koyaanisqatsi,8,Godfrey Reggio
 Duel,8,Steven Spielberg
 Sixteen Candles,6,John Hughes
-The Princess Bride,7,Rob Reiner
 Unforgiven,8,Clint Eastwood
+The Princess Bride,7,Rob Reiner
 The Handmaiden,8,Park Chan-wook
 My Life as a Zucchini,7,Claude Barras
 Lolita,6,Stanley Kubrick
@@ -625,8 +625,8 @@ Heart of Glass,6,Werner Herzog
 Thelma & Louise,7,Ridley Scott
 Sympathy for Mr. Vengeance,7,Park Chan-wook
 In Cold Blood,8,Richard Brooks
-3 Women,7,Robert Altman
 Man with a Movie Camera,8,Dziga Vertov
+3 Women,7,Robert Altman
 The Cabinet of Dr. Caligari,6,Robert Wiene
 Drugstore Cowboy,6,Gus Van Sant
 The Story of Film: An Odyssey,8,Mark Cousins
@@ -636,8 +636,8 @@ The Lovers on the Bridge,7,Leos Carax
 Sunrise: A Song of Two Humans,8,F.W. Murnau
 The Red Turtle,7,Michael Dudok de Wit
 To Have and Have Not,7,Howard Hawks
-Stalker,9,Andrei Tarkovsky
 Mindhorn,6,Sean Foley
+Stalker,9,Andrei Tarkovsky
 Ju Dou,8,Zhang Yimou
 Ju Dou,8,Yang Fengliang
 Late Autumn,8,Yasujirō Ozu
@@ -646,8 +646,8 @@ Samurai Rebellion,8,Masaki Kobayashi
 A Bucket of Blood,8,Roger Corman
 Going Clear: Scientology and the Prison of Belief,7,Alex Gibney
 Elle,7,Paul Verhoeven
-Ivan's Childhood,8,Andrei Tarkovsky
 Sansho the Bailiff,9,Kenji Mizoguchi
+Ivan's Childhood,8,Andrei Tarkovsky
 This Is Spinal Tap,8,Rob Reiner
 The Sword of Doom,7,Kihachi Okamoto
 The Tenant,7,Roman Polanski
@@ -660,8 +660,8 @@ When a Woman Ascends the Stairs,8,Mikio Naruse
 The Wages of Fear,8,Henri-Georges Clouzot
 The Treasure of the Sierra Madre,9,John Huston
 The Night of the Hunter,8,Charles Laughton
-The Burmese Harp,9,Kon Ichikawa
 The Virgin Spring,8,Ingmar Bergman
+The Burmese Harp,9,Kon Ichikawa
 Wild Strawberries,8,Ingmar Bergman
 Cléo from 5 to 7,8,Agnès Varda
 Buena Vista Social Club,7,Wim Wenders
@@ -670,8 +670,8 @@ After Hours,9,Martin Scorsese
 Butch Cassidy and the Sundance Kid,7,George Roy Hill
 All Tomorrow's Parties,6,Jonathan Caouette
 Kwaidan,8,Masaki Kobayashi
-Pastoral: To Die in the Country,8,Shūji Terayama
 Isle of Dogs,7,Wes Anderson
+Pastoral: To Die in the Country,8,Shūji Terayama
 Rio Bravo,8,Howard Hawks
 In the Mood for Love,8,Wong Kar-wai
 The Player,8,Robert Altman
@@ -694,8 +694,8 @@ Closely Watched Trains,8,Jiří Menzel
 Mildred Pierce,7,Michael Curtiz
 The Kid with a Bike,8,Luc Dardenne
 The Kid with a Bike,8,Jean-Pierre Dardenne
-Diabolique,7,Henri-Georges Clouzot
 La Ronde,8,Max Ophüls
+Diabolique,7,Henri-Georges Clouzot
 The Getaway,7,Sam Peckinpah
 Walkabout,7,Nicolas Roeg
 Best in Show,7,Christopher Guest
@@ -704,12 +704,12 @@ The Music Room,8,Satyajit Ray
 Band of Outsiders,7,Jean-Luc Godard
 Drifting Clouds,8,Aki Kaurismäki
 The Earrings of Madame de...,8,Max Ophüls
-The Bird with the Crystal Plumage,7,Dario Argento
 Amarcord,7,Federico Fellini
-Werckmeister Harmonies,7,Béla Tarr
-Werckmeister Harmonies,7,Ágnes Hranitzky
+The Bird with the Crystal Plumage,7,Dario Argento
 The Freshman,7,Fred C. Newmeyer
 The Freshman,7,Sam Taylor
+Werckmeister Harmonies,7,Béla Tarr
+Werckmeister Harmonies,7,Ágnes Hranitzky
 Certified Copy,8,Abbas Kiarostami
 Kiss Kiss Bang Bang,6,Shane Black
 Waiting for Guffman,8,Christopher Guest
@@ -719,8 +719,8 @@ Pat Garrett & Billy the Kid,7,Sam Peckinpah
 Shadow of a Doubt,7,Alfred Hitchcock
 The Bitter Tears of Petra von Kant,8,Rainer Werner Fassbinder
 Chinese Roulette,7,Rainer Werner Fassbinder
-The Sting,7,George Roy Hill
 Don't Look Now,7,Nicolas Roeg
+The Sting,7,George Roy Hill
 Hard Eight,7,Paul Thomas Anderson
 Last Tango in Paris,7,Bernardo Bertolucci
 The River,7,Jean Renoir
@@ -731,9 +731,9 @@ Code Unknown,8,Michael Haneke
 The Ballad of Cable Hogue,7,Sam Peckinpah
 American Graffiti,7,George Lucas
 The Woman Next Door,7,François Truffaut
+Johnny Guitar,7,Nicholas Ray
 The Turin Horse,7,Béla Tarr
 The Turin Horse,7,Ágnes Hranitzky
-Johnny Guitar,7,Nicholas Ray
 The White Ribbon,8,Michael Haneke
 Prince of Darkness,7,John Carpenter
 Life Is Sweet,8,Mike Leigh
@@ -742,8 +742,8 @@ Stray Dog,7,Akira Kurosawa
 Mishima: A Life in Four Chapters,7,Paul Schrader
 Cries and Whispers,8,Ingmar Bergman
 Once Upon a Time in the West,10,Sergio Leone
-Fantastic Planet,8,René Laloux
 The Wolf of Wall Street,8,Martin Scorsese
+Fantastic Planet,8,René Laloux
 The Cranes Are Flying,8,Mikhail Kalatozov
 Fanny and Alexander,8,Ingmar Bergman
 Winter Light,8,Ingmar Bergman
@@ -752,8 +752,8 @@ Lone Wolf and Cub: Sword of Vengeance,8,Kenji Misumi
 Alice Doesn't Live Here Anymore,8,Martin Scorsese
 Lone Wolf and Cub: Baby Cart at the River Styx,8,Kenji Misumi
 Lone Wolf and Cub: Baby Cart to Hades,8,Kenji Misumi
-Rififi,8,Jules Dassin
 Lone Wolf and Cub: Baby Cart in Peril,8,Buichi Saito
+Rififi,8,Jules Dassin
 Lone Wolf and Cub: Baby Cart in the Land of Demons,7,Kenji Misumi
 Through a Glass Darkly,8,Ingmar Bergman
 Lone Wolf and Cub: White Heaven in Hell,7,Yoshiyuki Kuroda
@@ -766,8 +766,8 @@ The Big Heat,8,Fritz Lang
 Blind Chance,8,Krzysztof Kieślowski
 Hiroshima Mon Amour,7,Alain Resnais
 The Umbrellas of Cherbourg,7,Jacques Demy
-I Confess,7,Alfred Hitchcock
 The Life of Oharu,8,Kenji Mizoguchi
+I Confess,7,Alfred Hitchcock
 The Eyes of Orson Welles,7,Mark Cousins
 Loves of a Blonde,8,Miloš Forman
 Strangers on a Train,8,Alfred Hitchcock
@@ -776,8 +776,8 @@ Carnival of Souls,6,Herk Harvey
 Infernal Affairs,7,Andrew Lau
 Infernal Affairs,7,Alan Mak
 Come and See,9,Elem Klimov
-Stagecoach,8,John Ford
 The Killing of a Sacred Deer,8,Yorgos Lanthimos
+Stagecoach,8,John Ford
 The Marriage of Maria Braun,7,Rainer Werner Fassbinder
 I Am Cuba,8,Mikhail Kalatozov
 "Welcome, or No Trespassing",7,Elem Klimov
@@ -788,8 +788,8 @@ Straw Dogs,7,Sam Peckinpah
 A Nightmare on Elm Street,6,Wes Craven
 Au Revoir les Enfants,8,Louis Malle
 The Ascent,8,Larisa Shepitko
-Five Easy Pieces,8,Bob Rafelson
 House,7,Nobuhiko Ōbayashi
+Five Easy Pieces,8,Bob Rafelson
 The Bad Sleep Well,8,Akira Kurosawa
 The Phantom of Liberty,7,Luis Buñuel
 Le Bonheur,7,Agnès Varda
@@ -800,8 +800,8 @@ Performance,7,Donald Cammell
 Bottle Rocket,7,Wes Anderson
 Train to Busan,7,Yeon Sang-ho
 Elevator to the Gallows,7,Louis Malle
-Caché,8,Michael Haneke
 Suspicion,6,Alfred Hitchcock
+Caché,8,Michael Haneke
 Nocturnal Animals,7,Tom Ford
 The Prestige,5,Christopher Nolan
 Into the Inferno,7,Werner Herzog
@@ -824,8 +824,8 @@ Rancho Notorious,7,Fritz Lang
 The Hunt,8,Thomas Vinterberg
 El Topo,7,Alejandro Jodorowsky
 Intimate Lighting,7,Ivan Passer
-Images,7,Robert Altman
 Memories of Murder,8,Bong Joon-ho
+Images,7,Robert Altman
 La Jetée,7,Chris Marker
 Letter Never Sent,8,Mikhail Kalatozov
 The Salesman,8,Asghar Farhadi
@@ -849,9 +849,9 @@ Phantom Thread,8,Paul Thomas Anderson
 Only Angels Have Wings,8,Howard Hawks
 Source Code,7,Duncan Jones
 Hot Fuzz,7,Edgar Wright
+Julieta,7,Pedro Almodóvar
 Smiles of a Summer Night,8,Ingmar Bergman
 The Shooting,6,Monte Hellman
-Julieta,7,Pedro Almodóvar
 Get Out,7,Jordan Peele
 Vagabond,7,Agnès Varda
 Dead Man's Shoes,7,Shane Meadows
@@ -871,8 +871,8 @@ The Human Condition I: No Greater Love,8,Masaki Kobayashi
 Nanook of the North,7,Robert J. Flaherty
 The Color of Pomegranates,6,Sergei Parajanov
 Bringing Out the Dead,7,Martin Scorsese
-Early Summer,8,Yasujirō Ozu
 Whisky Galore!,8,Alexander Mackendrick
+Early Summer,8,Yasujirō Ozu
 Radio On,7,Chris Petit
 Easy Rider,7,Dennis Hopper
 Sabotage,7,Alfred Hitchcock
@@ -894,9 +894,9 @@ Casque d'Or,8,Jacques Becker
 The Commissar,7,Aleksandr Askoldov
 Eyes Wide Shut,5,Stanley Kubrick
 Marketa Lazarová,8,František Vláčil
-The Goalie's Anxiety at the Penalty Kick,7,Wim Wenders
 Fruit of Paradise,7,Věra Chytilová
 Twelve Monkeys,7,Terry Gilliam
+The Goalie's Anxiety at the Penalty Kick,7,Wim Wenders
 Tyrannosaur,7,Paddy Considine
 The Conformist,8,Bernardo Bertolucci
 Hellraiser,6,Clive Barker
@@ -907,8 +907,8 @@ The Human Condition II: Road to Eternity,8,Masaki Kobayashi
 First Reformed,8,Paul Schrader
 The Phantom Carriage,8,Victor Sjöström
 The Human Condition III: A Soldier's Prayer,8,Masaki Kobayashi
-Christine,7,John Carpenter
 Monsieur Verdoux,7,Charlie Chaplin
+Christine,7,John Carpenter
 The Battle of Algiers,8,Gillo Pontecorvo
 Boyz n the Hood,7,John Singleton
 Snowpiercer,6,Bong Joon-ho
@@ -930,8 +930,8 @@ Bob le Flambeur,7,Jean-Pierre Melville
 Marty,7,Delbert Mann
 High Life,7,Claire Denis
 Another Woman,6,Woody Allen
-To Catch a Thief,6,Alfred Hitchcock
 The Crucified Lovers,8,Kenji Mizoguchi
+To Catch a Thief,6,Alfred Hitchcock
 Odd Man Out,8,Carol Reed
 Cold War,8,Paweł Pawlikowski
 Climax,8,Gaspar Noé
@@ -941,9 +941,9 @@ Annihilation,6,Alex Garland
 A Simple Life,8,Ann Hui
 Lupin the Third: The Castle of Cagliostro,6,Hayao Miyazaki
 Ip Man,8,Wilson Yip
-Uncle Boonmee Who Can Recall His Past Lives,8,Apichatpong Weerasethakul
 The Blue Angel,7,Josef von Sternberg
 School on Fire,6,Ringo Lam
+Uncle Boonmee Who Can Recall His Past Lives,8,Apichatpong Weerasethakul
 Missing,8,Costa-Gavras
 Godzilla,7,Ishirō Honda
 Syndromes and a Century,8,Apichatpong Weerasethakul
@@ -955,8 +955,8 @@ The Taking of Pelham One Two Three,9,Joseph Sargent
 Hard Boiled,8,John Woo
 The Honeymoon Killers,7,Leonard Kastle
 The Honeymoon Killers,7,Donald Volkman
-The Return,8,Andrey Zvyagintsev
 L'Eclisse,7,Michelangelo Antonioni
+The Return,8,Andrey Zvyagintsev
 Obsession,6,Brian De Palma
 In the Soup,7,Alexandre Rockwell
 Witness for the Prosecution,7,Billy Wilder
@@ -981,8 +981,8 @@ The Addiction,7,Abel Ferrara
 Landscape in the Mist,7,Theo Angelopoulos
 Nostalgia,7,Andrei Tarkovsky
 The Blackout,7,Abel Ferrara
-Stray Dogs,7,Tsai Ming-liang
 Chungking Express,8,Wong Kar-wai
+Stray Dogs,7,Tsai Ming-liang
 Kiki's Delivery Service,7,Hayao Miyazaki
 Leaving Las Vegas,7,Mike Figgis
 A Ghost Story,8,David Lowery
@@ -992,9 +992,9 @@ The Servant,7,Joseph Losey
 Midnight in Paris,7,Woody Allen
 mother!,7,Darren Aronofsky
 Us,6,Jordan Peele
+Somers Town,7,Shane Meadows
 He Walked by Night,7,Anthony Mann
 He Walked by Night,7,Alfred L. Werker
-Somers Town,7,Shane Meadows
 Radio Days,7,Woody Allen
 Le Trou,9,Jacques Becker
 The Edge,7,Barney Douglas
@@ -1006,8 +1006,8 @@ Top Secret!,8,David Zucker
 To Live and Die in L.A.,7,William Friedkin
 The Ballad of Narayama,7,Shōhei Imamura
 Stan & Ollie,6,Jon S. Baird
-"Electra, My Love",6,Miklós Jancsó
 Eureka,8,Shinji Aoyama
+"Electra, My Love",6,Miklós Jancsó
 Kind Hearts and Coronets,7,Robert Hamer
 The King of Marvin Gardens,6,Bob Rafelson
 Deliverance,8,John Boorman
@@ -1016,8 +1016,8 @@ Listen Up Philip,6,Alex Ross Perry
 Teddy Bomb,6,Justin Decloux
 A Man Escaped,9,Robert Bresson
 My Twentieth Century,7,Ildikó Enyedi
-Equinox Flower,8,Yasujirō Ozu
 The Naked Gun: From the Files of Police Squad!,7,David Zucker
+Equinox Flower,8,Yasujirō Ozu
 The Match Factory Girl,8,Aki Kaurismäki
 The Big Gundown,8,Sergio Sollima
 Diamonds of the Night,7,Jan Němec
@@ -1028,9 +1028,9 @@ Face to Face,8,Sergio Sollima
 Sonatine,7,Takeshi Kitano
 The Day Shall Come,7,Chris Morris
 Impossible Horror,6,Justin Decloux
-Bullet in the Head,8,John Woo
 The Shop on Main Street,8,Elmar Klos
 The Shop on Main Street,8,Ján Kadár
+Bullet in the Head,8,John Woo
 Drunken Master,8,Yuen Woo-ping
 Enter the Dragon,7,Robert Clouse
 Fireworks,8,Takeshi Kitano
@@ -1052,8 +1052,8 @@ I Vitelloni,7,Federico Fellini
 Burning,8,Lee Chang-dong
 I Lost My Body,7,Jérémy Clapin
 Walker,7,Alex Cox
-Atlantics,7,Mati Diop
 Zazie dans le Métro,7,Louis Malle
+Atlantics,7,Mati Diop
 Cameraman: The Life and Work of Jack Cardiff,7,Craig McCall
 Tokyo Fist,7,Shinya Tsukamoto
 Mother Joan of the Angels,8,Jerzy Kawalerowicz
@@ -1063,8 +1063,8 @@ Dirty Harry,7,Don Siegel
 Ip Man 2,7,Wilson Yip
 Mighty Aphrodite,7,Woody Allen
 The Driller Killer,6,Abel Ferrara
-The Grapes of Death,7,Jean Rollin
 The Killing of a Chinese Bookie,7,John Cassavetes
+The Grapes of Death,7,Jean Rollin
 "Texas, Adios",7,Ferdinando Baldi
 Japón,8,Carlos Reygadas
 The Funeral,7,Abel Ferrara
@@ -1073,10 +1073,10 @@ Happy as Lazzaro,8,Alice Rohrwacher
 The Limits of Control,6,Jim Jarmusch
 The Florida Project,8,Sean Baker
 Man on Wire,7,James Marsh
-Make Way for Tomorrow,7,Leo McCarey
 Aquarius,7,Kleber Mendonça Filho
-Death Rides a Horse,7,Giulio Petroni
+Make Way for Tomorrow,7,Leo McCarey
 Fallen Angels,7,Wong Kar-wai
+Death Rides a Horse,7,Giulio Petroni
 Duck Soup,7,Leo McCarey
 Dawn of the Dead,8,George A. Romero
 A Hidden Life,8,Terrence Malick
@@ -1085,9 +1085,9 @@ Damnation,6,Béla Tarr
 Mandy,8,Panos Cosmatos
 Shoplifters,8,Hirokazu Kore-eda
 Nazarin,7,Luis Buñuel
-The Last of England,7,Derek Jarman
 Uncut Gems,9,Josh Safdie
 Uncut Gems,9,Benny Safdie
+The Last of England,7,Derek Jarman
 The Wind Will Carry Us,8,Abbas Kiarostami
 The Lighthouse,8,Robert Eggers
 Witchfinder General,7,Michael Reeves
@@ -1110,8 +1110,8 @@ City of the Living Dead,6,Lucio Fulci
 Monos,7,Alejandro Landes
 Portrait of a Lady on Fire,8,Céline Sciamma
 Paprika,7,Satoshi Kon
-Kaili Blues,8,Bi Gan
 King of New York,7,Abel Ferrara
+Kaili Blues,8,Bi Gan
 "Our Voice of Earth, Memory and Future",7,Marta Rodríguez
 "Our Voice of Earth, Memory and Future",7,Jorge Silva
 Eastern Condors,7,Sammo Hung
@@ -1134,8 +1134,8 @@ Dragon Inn,8,King Hu
 Sisters,6,Brian De Palma
 The Big Combo,8,Joseph H. Lewis
 Sans Soleil,8,Chris Marker
-Poetry,8,Lee Chang-dong
 Horse Money,7,Pedro Costa
+Poetry,8,Lee Chang-dong
 Un Flic,7,Jean-Pierre Melville
 Bacurau,8,Kleber Mendonça Filho
 Bacurau,8,Juliano Dornelles
@@ -1145,10 +1145,10 @@ Winter Sleep,8,Nuri Bilge Ceylan
 Showgirls,6,Paul Verhoeven
 Tepepa,7,Giulio Petroni
 The 36th Chamber of Shaolin,8,Liu Chia-Liang
-Nausicaä of the Valley of the Wind,7,Hayao Miyazaki
 Zama,7,Lucrecia Martel
-A Touch of Sin,7,Jia Zhangke
+Nausicaä of the Valley of the Wind,7,Hayao Miyazaki
 Husbands and Wives,8,Woody Allen
+A Touch of Sin,7,Jia Zhangke
 Aniara,7,Pella Kågerman
 Aniara,7,Hugo Lilja
 The New World,9,Terrence Malick
@@ -1160,8 +1160,8 @@ Once Upon a Time in Anatolia,8,Nuri Bilge Ceylan
 Night Moves,7,Kelly Reichardt
 Cape Fear,5,Martin Scorsese
 The Decline of Western Civilization,8,Penelope Spheeris
-My Name Is Nobody,7,Tonino Valerii
 La Bête Humaine,7,Jean Renoir
+My Name Is Nobody,7,Tonino Valerii
 Invasion of the Body Snatchers,8,Philip Kaufman
 The Far Country,7,Anthony Mann
 A. K.,6,Chris Marker
@@ -1171,9 +1171,9 @@ The Assassin,6,Hou Hsiao-hsien
 Once Upon a Time… in Hollywood,8,Quentin Tarantino
 Killer Joe,6,William Friedkin
 Wendy and Lucy,7,Kelly Reichardt
-Pulse,7,Kiyoshi Kurosawa
-Diary of a Country Priest,6,Robert Bresson
 Let the Sunshine In,6,Claire Denis
+Diary of a Country Priest,6,Robert Bresson
+Pulse,7,Kiyoshi Kurosawa
 Tristana,7,Luis Buñuel
 "Black God, White Devil",6,Glauber Rocha
 Our Little Sister,7,Hirokazu Kore-eda
@@ -1181,9 +1181,9 @@ The Running Man,6,Paul Michael Glaser
 I Live in Fear,6,Akira Kurosawa
 Far from Men,7,David Oelhoffen
 Ronin,6,John Frankenheimer
-Passion,6,Brian De Palma
 Bob & Carol & Ted & Alice,8,Paul Mazursky
 Mr. Klein,8,Joseph Losey
+Passion,6,Brian De Palma
 The Decline of Western Civilization Part II: The Metal Years,7,Penelope Spheeris
 Vitalina Varela,7,Pedro Costa
 Drug War,7,Johnnie To
@@ -1191,12 +1191,12 @@ Youth of the Beast,7,Seijun Suzuki
 The Past,8,Asghar Farhadi
 The Happiness of the Katakuris,7,Takashi Miike
 The Grandmaster,6,Wong Kar-wai
+The Day of the Owl,7,Damiano Damiani
 The Farewell,7,Lulu Wang
 Shadow,7,Zhang Yimou
-The Day of the Owl,7,Damiano Damiani
+Hoop Dreams,8,Steve James
 Faces Places,7,Agnès Varda
 Faces Places,7,JR
-Hoop Dreams,8,Steve James
 Fist of Fury,6,Lo Wei
 Hero,7,Zhang Yimou
 The Emigrants,8,Jan Troell
@@ -1218,17 +1218,17 @@ The Westerner,7,William Wyler
 Pain and Glory,7,Pedro Almodóvar
 The New Land,8,Jan Troell
 The Bigamist,7,Ida Lupino
+A Chinese Ghost Story,6,Ching Siu-Tung
 Hereditary,5,Ari Aster
 Nymphomaniac: Vol. I,7,Lars von Trier
-A Chinese Ghost Story,6,Ching Siu-Tung
 Come Drink with Me,7,King Hu
 Nymphomaniac: Vol. II,6,Lars von Trier
 The Crime of Monsieur Lange,6,Jean Renoir
 City on Fire,7,Ringo Lam
 Spring Breakers,7,Harmony Korine
 Wheel of Time,7,Werner Herzog
-Dancer in the Dark,7,Lars von Trier
 The Cremator,7,Juraj Herz
+Dancer in the Dark,7,Lars von Trier
 Pickup on South Street,8,Samuel Fuller
 She's Gotta Have It,7,Spike Lee
 Starship Troopers,8,Paul Verhoeven
@@ -1237,8 +1237,8 @@ Once Upon a Time in China,7,Tsui Hark
 Pit Stop,7,Jack Hill
 Total Recall,7,Paul Verhoeven
 Enter the Void,7,Gaspar Noé
-Transit,7,Christian Petzold
 Boy Meets Girl,7,Leos Carax
+Transit,7,Christian Petzold
 An Actor's Revenge,7,Kon Ichikawa
 Live Flesh,7,Pedro Almodóvar
 Terminator 2: Judgment Day,7,James Cameron
@@ -1250,19 +1250,19 @@ Wolf Children,8,Mamoru Hosoda
 Tie Me Up! Tie Me Down!,6,Pedro Almodóvar
 Ghost in the Shell,7,Mamoru Oshii
 Knives Out,6,Rian Johnson
+Night Moves,8,Arthur Penn
 Hollow Man,6,Paul Verhoeven
 Invasion of the Body Snatchers,7,Don Siegel
-Night Moves,8,Arthur Penn
 Rescue Dawn,7,Werner Herzog
 Under the Silver Lake,7,David Robert Mitchell
 A Short Film About Killing,8,Krzysztof Kieślowski
 Le Havre,7,Aki Kaurismäki
 Oasis,8,Lee Chang-dong
-Minnie and Moskowitz,7,John Cassavetes
 Killer Constable,6,Kuei Chih-Hung
+Minnie and Moskowitz,7,John Cassavetes
 Lights in the Dusk,7,Aki Kaurismäki
-Winchester '73,7,Anthony Mann
 Blissfully Yours,8,Apichatpong Weerasethakul
+Winchester '73,7,Anthony Mann
 Kids Return,7,Takeshi Kitano
 A Prophet,7,Jacques Audiard
 Violent Cop,7,Takeshi Kitano
@@ -1271,8 +1271,8 @@ Gran Torino,6,Clint Eastwood
 Touchez Pas au Grisbi,7,Jacques Becker
 The Killers,7,Robert Siodmak
 All About My Mother,7,Pedro Almodóvar
-A Touch of Zen,8,King Hu
 A Short Film About Love,8,Krzysztof Kieślowski
+A Touch of Zen,8,King Hu
 A Snake of June,7,Shinya Tsukamoto
 Shinjuku Triad Society,6,Takashi Miike
 Dressed to Kill,7,Brian De Palma
@@ -1283,9 +1283,9 @@ Terrorizers,8,Edward Yang
 The Immortal Story,7,Orson Welles
 Million Dollar Baby,6,Clint Eastwood
 Red Sun,7,Terence Young
-Return to the 36th Chamber,7,Liu Chia-Liang
 Lifeboat,7,Alfred Hitchcock
 Long Day's Journey Into Night,8,Bi Gan
+Return to the 36th Chamber,7,Liu Chia-Liang
 I'm Thinking of Ending Things,8,Charlie Kaufman
 Reminiscences of a Journey to Lithuania,7,Jonas Mekas
 A Better Tomorrow,6,John Woo
@@ -1294,9 +1294,9 @@ Dirty Ho,7,Liu Chia-Liang
 Shaolin Soccer,7,Stephen Chow
 The Dance of Reality,8,Alejandro Jodorowsky
 The Beach Bum,7,Harmony Korine
-Freaky Farley,6,Charles Roxburgh
 Heroes of the East,8,Liu Chia-Liang
 The Border,7,Tony Richardson
+Freaky Farley,6,Charles Roxburgh
 Phoenix,7,Christian Petzold
 Cockfighter,7,Monte Hellman
 Nobody Knows,8,Hirokazu Kore-eda
@@ -1307,9 +1307,9 @@ On Dangerous Ground,7,Ida Lupino
 Scenes from a Marriage,8,Ingmar Bergman
 The Fabulous Baron Munchausen,8,Karel Zeman
 Lucky,7,John Carroll Lynch
-Thief,8,Michael Mann
-Shoulder Arms,7,Charlie Chaplin
 Manhunter,8,Michael Mann
+Shoulder Arms,7,Charlie Chaplin
+Thief,8,Michael Mann
 Army of Darkness,7,Sam Raimi
 Hour of the Wolf,7,Ingmar Bergman
 The Aviator's Wife,8,Éric Rohmer
@@ -1320,19 +1320,19 @@ Ringu,6,Hideo Nakata
 One Week,8,Buster Keaton
 One Week,8,Edward F. Cline
 Calm with Horses,7,Nick Rowland
+The Hills Have Eyes,6,Wes Craven
 Femme Fatale,7,Brian De Palma
 Santa Sangre,7,Alejandro Jodorowsky
-The Hills Have Eyes,6,Wes Craven
 Zigeunerweisen,7,Seijun Suzuki
 The 'Burbs,6,Joe Dante
 Irreversible,7,Gaspar Noé
 HyperNormalisation,7,Adam Curtis
-Full Moon in Paris,7,Éric Rohmer
 Underground,8,Emir Kusturica
+Full Moon in Paris,7,Éric Rohmer
 Gaslight,7,George Cukor
 All That Heaven Allows,7,Douglas Sirk
-"You, the Living",6,Roy Andersson
 Boyfriends and Girlfriends,8,Éric Rohmer
+"You, the Living",6,Roy Andersson
 Where the Sidewalk Ends,7,Otto Preminger
 White Material,7,Claire Denis
 In a Lonely Place,8,Nicholas Ray
@@ -1341,10 +1341,10 @@ The Assassination of Jesse James by the Coward Robert Ford,7,Andrew Dominik
 Barbara,7,Christian Petzold
 The Mercenary,7,Sergio Corbucci
 The 4th Man,7,Paul Verhoeven
-In the Heat of the Night,7,Norman Jewison
-Searching for Sugar Man,7,Malik Bendjelloul
 The Unknown Girl,7,Luc Dardenne
 The Unknown Girl,7,Jean-Pierre Dardenne
+Searching for Sugar Man,7,Malik Bendjelloul
+In the Heat of the Night,7,Norman Jewison
 Hopscotch,7,Ronald Neame
 Fear City,6,Abel Ferrara
 Fearless Hyena,7,Jackie Chan
@@ -1379,8 +1379,8 @@ Stray Cat Rock: Delinquent Girl Boss,6,Yasuharu Hasebe
 "Merry Christmas, Mr. Lawrence",7,Nagisa Ōshima
 The Exorcist III,7,William Peter Blatty
 About Endlessness,6,Roy Andersson
-Stalag 17,7,Billy Wilder
 La Grande Bouffe,7,Marco Ferreri
+Stalag 17,7,Billy Wilder
 And God Said to Cain,7,Antonio Margheriti
 In the Realm of the Senses,7,Nagisa Ōshima
 One Deadly Summer,7,Jean Becker
@@ -1388,9 +1388,9 @@ Lady Snowblood,7,Toshiya Fujita
 The Return of Ringo,6,Duccio Tessari
 One-Eyed Jacks,7,Marlon Brando
 Bad Lieutenant,7,Abel Ferrara
-Ride Lonesome,7,Budd Boetticher
 Seconds,8,John Frankenheimer
 Tangerine,7,Sean Baker
+Ride Lonesome,7,Budd Boetticher
 The Strange Case of Dr. Jekyll and Miss Osbourne,7,Walerian Borowczyk
 Election,7,Johnnie To
 The Living Dead Girl,7,Jean Rollin
@@ -1400,9 +1400,9 @@ Brute Force,8,Jules Dassin
 Time,7,Garrett Bradley
 Meet John Doe,7,Frank Capra
 The Iron Rose,6,Jean Rollin
-Zatoichi,7,Takeshi Kitano
-Trouble Every Day,6,Claire Denis
 Wake in Fright,8,Ted Kotcheff
+Trouble Every Day,6,Claire Denis
+Zatoichi,7,Takeshi Kitano
 T-Men,7,Anthony Mann
 Personal Shopper,7,Olivier Assayas
 [REC],7,Jaume Balagueró
@@ -1438,8 +1438,8 @@ Tokyo!,7,Bong Joon-ho
 Tokyo!,7,Leos Carax
 Don't Torture a Duckling,7,Lucio Fulci
 The Color of Money,8,Martin Scorsese
-Joint Security Area,8,Park Chan-wook
 The Crazies,7,George A. Romero
+Joint Security Area,8,Park Chan-wook
 Queen of Earth,7,Alex Ross Perry
 The Hustler,8,Robert Rossen
 Cemetery Man,7,Michele Soavi
@@ -1447,11 +1447,11 @@ Soylent Green,7,Richard Fleischer
 Kotoko,7,Shinya Tsukamoto
 Deep Red,6,Dario Argento
 Brain Damage,7,Frank Henenlotter
+Iron Monkey,7,Yuen Woo-ping
 13 Assassins,8,Takashi Miike
 Bloodsport,6,Newt Arnold
-Iron Monkey,7,Yuen Woo-ping
-The Red Queen Kills Seven Times,6,Emilio Miraglia
 Force Majeure,7,Ruben Östlund
+The Red Queen Kills Seven Times,6,Emilio Miraglia
 Breakdown,7,Jonathan Mostow
 That Cold Day in the Park,7,Robert Altman
 Camera Buff,8,Krzysztof Kieślowski
@@ -1460,8 +1460,8 @@ Female Prisoner Scorpion: Beast Stable,7,Shunya Ito
 Kiss Me Deadly,7,Robert Aldrich
 Seven Chances,7,Buster Keaton
 Blue Spring,7,Toshiaki Toyoda
-The Driver,7,Walter Hill
 JFK,8,Oliver Stone
+The Driver,7,Walter Hill
 Pusher,6,Nicolas Winding Refn
 Spetters,7,Paul Verhoeven
 Heroic Purgatory,7,Yoshishige Yoshida
@@ -1469,8 +1469,8 @@ Shotgun Stories,7,Jeff Nichols
 Limelight,8,Charlie Chaplin
 Project A,7,Jackie Chan
 Songs My Brothers Taught Me,7,Chloé Zhao
-Punishment Park,8,Peter Watkins
 Re-Animator,7,Stuart Gordon
+Punishment Park,8,Peter Watkins
 Pusher II: With Blood on My Hands,7,Nicolas Winding Refn
 Ashes of Time,6,Wong Kar-wai
 The Dark Mirror,7,Robert Siodmak
@@ -1482,8 +1482,8 @@ Blood Simple,8,Joel Coen
 Cruel Story of Youth,6,Nagisa Ōshima
 Harlan County U.S.A.,8,Barbara Kopple
 Wheels on Meals,7,Sammo Hung
-Sound of Metal,7,Darius Marder
 Pusher III,7,Nicolas Winding Refn
+Sound of Metal,7,Darius Marder
 Force of Evil,7,Abraham Polonsky
 A Hard Day's Night,7,Richard Lester
 Turkish Delight,7,Paul Verhoeven
@@ -1491,8 +1491,8 @@ Two-Lane Blacktop,8,Monte Hellman
 Revolver,6,Sergio Sollima
 Kansas City Confidential,8,Phil Karlson
 Dark Waters,7,Todd Haynes
-Over the Edge,7,Jonathan Kaplan
 The Little Shop of Horrors,6,Roger Corman
+Over the Edge,7,Jonathan Kaplan
 "4 Months, 3 Weeks and 2 Days",8,Cristian Mungiu
 The Reunion,7,Anna Odell
 The Southerner,7,Jean Renoir
@@ -1517,3 +1517,5 @@ If You Meet Sartana Pray for Your Death,6,Gianfranco Parolini
 Your Vice Is a Locked Room and Only I Have the Key,7,Sergio Martino
 The Things of Life,7,Claude Sautet
 Welcome to New York,7,Abel Ferrara
+The Manchurian Candidate,7,John Frankenheimer
+Jerichow,7,Christian Petzold
